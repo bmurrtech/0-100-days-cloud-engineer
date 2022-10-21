@@ -33,11 +33,48 @@ Follow my daily journey to becoming a certified Cloud Engineer.
 ## Day 3
 - Completed required job skill research
 - Completed creating learning roadmap by identifying key courses and optimizing for maximum learning to hours invested ratio
-- Enrolled into Linux Fundamentals (Learn Quest) course through Coursera Plus subscription
-- Started Week 1 of the course
-- Learned the history of Linux. Did you know that the creator of Linux, Linus Torvalds, was going to originally name it “Freax?” It is a combination or portmanteau of the two words “free” and “freak.”
 - Purchased [bmurr.tech](https://www.bmurr.tech) domain name with SSL and email mailbox
 - Created custom domain email box
 - Created a GitHub account to track and demonstrate my [0-100 days to Cloud Engineer progress](https://github.com/bmurrtech/0-100-days-cloud-engineer/blob/main/daily_journal.md)
 - Made a stunning [About Me Github page](https://github.com/bmurrtech)
 - Learned about and started utilizing [basic markdown syntax](https://www.markdownguide.org/cheat-sheet/)
+
+### Learning About Linux History and Distributions
+- Enrolled into Linux Fundamentals (Learn Quest) course through Coursera Plus subscription
+- Started Week 1 of the course
+- Learned the history of Linux. Did you know that the creator of Linux, Linus Torvalds, was going to originally name it “Freax?” It is a combination or portmanteau of the two words “free” and “freak.”
+-  Learning about Linux Distribtuions (i.e. Red Hat Enterprise Linux a.k.a. RHEL, 02-22-2000)
+- RedHat is a subsidiary of IBM and targets server software for the commerical market
+- CentOS is a redistribution with RedHat intellectual property (IP)
+- Fedora Linux (11-06-2003) is more innovative (many releases) vs. RHEL philosophy which focuses on stability over innovation
+- SUSE (soo-see) a German-based open-source tech company (09-2-1992); owned by Novell from 2003-2011
+- Ubuntu is based on Debian (major category of distribution); free to download; ideal for desktop, server, core IoT devices, and robets (note about support: every two years a new update is released and long-term support is offered for 5 years total)
+- Debian comes in stable, testing, and untested; similar to Ubuntu but Debian focuses on freedom (community-driven)
+
+### Linux Command Line
+- Resource: [Linux CLI Intro Guide](https://linuxjournal.com/content/linux-command-line-interface-introduction-guide)
+- 90% of the cloud is Linux based
+- ssh is faster than interacting with a GUI
+- the "bourne shell" is represented by the $ character to prompt the user for input
+
+| Command | Description |
+| ----------- | ----------- |
+| pwd | returns the path of the current working directory (dir) |
+| cd | change dir |
+| cd .. | move on dir up |
+| cd to | go straight to home folder |
+| cd - | move to your prev dir |
+| ls -r | will list all the files in the sub-directories as well |
+| ls -a | will show the hidden files |
+| ls -al | will list the files and dir with detailed info (ex. permissions, size, owner) |
+| cat | list the contents of a file on the standard output |
+| cat > filename | creates a new file |
+| cat > filename1 filename2>filename3 | joins 2 files and stores the output of them in a new file |
+| cp | copy files |
+| mv | move or rename files |
+| mkdir | create a new dir in the current dir |
+| rm | remove file and directories|
+| rm -r | remove dir and all files inside |
+| clear | to clear the screen and start all over |
+| history | will show a historal list of commands that were entered in the terminal session |
+
