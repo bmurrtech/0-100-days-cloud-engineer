@@ -40,3 +40,4 @@ Follow my daily journey to becoming a certified Cloud Engineer.
 - Created custom domain email box
 - Created a GitHub account to track and demonstrate my [0-100 days to Cloud Engineer progress](https://github.com/bmurrtech/0-100-days-cloud-engineer/blob/main/daily_journal.md)
 - Made a stunning [About Me Github page](https://github.com/bmurrtech)
+- Learned about and started utilizing [basic markdown syntax](https://www.markdownguide.org/cheat-sheet/)
