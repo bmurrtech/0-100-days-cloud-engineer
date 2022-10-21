@@ -2,11 +2,15 @@
 # Road to Cloud Dev in 100 Days
 Follow my daily journey to becoming a certified Cloud Engineer.
 
->He who aims at perfection
->will probably miss the mark,
->but he who aims at nothing,
->is sure to hit it every time.”
->(Henry Wheeler Shaw, 1876)
+>He who aims at perfection<br>will probably miss the mark,<br>but he who aims at nothing,<br>is sure to hit it every time.
+>
+><br>--<cite>*Henry Wheeler Shaw, 1876*</cite>
+<br>
+
+**Table of Key Learning Points & Resources:**
+1. [Linux Command Lines 1](#linux-command-lines-1)
+1.
+1.
 
 ## Day 1
 - Started a course I thought would be everything I needed to become a DevOps Cloud Engineer
@@ -51,7 +55,7 @@ Follow my daily journey to becoming a certified Cloud Engineer.
 - Ubuntu is based on Debian (major category of distribution); free to download; ideal for desktop, server, core IoT devices, and robets (note about support: every two years a new update is released and long-term support is offered for 5 years total)
 - Debian comes in stable, testing, and untested; similar to Ubuntu but Debian focuses on freedom (community-driven)
 
-### Linux Command Line
+### Linux Command Lines 1
 - Resource: [Linux CLI Intro Guide](https://linuxjournal.com/content/linux-command-line-interface-introduction-guide)
 - 90% of the cloud is Linux based
 - ssh is faster than interacting with a GUI
