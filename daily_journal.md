@@ -47,7 +47,7 @@ Follow my daily journey to becoming a certified Cloud Engineer.
 - Enrolled into Linux Fundamentals (Learn Quest) course through Coursera Plus subscription
 - Started Week 1 of the course
 - Learned the history of Linux.
-- :bulb: **Fun fact**: Did you know that the creator of Linux, <mark>Linus Torvalds</mark>, was going to originally name it *Freax*? It is a combination or portmanteau of the two words “free” and “freak.”
+- :bulb: **Fun fact**: Did you know that the creator of Linux, <mark>Linus Torvalds</mark>, was going to originally name it *Freax*? It is a combination or portmanteau of the two words “free” and “freak," and "x" being an allusion to Linux.
 - Learning about Linux Distribtuions (i.e. Red Hat Enterprise Linux a.k.a. RHEL, 02-22-2000)
 - RedHat is a subsidiary of IBM and targets server software for the commerical market
 - CentOS is a redistribution with RedHat intellectual property (IP)
@@ -68,7 +68,7 @@ Follow my daily journey to becoming a certified Cloud Engineer.
 | ----------- | ----------- |
 | pwd | returns the path of the current working directory (dir) |
 | cd | change dir |
-| cd .. | move on dir up |
+| cd .. | move one dir up |
 | cd to | go straight to home folder |
 | cd - | move to your prev dir |
 | ls -r | will list all the files in the sub-directories as well |
@@ -80,7 +80,7 @@ Follow my daily journey to becoming a certified Cloud Engineer.
 | cp | copy files |
 | mv | move or rename files |
 | mkdir | create a new dir in the current dir |
-| rm | remove file and directories|
+| rm | remove file and directories |
 | rm -r | remove dir and all files inside |
 | clear | to clear the screen and start all over |
 | history | will show a historal list of commands that were entered in the terminal session |
@@ -99,7 +99,8 @@ Follow my daily journey to becoming a certified Cloud Engineer.
 - Watched an amazing video by Network Chuck about configuring Kubernetes (k3s) on a cluster of Raspery Pi's with Rancher
 - Witnessed the power of Nginx as a load balancer
 - Learned that Linux largely depends upon the x86 arcitechure (making arm64, Raspberry Pi's, not ideal for full Kubernetes compatibility)
-### Zima Board - The Raspberry-Pi-Killer :knife::blood:
+### Zima Board
+The Raspberry-Pi-Killer :knife:
 ![alt text](./images/zimaboard1.jpg)
 - Found out about [ZimaBoard](https://www.zimaboard.com/zimaboard/product), for home lab setup.
   1. The "World’s First Hackable Single Board Server" (kickstarter project)
