@@ -9,21 +9,21 @@ Follow my daily journey to becoming a certified Cloud Engineer.
 
 **Table of Key Learning Points & Resources:**
 1. [Linux Command Lines 1](#linux-command-lines-1)
-1.
+1. [Raspberry-Pi-killer Home Lab Mini PC](#zima-board)
 1.
 
-## Day 1
+## Day :one:
 - Started a course I thought would be everything I needed to become a DevOps Cloud Engineer
 - First 5 hours into the course was all about the history of DevOps: agile, social coding, collaboration of developers and operations, etc.
 - Listened to a cloud engineer livestream interview of an IT professional’s story of how he transitioned to cloud engineering.
-- He was already employed, so he just networked with the cloud manager
-- He learned what skills a cloud engineer needed
-- He has CCNA certification (networking skills that came in handy later)
-- He started AWS certification training
-- He later realized that he lacked basic Linux, Bash scripting, and Python skills
-- He started Python on codecademy, completed 50% and got hired as a jr. cloud engineer months later (he said codecademy it is worth every penny)
+  - He was already employed, so he just networked with the cloud manager
+  - He learned what skills a cloud engineer needed
+  - He has CCNA certification (networking skills that came in handy later)
+  - He started AWS certification training
+  - He later realized that he lacked basic Linux, Bash scripting, and Python skills
+  - He started Python on codecademy, completed 50% and got hired as a jr. cloud engineer months later (he said codecademy it is worth every penny)
 
-## Day 2
+## Day :two:
 
 - Ditched the first DevOps IBM course to deep-dive into research of what it really takes to be a cloud engineer
 - Started searching job listings for the top required and most common skills mentioned
@@ -34,7 +34,7 @@ Follow my daily journey to becoming a certified Cloud Engineer.
 - Found courses for Linux LFCA Certification, Google Cloud Associate certification prep, and Python
 - Created roadmap and timeline (visualizing my goals)
 
-## Day 3
+## Day 3 :three:
 - Completed required job skill research
 - Completed creating learning roadmap by identifying key courses and optimizing for maximum learning to hours invested ratio
 - Purchased [bmurr.tech](https://www.bmurr.tech) domain name with SSL and email mailbox
@@ -47,7 +47,7 @@ Follow my daily journey to becoming a certified Cloud Engineer.
 - Enrolled into Linux Fundamentals (Learn Quest) course through Coursera Plus subscription
 - Started Week 1 of the course
 - Learned the history of Linux.
-- **Fun fact**: Did you know that the creator of Linux, <mark>Linus Torvalds</mark>, was going to originally name it *Freax*? It is a combination or portmanteau of the two words “free” and “freak.”
+- :bulb: **Fun fact**: Did you know that the creator of Linux, <mark>Linus Torvalds</mark>, was going to originally name it *Freax*? It is a combination or portmanteau of the two words “free” and “freak.”
 - Learning about Linux Distribtuions (i.e. Red Hat Enterprise Linux a.k.a. RHEL, 02-22-2000)
 - RedHat is a subsidiary of IBM and targets server software for the commerical market
 - CentOS is a redistribution with RedHat intellectual property (IP)
@@ -62,7 +62,7 @@ Follow my daily journey to becoming a certified Cloud Engineer.
 - ssh is faster than interacting with a GUI
 - the "bourne shell" is represented by the $ character to prompt the user for input
 - Bourne **Sh**ell (sh) was orginally developed by Stephen Bourne (not related to Jason Bourne!) while he was working at Bell Labs. 
-- **Fun fact**: Bash is an acronym for "**B**orne **A**gain **Sh**ell (B.A.SH). It was written as the free, open-source replacement of Bourne Shell. Because of the open-source nature of Bash, it has been adopted as the defalut shell on most Linux systems.
+- :bulb: **Fun fact**: Bash is an acronym for "**B**orne **A**gain **Sh**ell (B.A.SH). It was written as the free, open-source replacement of Bourne Shell. Because of the open-source nature of Bash, it has been adopted as the defalut shell on most Linux systems.
 
 | Command | Description |
 | ----------- | ----------- |
@@ -85,7 +85,7 @@ Follow my daily journey to becoming a certified Cloud Engineer.
 | clear | to clear the screen and start all over |
 | history | will show a historal list of commands that were entered in the terminal session |
 
-### Day 4
+## Day :four:
 - Learned how to add folders to Git repository
   1. Go to the folder inside which you want to create another folder
   1. Click on New file
@@ -99,7 +99,7 @@ Follow my daily journey to becoming a certified Cloud Engineer.
 - Watched an amazing video by Network Chuck about configuring Kubernetes (k3s) on a cluster of Raspery Pi's with Rancher
 - Witnessed the power of Nginx as a load balancer
 - Learned that Linux largely depends upon the x86 arcitechure (making arm64, Raspberry Pi's, not ideal for full Kubernetes compatibility)
-
+### Zima Board - The Raspberry-Pi-Killer :knife::blood:
 ![alt text](./images/zimaboard1.jpg)
 - Found out about [ZimaBoard](https://www.zimaboard.com/zimaboard/product), for home lab setup.
   1. The "World’s First Hackable Single Board Server" (kickstarter project)
