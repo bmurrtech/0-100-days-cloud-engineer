@@ -71,6 +71,7 @@ Follow my daily journey to becoming a certified Cloud Engineer.
 | cd .. | move one dir up |
 | cd to | go straight to home folder |
 | cd - | move to your prev dir |
+| ls | lists contents of the dir |
 | ls -r | will list all the files in the sub-directories as well |
 | ls -a | will show the hidden files |
 | ls -al | will list the files and dir with detailed info (ex. permissions, size, owner) |
@@ -86,6 +87,7 @@ Follow my daily journey to becoming a certified Cloud Engineer.
 | history | will show a historal list of commands that were entered in the terminal session |
 
 ## Day :four:
+- [Linux week 4 overview](https://d18ky98rnyall9.cloudfront.net/qRQY1L8KRNeUGNS_CnTXuQ_af9f7d4c30204287ac279be086d0c1f1_LinuxSpecializationCourse1Module1.pdf?Expires=1666656000&Signature=UJCINfl9vmCn1I33lc9u3J1zjFtZqeHU5Y33vUs2l35LE2GHXeaxIR~FvMFsgcCcfRKZ2~vk7v8g~wU6eskvWli0NK03Ghx85~Z3hstrd-tjtlCB58xGM0B0EY~nVB2gBYCiWyx5VmOw8JkKo8bPdArWbZOAMpE06p5BTXn4SqU_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A)
 - Learned how to add folders to Git repository
   1. Go to the folder inside which you want to create another folder
   1. Click on New file
