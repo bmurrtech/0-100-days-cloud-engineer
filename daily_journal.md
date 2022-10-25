@@ -13,7 +13,10 @@ Follow my daily journey to becoming a certified Cloud Engineer.
 To-do:<br>
 - [ ] Visual roadmap to Cloud Engineer (design in Canva)
 - [ ] Create Chia + MadMax CLI command reference and list (in this repo)
-- [ ] Create Markdown Resume (in this repo)
+- [ ] Create Online Resume
+  - [ ] Step 1 - Markdown Resume (in this repo)
+  - [ ] Step 2 - Create Resume using LaTeX[^tyalt1resume]
+[^tyalt1resume]: Inspiration credit goes to [Tlyer Alterio](https://github.com/tyalt1/Resume)  
 - [ ] Homelab NAS Projects (run on Ubuntu server):
   - [ ] **Priority** [ ] Self-hosting cybersecurity | [click here]([place-holder](https://github.com/bmurrtech/0-100-days-cloud-engineer/blob/main/home_network_cybersecurity.md)) for step-by-step process and documentation
   - [ ] Docker Containers to run all the following web apps
@@ -110,7 +113,7 @@ To-do:<br>
 | history | will show a historical list of commands that were entered in the terminal session |
 
 ## Day :four:
-- [Linux week 4 overview](https://d18ky98rnyall9.cloudfront.net/qRQY1L8KRNeUGNS_CnTXuQ_af9f7d4c30204287ac279be086d0c1f1_LinuxSpecializationCourse1Module1.pdf?Expires=1666656000&Signature=UJCINfl9vmCn1I33lc9u3J1zjFtZqeHU5Y33vUs2l35LE2GHXeaxIR~FvMFsgcCcfRKZ2~vk7v8g~wU6eskvWli0NK03Ghx85~Z3hstrd-tjtlCB58xGM0B0EY~nVB2gBYCiWyx5VmOw8JkKo8bPdArWbZOAMpE06p5BTXn4SqU_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A)
+- [Linux week 1 overview](https://d18ky98rnyall9.cloudfront.net/qRQY1L8KRNeUGNS_CnTXuQ_af9f7d4c30204287ac279be086d0c1f1_LinuxSpecializationCourse1Module1.pdf?Expires=1666656000&Signature=UJCINfl9vmCn1I33lc9u3J1zjFtZqeHU5Y33vUs2l35LE2GHXeaxIR~FvMFsgcCcfRKZ2~vk7v8g~wU6eskvWli0NK03Ghx85~Z3hstrd-tjtlCB58xGM0B0EY~nVB2gBYCiWyx5VmOw8JkKo8bPdArWbZOAMpE06p5BTXn4SqU_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A)
 - Learned how to add folders to Git repository
   1. Go to the folder inside which you want to create another folder
   1. Click on New file
@@ -140,3 +143,13 @@ The Raspberry-Pi-Killer :knife:
   1. TDP 6W
   1. Compatible OS Linux/Windows/OpenWrt/pfSense/Android/Libreelec
   1. Passive Cooling
+
+## Day :five:
+- Watched [Wolfgang Home Server Ansible Setup video](https://youtu.be/f5jNJDaztqk?t=1334) & was inspired to take on personal homelab/network project utilizing existing my server hardware from home
+- Added [cybersecurity.md](https://github.com/bmurrtech/0-100-days-cloud-engineer/blob/main/home_network_cybersecurity.md) for personal home NAS security project
+- Added [Ansible Data Dump .md](https://github.com/bmurrtech/0-100-days-cloud-engineer/blob/main/ansible-nas-doc.md) for future reference, for Ansible learning, & for Ansible automation home server project
+- Discovered [The LaTeX Project](https://www.latex-project.org/) typesetting system & document builder
+- Added a new repo for my LaTeX resume project
+  - Want to utilize LaTeX to create my resume
+  - Want to make repo able to create a [build of LaTeX document](https://github.com/bmurrtech/resume/edit/main/latex-doc-guide.md)
+- Made a to-do list for major [home server project](https://github.com/bmurrtech/0-100-days-cloud-engineer/blob/main/home_network_cybersecurity.md) (I want to showcase Linux, containerization, & Ansible automation skills in the future)
