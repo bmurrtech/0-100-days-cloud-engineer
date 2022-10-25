@@ -15,7 +15,7 @@ To-do:<br>
 - [ ] Create Chia + MadMax CLI command reference and list (in this repo)
 - [ ] Create Markdown Resume (in this repo)
 - [ ] Homelab NAS Projects (run on Ubuntu server):
-  - [ ] **Priority** [Cybersecurity for homelab/network](https://github.com/bmurrtech/0-100-days-cloud-engineer/blob/main/home_network_cybersecurity.md)
+  - [ ] **Priority** [ ] Self-hosting cybersecurity | [click here]([place-holder](https://github.com/bmurrtech/0-100-days-cloud-engineer/blob/main/home_network_cybersecurity.md)) for step-by-step process and documentation
   - [ ] Docker Containers to run all the following web apps
   - [ ] Homer (interface for NAS)
   - [ ] Nextcloud (dropbox and google cloud alternative; calendar + contact sync)
@@ -28,7 +28,6 @@ To-do:<br>
   - [ ] Pi-KVM (video-capture of home server: HDMI capture card + Raspberry Pi)
   - [ ] PiHole (VPN into home network, local DNS server, recursive DNS resolver, run Unbound)
   - [ ] pfSense (VLANs, cybersecurity, port-forwarding)
-  - [ ] Self-hosting cybersecurity | [click here](place-holder) for step-by-step process and documentation
   - [ ] HomeAssistant (for home automation)
 
 **Table of Key Learning Points & Resources:**
