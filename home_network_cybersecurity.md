@@ -1,4 +1,4 @@
-# Home Network Cyver Security Guide & Documentation
+# Home Network Cyber Security Guide & Documentation
 1. Close all ports
   - use iptables/firewallD/UFW
 2. Reverse proxy
