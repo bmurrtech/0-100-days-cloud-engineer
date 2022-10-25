@@ -113,7 +113,7 @@ To-do:<br>
 | history | will show a historical list of commands that were entered in the terminal session |
 
 ## Day :four:
-- [Linux week 1 overview](https://d18ky98rnyall9.cloudfront.net/qRQY1L8KRNeUGNS_CnTXuQ_af9f7d4c30204287ac279be086d0c1f1_LinuxSpecializationCourse1Module1.pdf?Expires=1666656000&Signature=UJCINfl9vmCn1I33lc9u3J1zjFtZqeHU5Y33vUs2l35LE2GHXeaxIR~FvMFsgcCcfRKZ2~vk7v8g~wU6eskvWli0NK03Ghx85~Z3hstrd-tjtlCB58xGM0B0EY~nVB2gBYCiWyx5VmOw8JkKo8bPdArWbZOAMpE06p5BTXn4SqU_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A)
+- Completed Week 1 of Linux Fund. 100% score on week 1 module quiz :raised_hands: in 1-2 days. See the [Linux week 1 overview](https://d18ky98rnyall9.cloudfront.net/qRQY1L8KRNeUGNS_CnTXuQ_af9f7d4c30204287ac279be086d0c1f1_LinuxSpecializationCourse1Module1.pdf?Expires=1666656000&Signature=UJCINfl9vmCn1I33lc9u3J1zjFtZqeHU5Y33vUs2l35LE2GHXeaxIR~FvMFsgcCcfRKZ2~vk7v8g~wU6eskvWli0NK03Ghx85~Z3hstrd-tjtlCB58xGM0B0EY~nVB2gBYCiWyx5VmOw8JkKo8bPdArWbZOAMpE06p5BTXn4SqU_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A).
 - Learned how to add folders to Git repository
   1. Go to the folder inside which you want to create another folder
   1. Click on New file
@@ -153,3 +153,45 @@ The Raspberry-Pi-Killer :knife:
   - Want to utilize LaTeX to create my resume
   - Want to make repo able to create a [build of LaTeX document](https://github.com/bmurrtech/resume/edit/main/latex-doc-guide.md)
 - Made a to-do list for major [home server project](https://github.com/bmurrtech/0-100-days-cloud-engineer/blob/main/home_network_cybersecurity.md) (I want to showcase Linux, containerization, & Ansible automation skills in the future)
+- Signed up for [Python Morsels](https://www.pythonmorsels.com/billing/pricing/) - weekly guided Python practice exercises
+
+### Week 2 of Linux
+- [Linux Week 2 infograph overview](https://d18ky98rnyall9.cloudfront.net/06EkHSmFTT-hJB0phb0_Sw_1bc88a9afcaa46eb9afb6f9ae566daf1_LinuxSpecializationCourse1Module2.pdf?Expires=1666828800&Signature=aoPuF1waD9uQQUAOz2mXi4u2Ohb0-Sj6Qu-vji6gUpPJRdpHo3CkcdtEyk7vWUwXsQ9J3qtqZjdV1E2yRPdLZma0OSIALI5h0thXB9sSPt2bWBCK6BvBjI1u9OnuxPMzH0qIzgVirooIa4lmCIeQGoJ2jglClA9cVdqD9EvOR0E_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A)
+- **L1: Servers v Desktops**
+  - Severs: focuses on programs that proved shared resources/services
+  - Desktop: focuses on programs that run in a Graphical User Interface (GUI)
+  - Servers run prog in two primary ways: 1. as a background process (always running and listening to requests) 2. a process spawned by a parent program that listens for requests
+- *Deamon* when a Linux services runs continually in the background, it is called a *deamon* and this processes often end in the letter "d" (ex. "mysqld")
+- Major service types include:
+  - file servers
+  - print servers
+  - web servers
+  - database servers
+  - mail servers
+  - network resources servers (DHCP, logging, etc.)
+- Review L1:
+  - A Linux *desktop* has programs designed around GUI interactive apps
+  - A Linux *server* has programs designed around bakground serviecs that share resources
+  - Deamons often end with the letter "d" in their name
+- **L2 Web Servers**
+![alt_text](./images/kinsta-hosting-architecture.png)[^kinstawebserver]
+[^kinstawebserver]: Photo Credits go to [Kinsta.com](https://kinsta.com/blog/nginx-vs-apache/)
+  - Web servers listen on port 80 and 443 for incoming requests and assign the request to a process to return the response from the following providers:
+  - *Apache*: free, open-source, cross-platform web server software released under Apache Lic. 2.0, 1995, compled modules extend core funct. w/server-side languages (i.e. PHP, Python, Pearl, Tcl, etc.)
+  - *NGINX*: free, open-source, cross-platform web server software released under FreeBSD licence in 2004; owned by F5 Networks; modular, event-driven architecture can provide predictable performance under high loads (build time); *most popular web server* today with 432M servers running as of April 2021
+  - *Lighttpd*: free, open-source, cross-platform web server software released under FreeBSD Licence in 2015; used in the past by several high-traffic websites (ex. YouTube); 33M servers running as of April 2021.
+- Reveiew L2:
+  - Web servers run in the backgorund and serve HTTP and HTTPS requests
+  - Apache is used by more sahred hosting providers
+  - Nginx has taken much of the web server market because of performance
+- Additional web server reading [Nginx v Apache](https://kinsta.com/blog/nginx-vs-apache/)
+  - Web pages are "essentially HTML documents"
+  - Therefore, you need a "serving" machine to "serve up" the visitor's browser the HTML document for viewing
+  - :bulb: Fun-fact: Apache got its name either from 1. a Native American heritage or 2. from a pun on "a-patchy-server" :laughing: which ensued a series of software patches
+  - Apache was made popular by its *dynamic module system*. A *module* is a feature that allows users to extend web server functionality. A list of modules can be found [here](https://httpd.apache.org/docs/2.4/mod/)
+  - Nginx was created by a Russian dev, Igo Sysoev.
+  - Nginx has a paid (Nginx Plus) and free version (BSD-type license).
+  - Nginx was orginally used as a *load-balancer* or *reverse proxy*
+  - A *reverse proxy* "sits in front of a web server and receives all the requests before they reach the origin server and can enhance performance, reliability, and security of the web server."[^reverseproxy]
+[^reverseproxy]: [Kinsta.com, *How To Set Up a Reverse Proxy..."](https://kinsta.com/blog/reverse-proxy/)
+  - Because NGINX does not have a conf system like Apache, it is not commonly used for retail hosting providers.
