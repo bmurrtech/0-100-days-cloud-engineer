@@ -157,7 +157,7 @@ The Raspberry-Pi-Killer :knife:
 
 ### Week 2 of Linux
 - [Linux Week 2 infograph overview](https://d18ky98rnyall9.cloudfront.net/06EkHSmFTT-hJB0phb0_Sw_1bc88a9afcaa46eb9afb6f9ae566daf1_LinuxSpecializationCourse1Module2.pdf?Expires=1666828800&Signature=aoPuF1waD9uQQUAOz2mXi4u2Ohb0-Sj6Qu-vji6gUpPJRdpHo3CkcdtEyk7vWUwXsQ9J3qtqZjdV1E2yRPdLZma0OSIALI5h0thXB9sSPt2bWBCK6BvBjI1u9OnuxPMzH0qIzgVirooIa4lmCIeQGoJ2jglClA9cVdqD9EvOR0E_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A)
-- **L1: Servers v Desktops**
+#### L1: Servers v Desktops
   - Severs: focuses on programs that proved shared resources/services
   - Desktop: focuses on programs that run in a Graphical User Interface (GUI)
   - Servers run prog in two primary ways: 1. as a background process (always running and listening to requests) 2. a process spawned by a parent program that listens for requests
@@ -169,18 +169,18 @@ The Raspberry-Pi-Killer :knife:
   - database servers
   - mail servers
   - network resources servers (DHCP, logging, etc.)
-- Review L1:
+- **Review L1**
   - A Linux *desktop* has programs designed around GUI interactive apps
   - A Linux *server* has programs designed around bakground serviecs that share resources
   - Deamons often end with the letter "d" in their name
-- **L2 Web Servers**
+#### L2 Web Servers
 ![alt_text](./images/kinsta-hosting-architecture.png)[^kinstawebserver]
 [^kinstawebserver]: Photo Credits go to [Kinsta.com](https://kinsta.com/blog/nginx-vs-apache/)
   - Web servers listen on port 80 and 443 for incoming requests and assign the request to a process to return the response from the following providers:
   - *Apache*: free, open-source, cross-platform web server software released under Apache Lic. 2.0, 1995, compled modules extend core funct. w/server-side languages (i.e. PHP, Python, Pearl, Tcl, etc.)
   - *NGINX*: free, open-source, cross-platform web server software released under FreeBSD licence in 2004; owned by F5 Networks; modular, event-driven architecture can provide predictable performance under high loads (build time); *most popular web server* today with 432M servers running as of April 2021
   - *Lighttpd*: free, open-source, cross-platform web server software released under FreeBSD Licence in 2015; used in the past by several high-traffic websites (ex. YouTube); 33M servers running as of April 2021.
-- Reveiew L2:
+- **Reveiew L2**
   - Web servers run in the backgorund and serve HTTP and HTTPS requests
   - Apache is used by more sahred hosting providers
   - Nginx has taken much of the web server market because of performance
@@ -195,3 +195,17 @@ The Raspberry-Pi-Killer :knife:
   - A *reverse proxy* "sits in front of a web server and receives all the requests before they reach the origin server and can enhance performance, reliability, and security of the web server."[^reverseproxy]
 [^reverseproxy]: [Kinsta.com, *How To Set Up a Reverse Proxy..."](https://kinsta.com/blog/reverse-proxy/)
   - Because NGINX does not have a conf system like Apache, it is not commonly used for retail hosting providers.
+#### L3 - Database Servers
+- Database Servers listen on the network for incoming requests (often SQL) and respond with data
+- Relation Database Model is the dominant used in business applications
+- SQL (Structured Query Language) [Official Documentation](https://dev.mysql.com/doc/mysql-getting-started/en/)
+  - [Learn Basic SQL ft. Network Chuck](https://youtu.be/xiUTqnI6xk8)
+  - Standard query language for DBMS
+  - You can use SQL queries to retrieve data according to some criteria (i.e. retrieve name, phone, and email for customers in a specific zip code)
+  - `SELECT name, phone, email FROM customers where zip_code = '01234'`
+- NoSQL Database model is **document focused**
+- *CRUD* stands for **C**reate **R**ead **U**pdate **D**elete
+- **L3 Rview**
+  - Both Relational and NoSQL support CRUD operations
+  - Relational is transactional focused
+  - NoSQL is document focused
