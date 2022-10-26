@@ -1,14 +1,16 @@
-0-100 Days to Cloud Engineer
-
 ![alt text](./images/0-100_Days_to_Cloud_Engineer.png)[^bannermaker]
 [^bannermaker]: Created in [Banner Maker](https://banner.godori.dev/)
-# Road to Cloud Dev in 100 Days
-Follow my daily journey to becoming a certified Cloud Engineer.
+# Road to Cloud DevOps Engineer in 100 Days
+Follow my daily journey of becoming a certified Cloud Engineer.
 
 >He who aims at perfection<br>will probably miss the mark,<br>but he who aims at nothing,<br>is sure to hit it every time.
 >
 ><br>--<cite>*Henry Wheeler Shaw, 1876*</cite>
 <br>
+
+**Table of Notable Achievements & Resources:**
+1. [Linux Command Lines 1](#linux-command-lines-1)
+1.
 
 To-do:<br>
 - [ ] Visual roadmap to Cloud Engineer (design in Canva)
@@ -17,28 +19,8 @@ To-do:<br>
   - [ ] Step 1 - Markdown Resume (in this repo)
   - [ ] Step 2 - Create Resume using LaTeX[^tyalt1resume]
 [^tyalt1resume]: Inspiration credit goes to [Tlyer Alterio](https://github.com/tyalt1/Resume)  
-- [ ] Homelab NAS Projects (run on Ubuntu server):
-  - [ ] **Priority** [ ] Self-hosting cybersecurity | [click here]([place-holder](https://github.com/bmurrtech/0-100-days-cloud-engineer/blob/main/home_network_cybersecurity.md)) for step-by-step process and documentation
-  - [ ] Docker Containers to run all the following web apps
-  - [ ] Homer (interface for NAS)
-  - [ ] Nextcloud (dropbox and google cloud alternative; calendar + contact sync)
-  - [ ] Jellyfin media server (install on Synology NAS)
-  - [ ] Openbooks (ebooks media server)
-  - [ ] Deluge (BitTorrent client written in Python)
-  - [ ] Jakcett (torrent tracker) + Sonarr & Radarr
-  - [ ] PhotoPrism - The iPhone Photo Killer (set up automation in WebDav to auto-upload)
-  - [ ] BitWarden | run [VaultWarden - open-source compatible server](https://github.com/dani-garcia/vaultwarden)
-  - [ ] Pi-KVM (video-capture of home server: HDMI capture card + Raspberry Pi)
-  - [ ] PiHole (VPN into home network, local DNS server, recursive DNS resolver, run Unbound)
-  - [ ] pfSense (VLANs, cybersecurity, port-forwarding)
-  - [ ] HomeAssistant (for home automation)
 
-**Table of Key Learning Points & Resources:**
-1. [Linux Command Lines 1](#linux-command-lines-1)
-1. [Raspberry-Pi-killer Home Lab Mini PC](#zima-board)
-1.
-
-## Day :one:
+# Day :one:
 - Started a course I thought would be everything I needed to become a DevOps Cloud Engineer
 - First 5 hours into the course was all about the history of DevOps: agile, social coding, collaboration of developers and operations, etc.
 - Listened to a cloud engineer livestream interview of an IT professional’s story of how he transitioned to cloud engineering.
@@ -49,7 +31,7 @@ To-do:<br>
   - He later realized that he lacked basic Linux, Bash scripting, and Python skills
   - He started Python on codecademy, completed 50% and got hired as a jr. cloud engineer months later (he said codecademy it is worth every penny)
 
-## Day :two:
+# Day :two:
 
 - Ditched the first DevOps IBM course to deep-dive into research of what it really takes to be a cloud engineer
 - Started searching job listings for the top required and most common skills mentioned
@@ -60,7 +42,7 @@ To-do:<br>
 - Found courses for Linux LFCA Certification, Google Cloud Associate certification prep, and Python
 - Created roadmap and timeline (visualizing my goals)
 
-## Day 3 :three:
+# Day 3 :three:
 - Completed required job skill research
 - Completed creating learning roadmap by identifying key courses and optimizing for maximum learning to hours invested ratio
 - Purchased [bmurr.tech](https://www.bmurr.tech) domain name with SSL and email mailbox
@@ -69,7 +51,7 @@ To-do:<br>
 - Made a stunning [About Me Github page](https://github.com/bmurrtech)
 - Learned about and started utilizing [basic markdown syntax](https://www.markdownguide.org/cheat-sheet/)
 
-### Learning About Linux History and Distributions
+## Learning About Linux History and Distributions
 - Enrolled into Linux Fundamentals (Learn Quest) course through Coursera Plus subscription
 - Started Week 1 of the course
 - Learned the history of Linux.
@@ -82,7 +64,7 @@ To-do:<br>
 - Ubuntu is based on Debian (major category of distribution); free to download; ideal for desktop, server, core IoT devices, and robots (note about support: every two years a new update is released and long-term support is offered for 5 years total)
 - Debian comes in stable, testing, and untested; similar to Ubuntu but Debian focuses on freedom (community-driven)
 
-### Linux Command Lines 1
+## Linux Command Lines 1
 - Resource: [Linux CLI Intro Guide](https://linuxjournal.com/content/linux-command-line-interface-introduction-guide)
 - 90% of the cloud is Linux based
 - ssh is faster than interacting with a GUI
@@ -112,7 +94,7 @@ To-do:<br>
 | clear | to clear the screen and start all over |
 | history | will show a historical list of commands that were entered in the terminal session |
 
-## Day :four:
+# Day :four:
 - Completed Week 1 of Linux Fund. 100% score on week 1 module quiz :raised_hands: in 1-2 days. See the [Linux week 1 overview](https://d18ky98rnyall9.cloudfront.net/qRQY1L8KRNeUGNS_CnTXuQ_af9f7d4c30204287ac279be086d0c1f1_LinuxSpecializationCourse1Module1.pdf?Expires=1666656000&Signature=UJCINfl9vmCn1I33lc9u3J1zjFtZqeHU5Y33vUs2l35LE2GHXeaxIR~FvMFsgcCcfRKZ2~vk7v8g~wU6eskvWli0NK03Ghx85~Z3hstrd-tjtlCB58xGM0B0EY~nVB2gBYCiWyx5VmOw8JkKo8bPdArWbZOAMpE06p5BTXn4SqU_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A).
 - Learned how to add folders to Git repository
   1. Go to the folder inside which you want to create another folder
@@ -128,7 +110,7 @@ To-do:<br>
 - Witnessed the power of Nginx as a load balancer
 - Learned that Linux largely depends upon the x86 architecture (making arm64, Raspberry Pi's, not ideal for full Kubernetes compatibility)
 - Created IT resume and applied for IT specialist jobs focused in DevOps or Linux-based responsibilities
-### Zima Board
+## Zima Board
 The Raspberry-Pi-Killer :knife:
 ![alt text](./images/zimaboard1.jpg)
 - Found out about [ZimaBoard](https://www.zimaboard.com/zimaboard/product), for home lab setup.
@@ -144,7 +126,7 @@ The Raspberry-Pi-Killer :knife:
   1. Compatible OS Linux/Windows/OpenWrt/pfSense/Android/Libreelec
   1. Passive Cooling
 
-## Day :five:
+# Day :five:
 - Watched [Wolfgang Home Server Ansible Setup video](https://youtu.be/f5jNJDaztqk?t=1334) & was inspired to take on personal homelab/network project utilizing existing my server hardware from home
 - Added [cybersecurity.md](https://github.com/bmurrtech/0-100-days-cloud-engineer/blob/main/home_network_cybersecurity.md) for personal home NAS security project
 - Added [Ansible Data Dump .md](https://github.com/bmurrtech/0-100-days-cloud-engineer/blob/main/ansible-nas-doc.md) for future reference, for Ansible learning, & for Ansible automation home server project
@@ -155,9 +137,9 @@ The Raspberry-Pi-Killer :knife:
 - Made a to-do list for major [home server project](https://github.com/bmurrtech/0-100-days-cloud-engineer/blob/main/home_network_cybersecurity.md) (I want to showcase Linux, containerization, & Ansible automation skills in the future)
 - Signed up for [Python Morsels](https://www.pythonmorsels.com/billing/pricing/) - weekly guided Python practice exercises
 
-### Week 2 of Linux
+## Week 2 of Linux
 - [Linux Week 2 infograph overview](https://d18ky98rnyall9.cloudfront.net/06EkHSmFTT-hJB0phb0_Sw_1bc88a9afcaa46eb9afb6f9ae566daf1_LinuxSpecializationCourse1Module2.pdf?Expires=1666828800&Signature=aoPuF1waD9uQQUAOz2mXi4u2Ohb0-Sj6Qu-vji6gUpPJRdpHo3CkcdtEyk7vWUwXsQ9J3qtqZjdV1E2yRPdLZma0OSIALI5h0thXB9sSPt2bWBCK6BvBjI1u9OnuxPMzH0qIzgVirooIa4lmCIeQGoJ2jglClA9cVdqD9EvOR0E_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A)
-#### L1: Servers v Desktops
+### L1: Servers v Desktops
   - Severs: focuses on programs that proved shared resources/services
   - Desktop: focuses on programs that run in a Graphical User Interface (GUI)
   - Servers run prog in two primary ways: 1. as a background process (always running and listening to requests) 2. a process spawned by a parent program that listens for requests
@@ -171,17 +153,17 @@ The Raspberry-Pi-Killer :knife:
   - network resources servers (DHCP, logging, etc.)
 - **Review L1**
   - A Linux *desktop* has programs designed around GUI interactive apps
-  - A Linux *server* has programs designed around bakground serviecs that share resources
+  - A Linux *server* has programs designed around background services that share resources
   - Deamons often end with the letter "d" in their name
-#### L2 Web Servers
+### L2 Web Servers
 ![alt_text](./images/kinsta-hosting-architecture.png)[^kinstawebserver]
 [^kinstawebserver]: Photo Credits go to [Kinsta.com](https://kinsta.com/blog/nginx-vs-apache/)
   - Web servers listen on port 80 and 443 for incoming requests and assign the request to a process to return the response from the following providers:
-  - *Apache*: free, open-source, cross-platform web server software released under Apache Lic. 2.0, 1995, compled modules extend core funct. w/server-side languages (i.e. PHP, Python, Pearl, Tcl, etc.)
-  - *NGINX*: free, open-source, cross-platform web server software released under FreeBSD licence in 2004; owned by F5 Networks; modular, event-driven architecture can provide predictable performance under high loads (build time); *most popular web server* today with 432M servers running as of April 2021
-  - *Lighttpd*: free, open-source, cross-platform web server software released under FreeBSD Licence in 2015; used in the past by several high-traffic websites (ex. YouTube); 33M servers running as of April 2021.
-- **Reveiew L2**
-  - Web servers run in the backgorund and serve HTTP and HTTPS requests
+  - *Apache*: free, open-source, cross-platform web server software released under Apache Lic. 2.0, 1995, compiled modules extend core funct. w/server-side languages (i.e. PHP, Python, Pearl, Tcl, etc.)
+  - *NGINX*: free, open-source, cross-platform web server software released under FreeBSD license in 2004; owned by F5 Networks; modular, event-driven architecture can provide predictable performance under high loads (build time); *most popular web server* today with 432M servers running as of April 2021
+  - *Lighttpd*: free, open-source, cross-platform web server software released under FreeBSD License in 2015; used in the past by several high-traffic websites (ex. YouTube); 33M servers running as of April 2021.
+- **Review L2**
+  - Web servers run in the background and serve HTTP and HTTPS requests
   - Apache is used by more sahred hosting providers
   - Nginx has taken much of the web server market because of performance
 - Additional web server reading [Nginx v Apache](https://kinsta.com/blog/nginx-vs-apache/)
@@ -191,11 +173,11 @@ The Raspberry-Pi-Killer :knife:
   - Apache was made popular by its *dynamic module system*. A *module* is a feature that allows users to extend web server functionality. A list of modules can be found [here](https://httpd.apache.org/docs/2.4/mod/)
   - Nginx was created by a Russian dev, Igo Sysoev.
   - Nginx has a paid (Nginx Plus) and free version (BSD-type license).
-  - Nginx was orginally used as a *load-balancer* or *reverse proxy*
+  - Nginx was originally used as a *load-balancer* or *reverse proxy*
   - A *reverse proxy* "sits in front of a web server and receives all the requests before they reach the origin server and can enhance performance, reliability, and security of the web server."[^reverseproxy]
 [^reverseproxy]: [Kinsta.com, *How To Set Up a Reverse Proxy..."](https://kinsta.com/blog/reverse-proxy/)
   - Because NGINX does not have a conf system like Apache, it is not commonly used for retail hosting providers.
-#### L3 - Database Servers
+### L3 - Database Servers
 - Database Servers listen on the network for incoming requests (often SQL) and respond with data
 - Relation Database Model is the dominant used in business applications
 - SQL (Structured Query Language) [Official Documentation](https://dev.mysql.com/doc/mysql-getting-started/en/)
@@ -205,7 +187,7 @@ The Raspberry-Pi-Killer :knife:
   - `SELECT name, phone, email FROM customers where zip_code = '01234'`
 - NoSQL Database model is **document focused**
 - *CRUD* stands for **C**reate **R**ead **U**pdate **D**elete
-- **L3 Rview**
+- **L3 Review**
   - Both Relational and NoSQL support CRUD operations
   - Relational is transactional focused
   - NoSQL is document focused
