@@ -1,7 +1,6 @@
-![alt text](./images/0-100_Days_to_Cloud_Engineer.png)[^bannermaker]
-[^bannermaker]: Created in [Banner Maker](https://banner.godori.dev/)
-# Road to Cloud DevOps Engineer in 100 Days
-Follow my daily journey of becoming a certified Cloud Engineer.
+![alt text](./images/road_to_cloud_dev.gif)[^canva]
+[^canva]: Created in [Canva](https://www.canva.com/))
+# Follow my daily journey to certified Cloud DevOps Engineer
 
 >He who aims at perfection<br>will probably miss the mark,<br>but he who aims at nothing,<br>is sure to hit it every time.
 >
@@ -139,11 +138,12 @@ The Raspberry-Pi-Killer :knife:
 
 ## Week 2 of Linux
 - [Linux Week 2 infograph overview](https://d18ky98rnyall9.cloudfront.net/06EkHSmFTT-hJB0phb0_Sw_1bc88a9afcaa46eb9afb6f9ae566daf1_LinuxSpecializationCourse1Module2.pdf?Expires=1666828800&Signature=aoPuF1waD9uQQUAOz2mXi4u2Ohb0-Sj6Qu-vji6gUpPJRdpHo3CkcdtEyk7vWUwXsQ9J3qtqZjdV1E2yRPdLZma0OSIALI5h0thXB9sSPt2bWBCK6BvBjI1u9OnuxPMzH0qIzgVirooIa4lmCIeQGoJ2jglClA9cVdqD9EvOR0E_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A)
+
 ### L1: Servers v Desktops
   - Severs: focuses on programs that proved shared resources/services
   - Desktop: focuses on programs that run in a Graphical User Interface (GUI)
   - Servers run prog in two primary ways: 1. as a background process (always running and listening to requests) 2. a process spawned by a parent program that listens for requests
-- *Deamon* when a Linux services runs continually in the background, it is called a *deamon* and this processes often end in the letter "d" (ex. "mysqld")
+- *Daemon* when a Linux services runs continually in the background, it is called a *daemon* and this processes often end in the letter "d" (ex. "mysqld")
 - Major service types include:
   - file servers
   - print servers
@@ -151,10 +151,12 @@ The Raspberry-Pi-Killer :knife:
   - database servers
   - mail servers
   - network resources servers (DHCP, logging, etc.)
+
 - **Review L1**
   - A Linux *desktop* has programs designed around GUI interactive apps
   - A Linux *server* has programs designed around background services that share resources
-  - Deamons often end with the letter "d" in their name
+  - Daemons often end with the letter "d" in their name
+
 ### L2 Web Servers
 ![alt_text](./images/kinsta-hosting-architecture.png)[^kinstawebserver]
 [^kinstawebserver]: Photo Credits go to [Kinsta.com](https://kinsta.com/blog/nginx-vs-apache/)
@@ -162,6 +164,7 @@ The Raspberry-Pi-Killer :knife:
   - *Apache*: free, open-source, cross-platform web server software released under Apache Lic. 2.0, 1995, compiled modules extend core funct. w/server-side languages (i.e. PHP, Python, Pearl, Tcl, etc.)
   - *NGINX*: free, open-source, cross-platform web server software released under FreeBSD license in 2004; owned by F5 Networks; modular, event-driven architecture can provide predictable performance under high loads (build time); *most popular web server* today with 432M servers running as of April 2021
   - *Lighttpd*: free, open-source, cross-platform web server software released under FreeBSD License in 2015; used in the past by several high-traffic websites (ex. YouTube); 33M servers running as of April 2021.
+
 - **Review L2**
   - Web servers run in the background and serve HTTP and HTTPS requests
   - Apache is used by more sahred hosting providers
@@ -177,6 +180,7 @@ The Raspberry-Pi-Killer :knife:
   - A *reverse proxy* "sits in front of a web server and receives all the requests before they reach the origin server and can enhance performance, reliability, and security of the web server."[^reverseproxy]
 [^reverseproxy]: [Kinsta.com, *How To Set Up a Reverse Proxy..."](https://kinsta.com/blog/reverse-proxy/)
   - Because NGINX does not have a conf system like Apache, it is not commonly used for retail hosting providers.
+  - 
 ### L3 - Database Servers
 - Database Servers listen on the network for incoming requests (often SQL) and respond with data
 - Relation Database Model is the dominant used in business applications
@@ -187,7 +191,45 @@ The Raspberry-Pi-Killer :knife:
   - `SELECT name, phone, email FROM customers where zip_code = '01234'`
 - NoSQL Database model is **document focused**
 - *CRUD* stands for **C**reate **R**ead **U**pdate **D**elete
+
 - **L3 Review**
   - Both Relational and NoSQL support CRUD operations
   - Relational is transactional focused
   - NoSQL is document focused
+
+# Day :six:
+- researched some AWS cloud project ideas
+- created new banner in .gif format
+- organzied goals and projects by creating new .md files
+
+### L4 Managing Serviecs
+- Init Process - an init program or systemd is the parent process for every process
+- init will show the location of the init process (i.e. `readlink -f /usr/sbin/init`)
+- [*Systemd*](https://en.wikipedia.org/wiki/Systemd) a software suit that provides an array of system components for Linux operating systems.
+  - Its main aim is to unify service configuration & behavior across Linux distributions
+
+- **Managing Service Command with Systemd**
+  - `sudo systemctl start [application.server]`
+  - `sudo systemctl stop [application.server]`
+  - `sudo systemctl restart [application.server]`
+  - `sudo systemctl reload [application.server]`
+  - `sudo systemctl enable [application.server]`
+  - `sudo systemctl disable [application.server]`
+  - `sudo systemctl status [application.server]`
+
+- **L4 Review**
+  - Systemd is the new standard for service configuration
+  - The `which init` command will allow you to see where you process init is located
+  - The `readlink` command will allow you to see what process controls your service configuration
+
+-**L4 Lab 1**
+  - `ps -aux` shows processes currently running & display the process identifier (PID) number
+  - `kill -9 [PID]` to kill the process of a certain PID
+  - restart mysqld using the `mysqld` command to run process in the **fore**ground
+  - restart mysql via `mysqld &` to run process in the **back**ground
+
+-**L4 Lab 2** - Install a Linux distro on a VM. Share distro version and name the process used as "PID 1"
+  - [ ] Install Docker on Synology NAS (this will create a "docker" folder in your "File Station"
+    - [ ] 1. Open the "Package Center" app on the Synology NAS 2. Search for "Docker" 3. Click "install" to get Docker
+  - [ ] Install a Linux distribution image (ISO) from the Docker application in a new Container
+    - [ ] Go to "Registry" and search for a Linux distro (i.e. CentOS/systemd:latest) 2. Double click on the OS you want to download. 3. Once the image has been downloaded, click on "Container" from the Docker app (see the left pane). 3. Select the OS you want to install in a new Container. 4. Choose whether or not you want to be able to edit ports or not (if not, select the "Use the same network as Docker Host" bubble) 5. Name the Container 6. Decide if you want to give the Container root permissions to your Synology NAS OS. If not, uncheck the "Execute container with high priviledge." 7. Check "Enable resouce limitation" to set a limit to the PC resources. 8. Hit Next
