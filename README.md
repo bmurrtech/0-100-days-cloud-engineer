@@ -222,14 +222,55 @@ The Raspberry-Pi-Killer :knife:
   - The `which init` command will allow you to see where you process init is located
   - The `readlink` command will allow you to see what process controls your service configuration
 
--**L4 Lab 1**
+- **L4 Lab 1**
   - `ps -aux` shows processes currently running & display the process identifier (PID) number
   - `kill -9 [PID]` to kill the process of a certain PID
   - restart mysqld using the `mysqld` command to run process in the **fore**ground
   - restart mysql via `mysqld &` to run process in the **back**ground
 
--**L4 Lab 2** - Install a Linux distro on a VM. Share distro version and name the process used as "PID 1"
-  - [ ] Install Docker on Synology NAS (this will create a "docker" folder in your "File Station"
-    - [ ] 1. Open the "Package Center" app on the Synology NAS 2. Search for "Docker" 3. Click "install" to get Docker
-  - [ ] Install a Linux distribution image (ISO) from the Docker application in a new Container
-    - [ ] Go to "Registry" and search for a Linux distro (i.e. CentOS/systemd:latest) 2. Double click on the OS you want to download. 3. Once the image has been downloaded, click on "Container" from the Docker app (see the left pane). 3. Select the OS you want to install in a new Container. 4. Choose whether or not you want to be able to edit ports or not (if not, select the "Use the same network as Docker Host" bubble) 5. Name the Container 6. Decide if you want to give the Container root permissions to your Synology NAS OS. If not, uncheck the "Execute container with high priviledge." 7. Check "Enable resouce limitation" to set a limit to the PC resources. 8. Hit Next
+- **L4 Lab 2**
+  - [x] Install a Linux distro in Docker.
+  - [x] Share distro version and name the process used as "PID 1" with peers in Linux course.
+
+**CentOS - Docker Container**
+
+ - Install Docker on Synology NAS (this will create a "docker" folder in your "File Station"
+    - Open the "Package Center" app on the Synology NAS
+    - Search for "Docker"
+    - Click "install" to get Docker
+ - Install a Linux distribution image (ISO) from the Docker application in a new Container
+    - Go to "Registry" and search for a Linux distro (i.e. CentOS/systemd:latest)
+    - Double click on the OS you want to download. 
+    - Once the image has been downloaded, click on "Container" from the Docker app (see the left pane).
+    - Select the OS you want to install in a new Container.
+    - Choose whether or not you want to be able to edit ports or not (if not, select the "Use the same network as Docker Host" bubble)
+    - Name the Container
+    - Decide if you want to give the Container root permissions to your Synology NAS OS. If not, uncheck the "Execute container with high priviledge."
+    - Check "Enable resouce limitation" to set a limit to the PC resources.
+    - Hit Next to move to port settings (if you enabled it earlier). You want to ensure that port 80 (HTTP) is enbaled. Input a arbitrary number for the internal port and hit next.
+  - Now you must create a volume folder for CentOS. Click create folder and name the folder inside the "docker" folder that was created on the initial Docker install (i.e. `/centos`). Inside this parent folder, add another folder named whatever you like. This child folder will be the folder path for the CentOS volume. 
+  - After you have created the subfolder in, you need to give CentOS a path. So type in `/path` inside the folder input box you created.
+  - Hit next and check the box that says "run this container after the wizard is finished" &, finally, click "done"
+  - If you did everything correctly, you should now see the OS you installed running in in the "Overivew" tab of Docker <br> ![alt_text](./images/centos_docker.jpg)
+
+
+- **NextCloud - Docker Container**
+  - Navigate to the [Docker Hub for NextCloud](https://hub.docker.com/r/linuxserver/nextcloud)
+  - Copy the `/linuxserver/nextcloud` line (see photo) <br>![alt_text](./images/linux_nextcloud.jpg)
+  - Click on "Image" from the selection menu in Docker, and paste the line into the "Hub Page" box. Hit "Add" and wait for the next popup screen.
+  - Next choose the appropriate tag for your CPU architecture (select "latest" if you are using any of the + models of the Synology NAS or you have a x86 CPU. Note: the Raspberry Pi is arm64 architecture and will require a different, compt. tag.)
+  - Double-click the image to start the image install
+  - Name the Container & decide if you want to give the Container root permissions to your Synology NAS OS. If not, uncheck the "Execute container with high priviledge."
+  - Check "Enable resouce limitation" to set a limit to the PC resources.
+  - Choose whether or not you want to be able to edit ports or not (if not, select the "Use the same network as Docker Host" bubble) 
+  - Click on "Advance Settings" and configure add a "GUID" line and a "PUID" line, also enter 1000 for both values. These numbers can be found at the [Docker Hub for NextCloud](https://hub.docker.com/r/linuxserver/nextcloud). Click "Save."
+  - Hit Next to move to port settings (if you enabled it earlier). Here you can set up a Reverse Proxy or just enter an arbitrary number for the ports. Hit next again.
+  - Now you must create two folder paths for NextCloud to function. One for `/data` and one for `/config`. The folder system can be formated as follows: docker > NextCloud > data and docker > NextCloud > config.
+  - Once you have created the parent and child/subfolders, you can now map the NextCloud paths to these two folders. Enter `/data/` in the "data" folder box, and enter `/config` in the "config" folder box (see screenshot for example). <br> ![alt_text](./images/nextcloud_paths.jpg)
+
+- **Access the Terminal of the OS in the Docker Container**
+  - Select "Containers" in the Docker app
+  - Double-click the OS you wish to access
+  - Click on the "Terminal" tab to access the Terminal CLI
+  - Click "Create" and that will make a new item on the list called "bash."
+  - Click on "bash" to access the CentOS Docker Terminal.
