@@ -1,0 +1,20 @@
+# My Project Ideas
+- [ ] [Deploy WordPress website in AWS](https://www.aosnote.com/offers/xFzqby9z/checkout) (use `TECHWITHLUCY` promo code at check out for 20% off)
+  - [ ] Add "AWS Project. Deployed and hosted a highly-available WordPress app using EC2, RDS, Route 53, ASG, and VPC." to resume
+- [ ] [Serverless Web Application on AWS](https://aws.amazon.com/getting-started/hands-on/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/)
+- [ ] [Chat Bot Amazon Connect Call Center on AWS](https://github.com/aws-samples/amazon-lex-connect-workshop)
+- [ ] Homelab NAS Projects (run on Ubuntu server):
+  - [ ] **Priority** [ ] Self-hosting cybersecurity | [click here]([place-holder](https://github.com/bmurrtech/0-100-days-cloud-engineer/blob/main/home_network_cybersecurity.md)) for step-by-step process and documentation
+  - [ ] Docker Containers to run all the following web apps
+  - [ ] Homer (interface for NAS)
+  - [ ] Nextcloud (dropbox and google cloud alternative; calendar + contact sync)
+  - [ ] Jellyfin media server (install on Synology NAS)
+  - [ ] Openbooks (ebooks media server)
+  - [ ] Deluge (BitTorrent client written in Python)
+  - [ ] Jakcett (torrent tracker) + Sonarr & Radarr
+  - [ ] PhotoPrism - The iPhone Photo Killer (set up automation in WebDav to auto-upload)
+  - [ ] BitWarden | run [VaultWarden - open-source compatible server](https://github.com/dani-garcia/vaultwarden)
+  - [ ] Pi-KVM (video-capture of home server: HDMI capture card + Raspberry Pi)
+  - [ ] PiHole (VPN into home network, local DNS server, recursive DNS resolver, run Unbound)
+  - [ ] pfSense (VLANs, cybersecurity, port-forwarding)
+  - [ ] HomeAssistant (for home automation)
