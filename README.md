@@ -274,3 +274,78 @@ The Raspberry-Pi-Killer :knife:
   - Click on the "Terminal" tab to access the Terminal CLI
   - Click "Create" and that will make a new item on the list called "bash."
   - Click on "bash" to access the CentOS Docker Terminal.
+
+# Day :7:
+
+- Learned more about the `kill` command
+  - `kill -l` will list all the types of kill commands and numbers
+  - `kill -9` is "SIGKILL" which means immediate, forced killing of a process
+  - `kill -15` is "SIGTERM" is the default kill command (which may not always kill the process)
+  - CTRL + Z is a hotkey shortcut for "SIGSTOP" or `kill -19`
+  - Pressing CTRL + Z a 2nd time in a row will run "SIGCONT" or `kill -18`
+  - CTRL + C is "SIGINT" or `kill -2`
+ 
+ - `ps` commands is how we see running processes to kill, but there are variants:
+    - `ps -aux` displays all processes
+    - `ps -u` shows processes for the user only
+    - `ps -u | grep [term]` (*grep* - global regular expression print; Linux-lingo for finding/filtering stuff)
+    - `pgrep [term]` to print the PID (process ID) to kill it with the `kill` command; *note* not all syst will have `pgrep` installed
+    - `ps --help simple` will print the `ps` options
+   - `top` or `htop` will show you the running processes sorted by CPU usage (hit "q" to exit)
+
+ - Programs can run in the foreground (CTRL + C will stop it)
+   - utilize `ping -c [number] [website]`
+   - `sleep 20`
+   - CTRL + Z (kill sleeper shortcut)
+   - `jobs` will list the sleeping foreground processes
+ - Programs can also run in the background (CTRL + C will not stop it)
+   - if the program is running in the fg, type `bg [job_ID_number] to put it in the bg
+   - if you want to start a program in the bg immediately, type `ping `c [number] [website] **&**`
+   - type `fg [job_ID_number]` to put the background process back to foreground and CTRL + C to kill it
+  - Programs have 4 states:
+    - Running
+    - Waitig (waiting for an event or system resource)
+    - Stopped ("T" : "traced" or stopped)
+    - Zombie (stopped but still has an entry in the process table)
+
+- Discovered a Linux simulation/emulator/virtualization app for iPad and iPhone called [iSH Shell](https://apps.apple.com/us/app/ish-shell/id1436902243)
+- Top APKs to install
+  - `apk add bash`
+  - `apk add openssh` (to remote access any Linux-based servers)
+  - `apk add net-tools`
+  - `apk add vim`
+  - `apk add curl`
+  - `apk add git`
+  - `apk add wget`
+  - `apk add python3` (to install py3) `python3 --version` (to check ver)
+  - pip install (regular pip install doesn't work) must run: `python3 -m ensurepip` (*note* pip is very slow in this app, do not restart, it is just slow)
+  - `pip3 install vitrualenv`
+- Create Vitrual Environment (VE) in iSh Shell to Install Packages:
+  - Create a new folder: `makedir [folder_name]`
+  - Go to that folder: `cd [folder_name]`
+  - Create a VE: `vitrualenv venv`
+  - Load the VE: `source venv/bin/activate`
+- VE Packages:
+  - Healdless Selenium: `pip3 install selenium` (web automation, web scrapping)
+  - Django to check your server `pip3 install django`
+  - **Note: Cannot not intall Pandas** :(
+- ~~How to Install Alpine Linux on iPad~~
+- Python IDEs (on iPad)
+  - Pythonista3 - $15
+    - clean interface
+    - great for beginners learning scripting
+    - no pandas, so for not ideal for data science
+  - Pyto - $15
+    - No natural language processing (i.e. cannot run an LP or LTK)
+    - Indentation editor issues (throws random errors at times)
+    - Can install additional packages
+  - Carnets - Free
+    - Jupiter-like interface 
+    - Ideal for data science newbies
+    - SeaBorn does not work (no visualizations)
+    - Requires multiple reboots
+  - Python Interpreter - $7
+    - Supports "Sublime" text
+    - Many pre-installed packages
+    - Easy-to-use interface
+    - Can't install custom packages (even if you pay for it)
