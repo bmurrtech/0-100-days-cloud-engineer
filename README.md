@@ -275,7 +275,7 @@ The Raspberry-Pi-Killer :knife:
   - Click "Create" and that will make a new item on the list called "bash."
   - Click on "bash" to access the CentOS Docker Terminal.
 
-# Day :7:
+# Day :seven:
 
 - Learned more about the `kill` command
   - `kill -l` will list all the types of kill commands and numbers
@@ -284,6 +284,7 @@ The Raspberry-Pi-Killer :knife:
   - CTRL + Z is a hotkey shortcut for "SIGSTOP" or `kill -19`
   - Pressing CTRL + Z a 2nd time in a row will run "SIGCONT" or `kill -18`
   - CTRL + C is "SIGINT" or `kill -2`
+  - `pkill -9 [job_name]` does not require a PID, but a job name.
  
  - `ps` commands is how we see running processes to kill, but there are variants:
     - `ps -aux` displays all processes
