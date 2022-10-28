@@ -300,8 +300,8 @@ The Raspberry-Pi-Killer :knife:
    - CTRL + Z (kill sleeper shortcut)
    - `jobs` will list the sleeping foreground processes
  - Programs can also run in the background (CTRL + C will not stop it)
-   - if the program is running in the fg, type `bg [job_ID_number] to put it in the bg
-   - if you want to start a program in the bg immediately, type `ping `c [number] [website] **&**`
+   - if the program is running in the fg, type `bg [job_ID_number]` to put it in the bg
+   - if you want to start a program in the bg immediately, type `ping -c [number] [website] **&**`
    - type `fg [job_ID_number]` to put the background process back to foreground and CTRL + C to kill it
   - Programs have 4 states:
     - Running
@@ -332,20 +332,20 @@ The Raspberry-Pi-Killer :knife:
   - **Note: Cannot not intall Pandas** :(
 - ~~How to Install Alpine Linux on iPad~~
 - Python IDEs (on iPad)
-  - Pythonista3 - $15
+  - *Pythonista3* - $15
     - clean interface
     - great for beginners learning scripting
     - no pandas, so for not ideal for data science
-  - Pyto - $15
+  - *Pyto* - $15
     - No natural language processing (i.e. cannot run an LP or LTK)
     - Indentation editor issues (throws random errors at times)
     - Can install additional packages
-  - Carnets - Free
+  - *Carnets* - Free
     - Jupiter-like interface 
     - Ideal for data science newbies
     - SeaBorn does not work (no visualizations)
     - Requires multiple reboots
-  - Python Interpreter - $7
+  - *Python Interpreter* - $7
     - Supports "Sublime" text
     - Many pre-installed packages
     - Easy-to-use interface
