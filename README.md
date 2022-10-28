@@ -83,15 +83,15 @@ To-do:<br>
 | ls -a | will show the hidden files |
 | ls -al | will list the files and dir with detailed info (ex. permissions, size, owner) |
 | cat | list the contents of a file on the standard output |
-| cat > filename | creates a new file |
-| cat > filename1 filename2>filename3 | joins 2 files and stores the output of them in a new file |
-| cp | copy files |
+| cat > [filename] | creates a new file |
+| cat > [filename1] filename2>filename3 | joins 2 files and stores the output of them in one new file |
+| cp | copies files |
 | mv | move or rename files |
 | mkdir | create a new dir in the current dir |
 | rm | remove file and directories |
-| rm -r | remove dir and all files inside |
 | clear | to clear the screen and start all over |
 | history | will show a historical list of commands that were entered in the terminal session |
+| touch | can create new files & update the time & date |
 
 # Day :four:
 - Completed Week 1 of Linux Fund. 100% score on week 1 module quiz :raised_hands: in 1-2 days. See the [Linux week 1 overview](https://d18ky98rnyall9.cloudfront.net/qRQY1L8KRNeUGNS_CnTXuQ_af9f7d4c30204287ac279be086d0c1f1_LinuxSpecializationCourse1Module1.pdf?Expires=1666656000&Signature=UJCINfl9vmCn1I33lc9u3J1zjFtZqeHU5Y33vUs2l35LE2GHXeaxIR~FvMFsgcCcfRKZ2~vk7v8g~wU6eskvWli0NK03Ghx85~Z3hstrd-tjtlCB58xGM0B0EY~nVB2gBYCiWyx5VmOw8JkKo8bPdArWbZOAMpE06p5BTXn4SqU_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A).
@@ -362,18 +362,77 @@ The Raspberry-Pi-Killer :knife:
 
 - [x] Linux Foundations Week 2 Complete
 
-# Day :eight:
-- Handle Files & Directories
-- CLI Commands:
+# Day :eight: 
+
+## Create a New Linux User w/Sudo Permissions
+
+- Why add a different user than root? Security. It is safer to use an accout you create with sudo permissions.
+- `adduser [username]` & then you will be prompted for a password
+- Now to add this new user to the "sudo" permission group: `usermod -aG sudo [username]`
+- `logout` to logout of the current user
+- Now you have to ssh back (log back into) your server by running `ssh [username]@[IP_address]`
+
+## Create an Authentication Key Pair (No user password required at login!)
+
+- Overview: We will create a public key (think lock) and private key (think key to unlock the lock) on within Windows Powershell/Mac or Linux Terminal.
+- First, you need to create a new dir on the remote server. This folder is where you will store the key. Also, you need change/modify (`chmod`) that directory. Here's how:
+  - Logged in on the remote server, type `mkdir ~/.ssh && chmod 700 ~/.ssh`
+- Now, logout of your remote server by typing `logout` and then open Terminal (Mac) or Powershell (Windows) on your primary computer that you will use to access your server.
+- Now that the server has a .ssh dir, you can generate the keys. Type the following in the Terminal/Powershell to generate your public/private keys: `ssh-keygen -b 4096` (`-b [number]` indicates how big you want the key to be)
+- By default, the key will be saved in the C:\Users\[username]/.ss./id_rsa directory of your PC. *Important Note* If you have generated ssh keys before, you could accidentilly overwrite and lose your original keys, which means **you might lose access to servers you already have**. If so, it will say something like "[filedirectory] already exists. Overwrite (y/n)? Do not type "y" if you do not want to lose your existing keys. Save the keys as a different file instead of overwriting it.
+- Next, you will be prompted to input a passphrase for the keys you just generated, but you don't have to use a password if you don't want, in which case, just leave it blank and hit `ENTER`
+- If you want to see the keys, type the following in the terminal/powershell: `cd .ssh` to go to that dir, then `ls` to list the contents of that folder. You should now see two files under the "Name" column which should read, "id_rsa" and "id_rsa.pub". The last thing to do is to upload that "id_rsa.pub" key to your server.
+- *Note:* This process will be different for Mac and Windows.
+  - For **Windows** (inside Powershell): We will use the Security Copy Protocol to copy the public key to the server as follows: (this is a *case-sensitive command*) type, `scp $env:USERPROFILE/.ssh./id_rsa.pub [username]@[IP_address}:~/.ssh/authorized_keys`
+    - You will now be prompted for your username password. Go ahead and enter it (this will be the last time you have to enter it!)
+  - For **Mac** (inside Terminal): type, `scp ~/.ssh./id_rsa.pub [username]@[IP_address}:~/.ssh/authorized_keys`
+  - For **Linux** (inside Terminal): type, `ssh-copy-id [username]@[IP_address]`
+    - To test it, try logging into your remote server through your terminal/powershell, `ssh [username]@[IP_address]`
+    - If it does not ask for your password, congrats! You have successfully set up an authentication key pair or passwordless Linux server login.
+
+## Lockdown All Password Logins
+
+- Overview: Modify the ssgh_config file. Change the default login port number (22). Change to IPv4-only access (by modifying the AddressFamily). Remove Root login. Remove password logins.
+- `sudo nano /etc/ssh/sshd_config` and `ENTER`
+- If you are prompted for the sudo password, enter it to continue to view the file contents (this is the root password you orginally set when you set up the server in the beginning)
+- Toggle down to the line that has "#Port 22" and remove the "#" sign. Next, change 22 to some other not-well-known port number, something random which hackers will not be able to guess easily.
+- Toggle down to "#AddressFamily any" (one under) to change it to read as follows "AddressFamily inet" (this changes it form IPv6 and IPv4 to IPv4-only).
+- Toggle down to "PermiteRootLogin yes" to "PermitRootLogin **no**" (because - no! - we do not want to allow god-like root powers open for hackers to exploit)
+- Toggle down to "PasswordAuthentications yes" and change it to "PasswordAuthentication **no**" *Important Note*: this will absolutely require authentication key pairs login to access the server. Do NOT change this if you did not set up passwordless login (see above for how-to)[#Create an Authentication Key Pair]
+- Press CTRL + X and then press "y' then press `ENTER` to save the custom configuration
+- Next, you must restart the ssh daemon service, type: `sudo  systemctl restart sshd`
+  - Do NOT logout (in case you botched it). Instead, open a new terminal/powershell and login to your server in a separate terminal: `ssh [username]@[IP_address]`
+
+## Handle Files & Directories
+
+### `ls` Commands *Expanded*:
 - `ls [options] [paths]`
   -  `ls -a` - lists all files including hidden files. These are files that start with "."
   -  `ls -A` - list all files including hidden files except for "." & ".." - these refer to entries for the current folder (dir) & for the parent dir
   -  `ls -R` - "recurse" lists all files descending down the dir tree from the given path
   -  `ls -r` - reverse the sorting order
   -  `ls -l` - lists files in long formate (i.e. with an index number, owner name, group name, size, & permissions)
-  -  `ls -o` - lists files in long formate but w/o the **group** name
-  -  `ls -g` - lists files in long formate but w/o the **owner** name
-  -  `ls -i` - lists files **w/index** number
-  -  `ls -s` - lists files **w/size**
-  -  `ls -S` sorts the list be **size** with the *largest at the top*
+  -  `ls -o` - lists files in long formate but w/o the *group* name
+  -  `ls -g` - lists files in long formate but w/o the *owner* name
+  -  `ls -i` - lists files *with index* number
+  -  `ls -s` - lists files *with size*
+  -  `ls -S` *sorts* the list *by size* with the *largest at the top*
   -  `ls -t` - sorts by time of modification with the newest at the top
+
+### File & Directory Links
+
+- *Hard Link* : a file (or dir) with one index number (inode) & at least two different files names
+  - ex. Filename1 -> inode # [] <- Filename2
+  - Linked file is created when command is issued
+  - Create a Hard Link by:
+    - 'ln [original_filename] [linkname]`
+- *Soft Link* : a file with different index numbers (inode).
+  - ex. Filename1 inode # [] -> Filename2 inode # []
+  - Create a soft link by:
+    - `ln -s [original_filename] [linkname]`
+- If you delete the orginal file with a *hard*link, the link still works
+- If you delete the oritinal file with a *soft*link the link will be broken
+- You can link both files and folders
+
+### Reading Files
+
