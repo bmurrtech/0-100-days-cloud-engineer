@@ -319,18 +319,27 @@ The Raspberry-Pi-Killer :knife:
   - `apk add git`
   - `apk add wget`
   - `apk add python3` (to install py3) `python3 --version` (to check ver)
-  - pip install (regular pip install doesn't work) must run: `python3 -m ensurepip` (*note* pip is very slow in this app, do not restart, it is just slow)
-  - `pip3 install vitrualenv`
+  - to install `pip` (regular pip install doesn't work by default), you must run: `python3 -m ensurepip` (*note* pip is very slow in this app, do not restart, it is just slow)
+  - `pip3 install virtualenv`
 - Create Vitrual Environment (VE) in iSh Shell to Install Packages:
-  - Create a new folder: `makedir [folder_name]`
+  - Create a new folder: `mkdir [folder_name]`
   - Go to that folder: `cd [folder_name]`
   - Create a VE: `vitrualenv venv`
   - Load the VE: `source venv/bin/activate`
 - VE Packages:
   - Healdless Selenium: `pip3 install selenium` (web automation, web scrapping)
   - Django to check your server `pip3 install django`
-  - **Note: Cannot not intall Pandas** :(
-- ~~How to Install Alpine Linux on iPad~~
+  - Note: Cannot not intall Pandas :(
+
+
+- How to [Install Alpine Linux on iPad](https://github.com/ish-app/ish)
+  - To set up your environment, cd to the project and run `meson build` to create a build directory in `build`. Then cd to the build directory and run `ninja`.
+  - To set up a self-contained Alpine linux filesystem, download the Alpine minirootfs tarball for i386 from the [Alpine website](https://alpinelinux.org/downloads/) and run `./tools/fakefsify`, with the minirootfs tarball as the first argument and the name of the output directory as the second argument.
+  - Then you can run things inside the Alpine filesystem with `./ish -f alpine /bin/login -f root`, assuming the output directory is called `alpine`.
+  - If `tools/fakefsify` doesn't exist for you in your build directory, that might be because it couldn't find libarchive on your system.
+  - You can replace `ish` with `tools/ptraceomatic` to run the program in a real process and single step and compare the registers at each step.
+  - Requires 64-bit Linux 4.11 or later.
+
 - Python IDEs (on iPad)
   - *Pythonista3* - $15
     - clean interface
@@ -350,3 +359,21 @@ The Raspberry-Pi-Killer :knife:
     - Many pre-installed packages
     - Easy-to-use interface
     - Can't install custom packages (even if you pay for it)
+
+- [x] Linux Foundations Week 2 Complete
+
+# Day :eight:
+- Handle Files & Directories
+- CLI Commands:
+- `ls [options] [paths]`
+  -  `ls -a` - lists all files including hidden files. These are files that start with "."
+  -  `ls -A` - list all files including hidden files except for "." & ".." - these refer to entries for the current folder (dir) & for the parent dir
+  -  `ls -R` - "recurse" lists all files descending down the dir tree from the given path
+  -  `ls -r` - reverse the sorting order
+  -  `ls -l` - lists files in long formate (i.e. with an index number, owner name, group name, size, & permissions)
+  -  `ls -o` - lists files in long formate but w/o the **group** name
+  -  `ls -g` - lists files in long formate but w/o the **owner** name
+  -  `ls -i` - lists files **w/index** number
+  -  `ls -s` - lists files **w/size**
+  -  `ls -S` sorts the list be **size** with the *largest at the top*
+  -  `ls -t` - sorts by time of modification with the newest at the top
