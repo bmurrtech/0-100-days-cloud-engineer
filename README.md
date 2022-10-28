@@ -398,10 +398,37 @@ The Raspberry-Pi-Killer :knife:
 - Toggle down to the line that has "#Port 22" and remove the "#" sign. Next, change 22 to some other not-well-known port number, something random which hackers will not be able to guess easily.
 - Toggle down to "#AddressFamily any" (one under) to change it to read as follows "AddressFamily inet" (this changes it form IPv6 and IPv4 to IPv4-only).
 - Toggle down to "PermiteRootLogin yes" to "PermitRootLogin **no**" (because - no! - we do not want to allow god-like root powers open for hackers to exploit)
-- Toggle down to "PasswordAuthentications yes" and change it to "PasswordAuthentication **no**" *Important Note*: this will absolutely require authentication key pairs login to access the server. Do NOT change this if you did not set up passwordless login (see above for how-to)[#Create an Authentication Key Pair]
+- Toggle down to "PasswordAuthentications yes" and change it to "PasswordAuthentication **no**" *Important Note*: this will absolutely require authentication key pairs login to access the server. Do NOT change this if you did not set up passwordless login [see above for how-to](#Create-an-Authentication-Key-Pair)
 - Press CTRL + X and then press "y' then press `ENTER` to save the custom configuration
 - Next, you must restart the ssh daemon service, type: `sudo  systemctl restart sshd`
-  - Do NOT logout (in case you botched it). Instead, open a new terminal/powershell and login to your server in a separate terminal: `ssh [username]@[IP_address]`
+  - **Do NOT logout** (in case you botched it). Instead, open a new terminal/powershell and login to your server in a separate terminal: `ssh [username]@[IP_address]`
+  - After trying to login in a separate window, you should get a "connection refused" message. If you did, this is a *good* sign! Because we closed the default port 22, remember? That's what we want!
+  - Keep that second terminal open and try this new command to login: `ssh [username]@[IP_address] -p [your_custom_port_number]` (the addition of `-p` allows us to specify which port to use to access your server; this number will be what you put in the config)
+  - If you got in to the server with that second command, congrats! You have successfully locked down all password logins. Take that hackers!
+
+## Firewall UFW (Uncomplicated Fire Wall)
+
+- Overview: More open ports on your server means more opportunities for hackers to squeeze through your firewall. Fix this by closing unnecessary open ports and configuring UFW.
+- To see what ports are currently open on your sever run `sudo ss -tupln`
+- What do you see? Is there a big list of open ports? Do you know what each port is used for? Are you unsure? Do a quick google search on the port numbers to check if you need it open or not (i.e DNS servers are needed). If you don't need it, let's uninstall it and close the port.
+- Install UFW `sudo apt install ufw`
+- By default, UFW will not be active, see this by entering: `sudo ufw status` and you will see "inactive." Now, before you activate UFW, make sure you first make a way in - like a door - for yourself to get into your server.
+- First, open that custom login port you made: `sudo ufw allow [your_server_port_number]`
+- Now you can enable UFW - let's put up that burn wall, baby! That's sure to burn some hackers! Turn up the heat by typing: `sudo ufw enable` and press "y" to activate it. Run a quick status check to see if it worked: `sudo ufw status`
+- Now, like before, let's ensure you set it up right by opening another terminal/powershell and trying to log in now that UFW is active. Login to your sever: `ssh [username]@[IP_address] -p [your_custom_port_number]`
+- Did it work? Good. Now, for testing purposes, let's say you want to run a web server with your firewall enabled. If you want traffic to get in, you need to open up port 80 for people to visit your website. Let's try it:
+  - Install apache2 to test this out `sudo apt install apache2`
+  - Once installed, you need to start it by typing: `sudo systemctl start apache2` and that should now be running.
+  - Check you ports again: `sudo ss -tupln`
+  - Do you see port 80 listed now? Great, but the firewall is blocking it right now. You can test this by entering your server's IP address in a URL web browser, and nothing will load. Now, let's allow it.
+  - Type: `sudo ufw allow 80/tcp` and hit `ENTER` 
+- Now it's open! Check it by typing in the URL. It should load an Apache default page. Nice! You bypassed your own firewall, but your IP is still vunerable to hackers' pings. If you want to make your server IP *ping-proof* and practically invisible to hackers, you gotta change a UFW settings. Here's how (note: this will also make your server invisible to your own `ping` commands, but it is a good security practice to enable, nontheless):
+  - Type `sudo nano /etc/ufw/before.rules`
+  - Add just 1 line to the file. Toggle down to where you see the heading which reads, "# ok icmp codes for INPUT" and add the following line at the top: `-A ufw-before-input -p icmp--icmp-type echo-request -j DROP`
+  - Next, hit CTRL + X then "y" then ENTER to save the configuration and this will make your IP address invisible to both you and hackers' ping attacks. 
+  - Next, you will need to reload UFW for the changes to take affect, type `sudo ufw reload` and then try to `ping -c 10 [your_server_IP]`
+  - If you still see the IP, try to reboot your server, type `sudo reboot`
+  - Re-login and try to ping your server again. If you get a "request timeout" message, then you have just turned your server invisible - just like Harry Potter's cloak of invisiblity, bro! Those hacker squibs ain't gonna get up into your bee's wax now!
 
 ## Handle Files & Directories
 
