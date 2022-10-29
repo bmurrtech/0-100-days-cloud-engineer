@@ -556,7 +556,10 @@ clean
 convert [gpt/mbr]
 ```
 ## Kubernetes Homelab Install
-- 
+- Repurpose old PC or get a tiny test computer - [check out the Raspberry Pi Killer!](#zima-board)
+- Installed Ubuntu to get started installing necessary packages
 
-### Reading Files
+> Refer to [Ubuntu's official download and install website for instructions](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview)
+
+- 
 
