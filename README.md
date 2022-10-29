@@ -9,7 +9,7 @@
 
 **Table of Notable Achievements & Resources:**
 1. [Linux Command Lines 1](#linux-command-lines-1)
-1.
+1. [Cybersecurity Project 1](#Cybersecurity-Project-1)
 
 To-do:<br>
 - [ ] Visual roadmap to Cloud Engineer (design in Canva)
@@ -17,7 +17,7 @@ To-do:<br>
 - [ ] Create Online Resume
   - [ ] Step 1 - Markdown Resume (in this repo)
   - [ ] Step 2 - Create Resume using LaTeX[^tyalt1resume]
-[^tyalt1resume]: Inspiration credit goes to [Tlyer Alterio](https://github.com/tyalt1/Resume)  
+[^tyalt1resume]: Inspiration credit goes to [Tlyer Alterio](https://github.com/tyalt1/Resume)
 
 # Day :one:
 - Started a course I thought would be everything I needed to become a DevOps Cloud Engineer
@@ -364,7 +364,13 @@ The Raspberry-Pi-Killer :knife:
 
 # Day :eight: 
 
-## Create a New Linux User w/Sudo Permissions
+## Cybersecurity Project 1
+- New Sudo Linux User
+- Authentication Key Pair - Passwordless Login
+- Lockdown All Password Entry Attempts
+- Firewall Configuration
+
+### Create a New Linux User w/Sudo Permissions
 
 - Why add a different user than root? Security. It is safer to use an accout you create with sudo permissions.
 - `adduser [username]` & then you will be prompted for a password
@@ -372,7 +378,7 @@ The Raspberry-Pi-Killer :knife:
 - `logout` to logout of the current user
 - Now you have to ssh back (log back into) your server by running `ssh [username]@[IP_address]`
 
-## Create an Authentication Key Pair (No user password required at login!)
+### Create an Authentication Key Pair (No user password required at login!)
 
 - Overview: We will create a public key (think lock) and private key (think key to unlock the lock) on within Windows Powershell/Mac or Linux Terminal.
 - First, you need to create a new dir on the remote server. This folder is where you will store the key. Also, you need change/modify (`chmod`) that directory. Here's how:
@@ -390,7 +396,7 @@ The Raspberry-Pi-Killer :knife:
     - To test it, try logging into your remote server through your terminal/powershell, `ssh [username]@[IP_address]`
     - If it does not ask for your password, congrats! You have successfully set up an authentication key pair or passwordless Linux server login.
 
-## Lockdown All Password Logins
+### Lockdown All Password Logins
 
 - Overview: Modify the ssgh_config file. Change the default login port number (22). Change to IPv4-only access (by modifying the AddressFamily). Remove Root login. Remove password logins.
 - `sudo nano /etc/ssh/sshd_config` and `ENTER`
@@ -406,7 +412,7 @@ The Raspberry-Pi-Killer :knife:
   - Keep that second terminal open and try this new command to login: `ssh [username]@[IP_address] -p [your_custom_port_number]` (the addition of `-p` allows us to specify which port to use to access your server; this number will be what you put in the config)
   - If you got in to the server with that second command, congrats! You have successfully locked down all password logins. Take that hackers!
 
-## Firewall UFW (Uncomplicated Fire Wall)
+### Firewall UFW (Uncomplicated Fire Wall)
 
 - Overview: More open ports on your server means more opportunities for hackers to squeeze through your firewall. Fix this by closing unnecessary open ports and configuring UFW.
 - To see what ports are currently open on your sever run `sudo ss -tupln`
@@ -460,6 +466,97 @@ The Raspberry-Pi-Killer :knife:
 - If you delete the orginal file with a *hard*link, the link still works
 - If you delete the oritinal file with a *soft*link the link will be broken
 - You can link both files and folders
+
+
+# Day :nine:
+
+## Windows Disk Utility CLI
+
+| Command | Description |
+| ----------- | ----------- |
+| diskpart | runs disk partition program in CLI |
+| help | lists all the commands for diskpart |
+| list disk | lists all the connected disks |
+| select disk [#] | lists all the connected disks |
+| list volume | lists all the connected disks |
+| select volume [#] | lists all the connected disks |
+| create partition primary size=[#in_MB] | creates a partition and sets a partition type |
+| clean | erases all contents on that disk/volume |
+| format fs=[file_system_type] quick | formats a volume to a file system |
+
+## Windows Disk Utility How-to
+
+- Delete a volume:
+```sh
+list volume
+select volume [#]
+delete volume
+```
+> Note: you cannot delete system volumes
+
+
+- Create a partition: 
+```sh 
+list disk
+select disk [#]
+create partition primary size=[#_in_MB]
+```
+
+> Note: if you want to create a different types of partition, simply replace `primary` with the desired partition type such as:  `efi`, `extended`, `logical`, or `msr`
+
+
+- Format partition: `list volume`, if the file system (Fs) reads as "RAW" then you must first format the volume to a useable file system first. To do so simply type:
+```sh
+select volume [#]
+fortmat fs=exfat quick
+```
+
+> Note: you can format to other fs by changing `exfat` to: `ntfs`, `fat`, `fat32` <br>
+> Note: diskpart cannot partition `fat32` volumes greater than 32GB
+
+
+- Extend a Partition (if you want to expand the size of a partition and have extra space still available on the same drive):
+```sh
+list volume
+select volume [#]
+extend size=[#_in_MB]
+```
+
+- Shrink a Partition (if you want to shrink the size of a partition):
+```sh
+list volume
+select volume [#]
+shrink desired=[#_in_MB]
+```
+
+- Assign drive letter:
+```sh
+select disk [#]
+assign letter=[drive_letter]
+```
+
+- Mark Parition as Active:
+```sh
+list volume
+select volume [#]
+active
+```
+
+- Convert MBR to GPT:
+
+```sh
+list disk
+select disk [#]
+```
+
+> **Important Note**: this next command will *completely wipe the drive, erasing all files*
+
+```sh
+clean
+convert [gpt/mbr]
+```
+## Kubernetes Homelab Install
+- 
 
 ### Reading Files
 
