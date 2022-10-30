@@ -372,7 +372,7 @@ The Raspberry-Pi-Killer :knife:
 
 ### Create a New Linux User w/Sudo Permissions
 
-> About Security Effectiveness of Sudo Users: Adding a new user or multiple users with sudo permissions is equivelant to hackers gaining access to root. For example, a hacker could theoretically edit the bash RC to add an alias (ex. `alias sudo='sudo id; sudo') which would execute a malicious command every time the user uses `sudo` they won't realize they just executed a malicious command as root. So why add a different user than root? The usefulness of this step is debatable, but many still consider adding users is best practice. I would argue that the best security measure is a strong password, therefore, creating new sudo users *in combination with* creating authentication key pairs for each user (eliminating weak passwords) is one of the best things you can do to secure your server.
+> About Security Effectiveness of Sudo Users: Adding a new user or multiple users with sudo permissions is equivelant to hackers gaining access to root. For example, a hacker could theoretically edit the bash RC to add an alias (ex. `alias sudo='sudo id; sudo`) which would execute a malicious command every time the user uses `sudo` they won't realize they just executed a malicious command as root. So why add a different user than root? The usefulness of this step is debatable, but many still consider adding users is best practice. I would argue that the best security measure is a strong password, therefore, creating new sudo users *in combination with* creating authentication key pairs for each user (eliminating weak passwords) is one of the best things you can do to secure your server.
 
 - In terminal type: `adduser [username]` & then you will be prompted for a password.
 - Enter a temporary password. This password can be simpmle because we are going to set up the passwordless login next.
@@ -440,6 +440,12 @@ The Raspberry-Pi-Killer :knife:
   - Next, you will need to reload UFW for the changes to take affect, type `sudo ufw reload` and then try to `ping -c 10 [your_server_IP]`
   - If you still see the IP, try to reboot your server, type `sudo reboot`
   - Re-login and try to ping your server again. If you get a "request timeout" message, then you have just turned your server invisible - just like Harry Potter's cloak of invisiblity, bro! Those hacker squibs ain't gonna get up into your bee's wax now!
+
+## Keep Your Server Updated
+- `apt-get dist-upgrade` or `apt-get upgrade` to run a system OS upgrade
+- `dpkg-reconfigure unattended-upgrade` to enable automatic updates
+
+> Problem: Enabling automatic updates is a good way to break things. In other words, not all updates are security-related and may break other apps with frequent automatic updates. Normally, this isn't a problem for, say, a homelab where it's okay to have downtime, but if you are a system admin at a company that requires 99.9% uptime, enabling unattended upgrades is sure to cause unwanted, un-planned downtime and service outages. Therefore, the best practice is to schedule maintenance times for important security updates. But if you are just running a homelab for personal use, then automatic updates is a nice feature to enable.
 
 ## Handle Files & Directories
 
@@ -560,6 +566,7 @@ select disk [#]
 clean
 convert [gpt/mbr]
 ```
+
 ## Kubernetes Homelab Install
 - Repurpose old PC or get a tiny test computer - [check out the Raspberry Pi Killer!](#zima-board)
 - Installed Ubuntu to get started installing necessary packages
