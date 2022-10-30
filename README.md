@@ -577,7 +577,7 @@ clean
 convert [gpt/mbr]
 ```
 
-## ProxMox Hypervisor Install
+## ProxMox Type 1 Hypervisor Install
 
 - Download the lateset "ProxMox ISO [version#] ISO installer" from the [official website](https://www.proxmox.com/en/downloads/category/iso-images-pve)
 - Flash the ISO image to a USB drive (at least 8GB in size) using BalenaEtcher or Rufus (free Windows programs)
@@ -604,8 +604,47 @@ convert [gpt/mbr]
 > Don't forget to include "https://" and add ":8006" at the end of the of the IP address.
 
 - You will get a warning screen from your web browser telling you the URL address you went to is unsafe, but that's just because you don't have SSL for your ProxMox. It's a false alarm. Just click on whatever options you have to continue to the site.
-- Next, you will be promted to login to ProxMox. Input "admin" for the username and enter the password you created at setup to gain access.
+- Next, you will be promted to login to ProxMox. Input `root` for the username and enter the password you created at setup to gain access.
 
+> Before deploying and VMs, you can consilidate and expand your storage. Do this *before* creating VMs.
+
+## Increase Available HD Storage
+
+- Once you are in, you will notice two separate storage units inside of the node created by defaulty (local-lvm and local). It turns out you don't need the local-lvm. So we can delete it to increase your storage capacity. Navigate to `Storage` and then select the "local-lvm" storage unit, and then click `Remove` to delete, and it will be gone.
+
+> Note: We still have some work to do in the shell to fully remove "local-lvm" and increase the storage for "local".
+
+- Click on the node (underneat the `Datacenter` dropdown under the server view_.
+- Next, click on `>_ Shell` to enter the command line needed now.
+
+-This will remove the local-lvm:
+
+```sh
+lvremove /dev/pve/data
+ENTER
+y
+```
+
+-Now to resize the storage to the maxium size available on the target HD:
+
+```sh
+lvresize -l +100%FREE /dev/pve/root
+ENTER
+```
+
+-And, one last command to finish everything off:
+
+```sh
+resize2fs /dev/mapper/pve-root
+ENTER
+```
+
+-Now if you check the summar, you will see the "local" storage unit of your ProxMox node has been increased fully.
+
+## VM Time, Baby!
+
+- Navigate to ISO Images (under the sever view dropdown menu, you have to click on the ProxMox node)
+- Currently, the directory should be empty, so you will need to download your ISOs and then upload them by clicking `Upload`
 
 ## MadMax (Chia Plotting) CLI
 
