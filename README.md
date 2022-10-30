@@ -372,13 +372,15 @@ The Raspberry-Pi-Killer :knife:
 
 ### Create a New Linux User w/Sudo Permissions
 
-- Why add a different user than root? Security. It is safer to use an accout you create with sudo permissions.
-- `adduser [username]` & then you will be prompted for a password
-- Now to add this new user to the "sudo" permission group: `usermod -aG sudo [username]`
-- `logout` to logout of the current user
-- Now you have to ssh back (log back into) your server by running `ssh [username]@[IP_address]`
+> About Security Effectiveness of Sudo Users: Adding a new user or multiple users with sudo permissions is equivelant to hackers gaining access to root. For example, a hacker could theoretically edit the bash RC to add an alias (ex. `alias sudo='sudo id; sudo') which would execute a malicious command every time the user uses `sudo` they won't realize they just executed a malicious command as root. So why add a different user than root? The usefulness of this step is debatable, but many still consider adding users is best practice. I would argue that the best security measure is a strong password, therefore, creating new sudo users *in combination with* creating authentication key pairs for each user (eliminating weak passwords) is one of the best things you can do to secure your server.
 
-### Create an Authentication Key Pair (No user password required at login!)
+- In terminal type: `adduser [username]` & then you will be prompted for a password.
+- Enter a temporary password. This password can be simpmle because we are going to set up the passwordless login next.
+- Now to add this new user to the "sudo" permission group: `usermod -aG sudo [username]`
+- Type `logout` to logout of the current user
+- Now you can try to `ssh` back (log back into) your server using your new sudo user by running `ssh [username]@[IP_address]`
+
+### Create an Authentication Key Pair (BEST DEFENSE!)
 
 - Overview: We will create a public key (think lock) and private key (think key to unlock the lock) on within Windows Powershell/Mac or Linux Terminal.
 - First, you need to create a new dir on the remote server. This folder is where you will store the key. Also, you need change/modify (`chmod`) that directory. Here's how:
@@ -401,7 +403,10 @@ The Raspberry-Pi-Killer :knife:
 - Overview: Modify the ssgh_config file. Change the default login port number (22). Change to IPv4-only access (by modifying the AddressFamily). Remove Root login. Remove password logins.
 - `sudo nano /etc/ssh/sshd_config` and `ENTER`
 - If you are prompted for the sudo password, enter it to continue to view the file contents (this is the root password you orginally set when you set up the server in the beginning)
-- Toggle down to the line that has "#Port 22" and remove the "#" sign. Next, change 22 to some other not-well-known port number, something random which hackers will not be able to guess easily.
+- (Optional) Toggle down to the line that has "#Port 22" and remove the "#" sign. Next, change 22 to some other not-well-known port number, something random which hackers will not be able to guess easily.
+
+> Port Change Note: I labeled changing the default `ssh` port as optional because a port change is useless if someone has the capability to hack into `ssh`, then changing a port is pointless. It wouldn't stop someone like that. Truthfully, a port change may only protect against automated scanners looking for servers with weak passwords. Again, *having a strong password or only using ssh keys* is your best defense becuase the brute force password attacks attempted by script kiddies shouldn't work.
+
 - Toggle down to "#AddressFamily any" (one under) to change it to read as follows "AddressFamily inet" (this changes it form IPv6 and IPv4 to IPv4-only).
 - Toggle down to "PermiteRootLogin yes" to "PermitRootLogin **no**" (because - no! - we do not want to allow god-like root powers open for hackers to exploit)
 - Toggle down to "PasswordAuthentications yes" and change it to "PasswordAuthentication **no**" *Important Note*: this will absolutely require authentication key pairs login to access the server. Do NOT change this if you did not set up passwordless login [see above for how-to](#Create-an-Authentication-Key-Pair)
