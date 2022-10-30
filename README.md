@@ -577,6 +577,36 @@ clean
 convert [gpt/mbr]
 ```
 
+## ProxMox Hypervisor Install
+
+- Download the lateset "ProxMox ISO [version#] ISO installer" from the [official website](https://www.proxmox.com/en/downloads/category/iso-images-pve)
+- Flash the ISO image to a USB drive (at least 8GB in size) using BalenaEtcher or Rufus (free Windows programs)
+- Plug the flashed USB drive into the PC you wish to use as your hypervisor
+ 
+> Ensure your PC has an ethernet connection during the ProxMox install
+
+- Press `F12` or other key to enter your boot disk selection or BIOS
+- Force the PC to boot from the flash drive you created by selecting the flashdrive from the BIOS menu (google your PC BIOS for how to find the boot drive settings)
+- Allow ProxMox to load up and then select "Install ProxMox VE"
+- Agree the the terms of service EULA
+- Select the harddrive you wish to erase and install the hypervisor on
+
+> Note: This action will erase the drive. If you have files you don't want to lose, first back them up before proceeding.
+
+- Create a password to access your ProxMox hypervisor remotely using a web browser (you will be prompted for this password to access it)
+- Customize your install by editing the settings (timezone, hostname, IP CIDR, Gateway, DNS, etc.)
+
+> You should be able to leave the default, pre-filled information for the IP, gateway, and DNS, but you can always customize them to your liking.
+
+- Confirm all the settings and then click "Install" wait for ProxMox to fully install
+- After ProxMox has finished installing, it will automatically reboot (reboot manually if it did not). Ensure your ProxMox PC is running and plugged into a working ethernet connection, and then open up a web browser on a different machine and type in the IP CIDR address your created (typically it is https://192.168.1.1:8006 by default, but if you changed it in the set up, you need to use your specific IP to access it).
+
+> Don't forget to include "https://" and add ":8006" at the end of the of the IP address.
+
+- You will get a warning screen from your web browser telling you the URL address you went to is unsafe, but that's just because you don't have SSL for your ProxMox. It's a false alarm. Just click on whatever options you have to continue to the site.
+- Next, you will be promted to login to ProxMox. Input "admin" for the username and enter the password you created at setup to gain access.
+
+
 ## MadMax (Chia Plotting) CLI
 
 ## Kubernetes Homelab Install
