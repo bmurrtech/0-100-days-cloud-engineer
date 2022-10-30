@@ -9,7 +9,7 @@
 
 **Table of Notable Achievements & Resources:**
 1. [Linux Command Lines 1](#linux-command-lines-1)
-1. [Cybersecurity Project 1](#Cybersecurity-Project-1)
+1. [Cybersecurity Best Practices How-to](#Cybersecurity-Project-1)
 
 To-do:<br>
 - [ ] Visual roadmap to Cloud Engineer (design in Canva)
@@ -409,13 +409,23 @@ The Raspberry-Pi-Killer :knife:
 
 - Toggle down to "#AddressFamily any" (one under) to change it to read as follows "AddressFamily inet" (this changes it form IPv6 and IPv4 to IPv4-only).
 - Toggle down to "PermiteRootLogin yes" to "PermitRootLogin **no**" (because - no! - we do not want to allow god-like root powers open for hackers to exploit)
-- Toggle down to "PasswordAuthentications yes" and change it to "PasswordAuthentication **no**" *Important Note*: this will absolutely require authentication key pairs login to access the server. Do NOT change this if you did not set up passwordless login [see above for how-to](#Create-an-Authentication-Key-Pair)
+- Toggle down to: "PasswordAuthentications yes" and change it to: "PasswordAuthentication **no**"
+
+>**Important Note**: this will absolutely require authentication key pairs login to access the server. Do NOT change this if you did not set up passwordless login [see above for how-to](#Create-an-Authentication-Key-Pair)
+
+
 - Press CTRL + X and then press "y' then press `ENTER` to save the custom configuration
 - Next, you must restart the ssh daemon service, type: `sudo  systemctl restart sshd`
-  - **Do NOT logout** (in case you botched it). Instead, open a new terminal/powershell and login to your server in a separate terminal: `ssh [username]@[IP_address]`
+ 
+ > **Do NOT logout** (in case you botched it). Instead, open a new terminal/powershell and login to your server in a separate terminal: `ssh [username]@[IP_address]`
+
+
   - After trying to login in a separate window, you should get a "connection refused" message. If you did, this is a *good* sign! Because we closed the default port 22, remember? That's what we want!
-  - Keep that second terminal open and try this new command to login: `ssh [username]@[IP_address] -p [your_custom_port_number]` (the addition of `-p` allows us to specify which port to use to access your server; this number will be what you put in the config)
-  - If you got in to the server with that second command, congrats! You have successfully locked down all password logins. Take that hackers!
+  - Keep that second terminal open and try this new command to login: `ssh [username]@[IP_address] -p [your_custom_port_number]`
+  
+ > The addition of `-p` allows us to specify which port to use to access your server; this number will be what you put in the config
+
+  - If you got in to the server with that second command, congrats! You have successfully locked down all password logins. Take that, hackers!
 
 ### Firewall UFW (Uncomplicated Fire Wall)
 
@@ -566,6 +576,8 @@ select disk [#]
 clean
 convert [gpt/mbr]
 ```
+
+## MadMax (Chia Plotting) CLI
 
 ## Kubernetes Homelab Install
 - Repurpose old PC or get a tiny test computer - [check out the Raspberry Pi Killer!](#zima-board)
