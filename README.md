@@ -7,9 +7,10 @@
 ><br>--<cite>*Henry Wheeler Shaw, 1876*</cite>
 <br>
 
-**Table of Notable Achievements & Resources:**
+**Table of Achievements & Resources:**
 1. [Linux Command Lines 1](#linux-command-lines-1)
 1. [Cybersecurity Best Practices How-to](#Cybersecurity-Project-1)
+1. [How-to Setup ProxMox - a Type 1 Hypervisor](ProxMox-Type-1-Hypervisor-Install)
 
 To-do:<br>
 - [ ] Visual roadmap to Cloud Engineer (design in Canva)
@@ -578,6 +579,7 @@ convert [gpt/mbr]
 ```
 
 ## ProxMox Type 1 Hypervisor Install
+![alt_text](./images/proxmox-setup.jpg)
 
 - Download the lateset "ProxMox ISO [version#] ISO installer" from the [official website](https://www.proxmox.com/en/downloads/category/iso-images-pve)
 - Flash the ISO image to a USB drive (at least 8GB in size) using BalenaEtcher or Rufus (free Windows programs)
@@ -648,6 +650,9 @@ ENTER
 - Click on `Datacenter` (underneath the "Sever view" pane).
 - Click on the ID (the only ID listed should be "local" if you followed the previous step), and then click `Edit`.
 - Click on the `Content` dropdown box and click on `Disk Image` to include it and allow it.
+
+> If you want to create containers inside of ProxMox, then you should also click on `Containers` to include and allow them, too.
+
 - Navigate to ISO Images (under the sever view dropdown menu, you have to click on the ProxMox node).
 - Currently, the directory should be empty, so you will need to download your ISOs and then upload them by clicking `Upload`.
 - After uploading the VM you want, now it's time to click on the blue button on the top right of the UI that says `Create VM`.
@@ -665,6 +670,8 @@ ENTER
 - With everything configured, you are now at the final `Confirm` stage. If everything looks good to you, hit finish to spin up a new VM! Within seconds it will be ready to go. You can check on it from the `Server View`.
 
 > Note: You will still have to go through the initial install and setup phase like you normally would when you first are installing a new OS. When you start the system, go through the necessary install process.
+
+> About Creating Containers: You can also create Docker-like containers with ProxMox by downloading Linux container ISOs and uploading them to ProxMox, and then click on the `Create CT` blue button (right next to the `Create VM` button). The process for creating containers is the same as creating VMs.
 
 ## MadMax (Chia Plotting) CLI
 
