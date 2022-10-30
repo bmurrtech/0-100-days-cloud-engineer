@@ -643,8 +643,28 @@ ENTER
 
 ## VM Time, Baby!
 
-- Navigate to ISO Images (under the sever view dropdown menu, you have to click on the ProxMox node)
-- Currently, the directory should be empty, so you will need to download your ISOs and then upload them by clicking `Upload`
+> Before we can write an ISO file to our new ProxMox setup, we must edit the directory to allow `Disk Image`.
+
+- Click on `Datacenter` (underneath the "Sever view" pane).
+- Click on the ID (the only ID listed should be "local" if you followed the previous step), and then click `Edit`.
+- Click on the `Content` dropdown box and click on `Disk Image` to include it and allow it.
+- Navigate to ISO Images (under the sever view dropdown menu, you have to click on the ProxMox node).
+- Currently, the directory should be empty, so you will need to download your ISOs and then upload them by clicking `Upload`.
+- After uploading the VM you want, now it's time to click on the blue button on the top right of the UI that says `Create VM`.
+- Give the VM a name and click next.
+- Select the ISO image you wish to install (ex. Ubuntu), and click next, and (if you don't want to change any of the default settings) click next again.
+- Now, under the `Disks` tab, set the total disk size you wish to allocate to that VM instance, and hit next again.
+- Now it is time to set the CPU usage for this VM. Set the number of CPUs you want to set apart for this VM and hit next.
+- Now set the memory in MiB.
+ 
+> Note: GB is to MiB *not* a 1:1 raitio like GB is to MB. Use [this conversion calculator for reference](https://mbtogb.com/128-gb-to-mb)
+
+> Note: You can always edit the disk space, core, and memory allocations later.
+
+- Now for network settings. By default, the VM will be bridged to your home network, so it will receive an IP address from your router. If you don't want that, then edit the network settings as desired.
+- With everything configured, you are now at the final `Confirm` stage. If everything looks good to you, hit finish to spin up a new VM! Within seconds it will be ready to go. You can check on it from the `Server View`.
+
+> Note: You will still have to go through the initial install and setup phase like you normally would when you first are installing a new OS. When you start the system, go through the necessary install process.
 
 ## MadMax (Chia Plotting) CLI
 
