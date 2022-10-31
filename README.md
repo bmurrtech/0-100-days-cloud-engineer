@@ -547,6 +547,7 @@ create partition primary size=[#_in_MB]
 >> * Open Disk Mangagment (Windows button + search "disk" + click on "create and format hard disk partitions"
 >> * Right-click the drive you want to partition (it helps to `clean` and `convert` the drive you want to partition in diskpart first).
 >> * Click "New Simple Volume" > Hit next on the wizard GUI > take note of the value in "Simple volume size in MB"
+>> <br> ![alt_text](./images/simple-vol-wiz.jpg)
 >> * This value is the *max amount* you can partition. Enter this value in the the `diskpart` CLI `create primary partition =size <that_value>`
 
 
