@@ -168,7 +168,7 @@ The Raspberry-Pi-Killer :knife:
 
 - **Review L2**
   - Web servers run in the background and serve HTTP and HTTPS requests
-  - Apache is used by more sahred hosting providers
+  - Apache is used by more shared hosting providers
   - Nginx has taken much of the web server market because of performance
 - Additional web server reading [Nginx v Apache](https://kinsta.com/blog/nginx-vs-apache/)
   - Web pages are "essentially HTML documents"
@@ -201,9 +201,9 @@ The Raspberry-Pi-Killer :knife:
 # Day :six:
 - researched some AWS cloud project ideas
 - created new banner in .gif format
-- organzied goals and projects by creating new .md files
+- organized goals and projects by creating new .md files
 
-### L4 Managing Serviecs
+### L4 Managing Services
 - Init Process - an init program or systemd is the parent process for every process
 - init will show the location of the init process (i.e. `readlink -f /usr/sbin/init`)
 - [*Systemd*](https://en.wikipedia.org/wiki/Systemd) a software suit that provides an array of system components for Linux operating systems.
@@ -246,13 +246,13 @@ The Raspberry-Pi-Killer :knife:
     - Select the OS you want to install in a new Container.
     - Choose whether or not you want to be able to edit ports or not (if not, select the "Use the same network as Docker Host" bubble)
     - Name the Container
-    - Decide if you want to give the Container root permissions to your Synology NAS OS. If not, uncheck the "Execute container with high priviledge."
-    - Check "Enable resouce limitation" to set a limit to the PC resources.
-    - Hit Next to move to port settings (if you enabled it earlier). You want to ensure that port 80 (HTTP) is enbaled. Input a arbitrary number for the internal port and hit next.
+    - Decide if you want to give the Container root permissions to your Synology NAS OS. If not, uncheck the "Execute container with high privilege."
+    - Check "Enable resource limitation" to set a limit to the PC resources.
+    - Hit Next to move to port settings (if you enabled it earlier). You want to ensure that port 80 (HTTP) is enabled. Input a arbitrary number for the internal port and hit next.
   - Now you must create a volume folder for CentOS. Click create folder and name the folder inside the "docker" folder that was created on the initial Docker install (i.e. `/centos`). Inside this parent folder, add another folder named whatever you like. This child folder will be the folder path for the CentOS volume. 
   - After you have created the subfolder in, you need to give CentOS a path. So type in `/path` inside the folder input box you created.
   - Hit next and check the box that says "run this container after the wizard is finished" &, finally, click "done"
-  - If you did everything correctly, you should now see the OS you installed running in in the "Overivew" tab of Docker <br> ![alt_text](./images/centos_docker.jpg)
+  - If you did everything correctly, you should now see the OS you installed running in in the "Overview" tab of Docker <br> ![alt_text](./images/centos_docker.jpg)
 
 
 - **NextCloud - Docker Container**
@@ -261,12 +261,12 @@ The Raspberry-Pi-Killer :knife:
   - Click on "Image" from the selection menu in Docker, and paste the line into the "Hub Page" box. Hit "Add" and wait for the next popup screen.
   - Next choose the appropriate tag for your CPU architecture (select "latest" if you are using any of the + models of the Synology NAS or you have a x86 CPU. Note: the Raspberry Pi is arm64 architecture and will require a different, compt. tag.)
   - Double-click the image to start the image install
-  - Name the Container & decide if you want to give the Container root permissions to your Synology NAS OS. If not, uncheck the "Execute container with high priviledge."
-  - Check "Enable resouce limitation" to set a limit to the PC resources.
+  - Name the Container & decide if you want to give the Container root permissions to your Synology NAS OS. If not, uncheck the "Execute container with high privilege."
+  - Check "Enable resource limitation" to set a limit to the PC resources.
   - Choose whether or not you want to be able to edit ports or not (if not, select the "Use the same network as Docker Host" bubble) 
   - Click on "Advance Settings" and configure add a "GUID" line and a "PUID" line, also enter 1000 for both values. These numbers can be found at the [Docker Hub for NextCloud](https://hub.docker.com/r/linuxserver/nextcloud). Click "Save."
   - Hit Next to move to port settings (if you enabled it earlier). Here you can set up a Reverse Proxy or just enter an arbitrary number for the ports. Hit next again.
-  - Now you must create two folder paths for NextCloud to function. One for `/data` and one for `/config`. The folder system can be formated as follows: docker > NextCloud > data and docker > NextCloud > config.
+  - Now you must create two folder paths for NextCloud to function. One for `/data` and one for `/config`. The folder system can be formatted as follows: docker > NextCloud > data and docker > NextCloud > config.
   - Once you have created the parent and child/subfolders, you can now map the NextCloud paths to these two folders. Enter `/data/` in the "data" folder box, and enter `/config` in the "config" folder box (see screenshot for example). <br> ![alt_text](./images/nextcloud_paths.jpg)
 
 - **Access the Terminal of the OS in the Docker Container**
@@ -328,9 +328,9 @@ The Raspberry-Pi-Killer :knife:
   - Create a VE: `vitrualenv venv`
   - Load the VE: `source venv/bin/activate`
 - VE Packages:
-  - Healdless Selenium: `pip3 install selenium` (web automation, web scrapping)
+  - Headless Selenium: `pip3 install selenium` (web automation, web scrapping)
   - Django to check your server `pip3 install django`
-  - Note: Cannot not intall Pandas :(
+  - Note: Cannot not install Pandas :(
 
 
 - How to [Install Alpine Linux on iPad](https://github.com/ish-app/ish)
@@ -373,10 +373,10 @@ The Raspberry-Pi-Killer :knife:
 
 ### Create a New Linux User w/Sudo Permissions
 
-> About Security Effectiveness of Sudo Users: Adding a new user or multiple users with sudo permissions is equivelant to hackers gaining access to root. For example, a hacker could theoretically edit the bash RC to add an alias (ex. `alias sudo='sudo id; sudo`) which would execute a malicious command every time the user uses `sudo` they won't realize they just executed a malicious command as root. So why add a different user than root? The usefulness of this step is debatable, but many still consider adding users is best practice. I would argue that the best security measure is a strong password, therefore, creating new sudo users *in combination with* creating authentication key pairs for each user (eliminating weak passwords) is one of the best things you can do to secure your server.
+> About Security Effectiveness of Sudo Users: Adding a new user or multiple users with sudo permissions is equivalent to hackers gaining access to root. For example, a hacker could theoretically edit the bash RC to add an alias (ex. `alias sudo='sudo id; sudo`) which would execute a malicious command every time the user uses `sudo` they won't realize they just executed a malicious command as root. So why add a different user than root? The usefulness of this step is debatable, but many still consider adding users is best practice. I would argue that the best security measure is a strong password, therefore, creating new sudo users *in combination with* creating authentication key pairs for each user (eliminating weak passwords) is one of the best things you can do to secure your server.
 
 - In terminal type: `adduser [username]` & then you will be prompted for a password.
-- Enter a temporary password. This password can be simpmle because we are going to set up the passwordless login next.
+- Enter a temporary password. This password can be simple because we are going to set up the passwordless login next.
 - Now to add this new user to the "sudo" permission group: `usermod -aG sudo [username]`
 - Type `logout` to logout of the current user
 - Now you can try to `ssh` back (log back into) your server using your new sudo user by running `ssh [username]@[IP_address]`
@@ -388,7 +388,7 @@ The Raspberry-Pi-Killer :knife:
   - Logged in on the remote server, type `mkdir ~/.ssh && chmod 700 ~/.ssh`
 - Now, logout of your remote server by typing `logout` and then open Terminal (Mac) or Powershell (Windows) on your primary computer that you will use to access your server.
 - Now that the server has a .ssh dir, you can generate the keys. Type the following in the Terminal/Powershell to generate your public/private keys: `ssh-keygen -b 4096` (`-b [number]` indicates how big you want the key to be)
-- By default, the key will be saved in the C:\Users\[username]/.ss./id_rsa directory of your PC. *Important Note* If you have generated ssh keys before, you could accidentilly overwrite and lose your original keys, which means **you might lose access to servers you already have**. If so, it will say something like "[filedirectory] already exists. Overwrite (y/n)? Do not type "y" if you do not want to lose your existing keys. Save the keys as a different file instead of overwriting it.
+- By default, the key will be saved in the C:\Users\[username]/.ss./id_rsa directory of your PC. *Important Note* If you have generated ssh keys before, you could accidentally overwrite and lose your original keys, which means **you might lose access to servers you already have**. If so, it will say something like "<filedirectory> already exists. Overwrite (y/n)? Do not type "y" if you do not want to lose your existing keys. Save the keys as a different file instead of overwriting it.
 - Next, you will be prompted to input a passphrase for the keys you just generated, but you don't have to use a password if you don't want, in which case, just leave it blank and hit `ENTER`
 - If you want to see the keys, type the following in the terminal/powershell: `cd .ssh` to go to that dir, then `ls` to list the contents of that folder. You should now see two files under the "Name" column which should read, "id_rsa" and "id_rsa.pub". The last thing to do is to upload that "id_rsa.pub" key to your server.
 - *Note:* This process will be different for Mac and Windows.
@@ -403,10 +403,10 @@ The Raspberry-Pi-Killer :knife:
 
 - Overview: Modify the ssgh_config file. Change the default login port number (22). Change to IPv4-only access (by modifying the AddressFamily). Remove Root login. Remove password logins.
 - `sudo nano /etc/ssh/sshd_config` and `ENTER`
-- If you are prompted for the sudo password, enter it to continue to view the file contents (this is the root password you orginally set when you set up the server in the beginning)
+- If you are prompted for the sudo password, enter it to continue to view the file contents (this is the root password you originally set when you set up the server in the beginning)
 - (Optional) Toggle down to the line that has "#Port 22" and remove the "#" sign. Next, change 22 to some other not-well-known port number, something random which hackers will not be able to guess easily.
 
-> Port Change Note: I labeled changing the default `ssh` port as optional because a port change is useless if someone has the capability to hack into `ssh`, then changing a port is pointless. It wouldn't stop someone like that. Truthfully, a port change may only protect against automated scanners looking for servers with weak passwords. Again, *having a strong password or only using ssh keys* is your best defense becuase the brute force password attacks attempted by script kiddies shouldn't work.
+> Port Change Note: I labeled changing the default `ssh` port as optional because a port change is useless if someone has the capability to hack into `ssh`, then changing a port is pointless. It wouldn't stop someone like that. Truthfully, a port change may only protect against automated scanners looking for servers with weak passwords. Again, *having a strong password or only using ssh keys* is your best defense because the brute force password attacks attempted by script kiddies shouldn't work.
 
 - Toggle down to "#AddressFamily any" (one under) to change it to read as follows "AddressFamily inet" (this changes it form IPv6 and IPv4 to IPv4-only).
 - Toggle down to "PermiteRootLogin yes" to "PermitRootLogin **no**" (because - no! - we do not want to allow god-like root powers open for hackers to exploit)
@@ -444,19 +444,19 @@ The Raspberry-Pi-Killer :knife:
   - Check you ports again: `sudo ss -tupln`
   - Do you see port 80 listed now? Great, but the firewall is blocking it right now. You can test this by entering your server's IP address in a URL web browser, and nothing will load. Now, let's allow it.
   - Type: `sudo ufw allow 80/tcp` and hit `ENTER` 
-- Now it's open! Check it by typing in the URL. It should load an Apache default page. Nice! You bypassed your own firewall, but your IP is still vunerable to hackers' pings. If you want to make your server IP *ping-proof* and practically invisible to hackers, you gotta change a UFW settings. Here's how (note: this will also make your server invisible to your own `ping` commands, but it is a good security practice to enable, nontheless):
+- Now it's open! Check it by typing in the URL. It should load an Apache default page. Nice! You bypassed your own firewall, but your IP is still vulnerable to hackers' pings. If you want to make your server IP *ping-proof* and practically invisible to hackers, you gotta change a UFW settings. Here's how (note: this will also make your server invisible to your own `ping` commands, but it is a good security practice to enable, nonetheless):
   - Type `sudo nano /etc/ufw/before.rules`
   - Add just 1 line to the file. Toggle down to where you see the heading which reads, "# ok icmp codes for INPUT" and add the following line at the top: `-A ufw-before-input -p icmp--icmp-type echo-request -j DROP`
   - Next, hit CTRL + X then "y" then ENTER to save the configuration and this will make your IP address invisible to both you and hackers' ping attacks. 
   - Next, you will need to reload UFW for the changes to take affect, type `sudo ufw reload` and then try to `ping -c 10 [your_server_IP]`
   - If you still see the IP, try to reboot your server, type `sudo reboot`
-  - Re-login and try to ping your server again. If you get a "request timeout" message, then you have just turned your server invisible - just like Harry Potter's cloak of invisiblity, bro! Those hacker squibs ain't gonna get up into your bee's wax now!
+  - Re-login and try to ping your server again. If you get a "request timeout" message, then you have just turned your server invisible - just like Harry Potter's cloak of invisibility, bro! Those hacker squibs ain't gonna get up into your bee's wax now!
 
 ## Keep Your Server Updated
 - `apt-get dist-upgrade` or `apt-get upgrade` to run a system OS upgrade
 - `dpkg-reconfigure unattended-upgrade` to enable automatic updates
 
-> Problem: Enabling automatic updates is a good way to break things. In other words, not all updates are security-related and may break other apps with frequent automatic updates. Normally, this isn't a problem for, say, a homelab where it's okay to have downtime, but if you are a system admin at a company that requires 99.9% uptime, enabling unattended upgrades is sure to cause unwanted, un-planned downtime and service outages. Therefore, the best practice is to schedule maintenance times for important security updates. But if you are just running a homelab for personal use, then automatic updates is a nice feature to enable.
+> Problem: Enabling automatic updates is a good way to break things. In other words, not all updates are security-related and may break other apps with frequent automatic updates. Normally, this isn't a problem for, say, a homelab where it's okay to have downtime, but if you are a system admin at a company that requires 99.9% uptime, enabling unattended upgrades is sure to cause unwanted, unplanned downtime and service outages. Therefore, the best practice is to schedule maintenance times for important security updates. But if you are just running a homelab for personal use, then automatic updates is a nice feature to enable.
 
 ## Handle Files & Directories
 
@@ -485,8 +485,8 @@ The Raspberry-Pi-Killer :knife:
   - ex. Filename1 inode # [] -> Filename2 inode # []
   - Create a soft link by:
     - `ln -s [original_filename] [linkname]`
-- If you delete the orginal file with a *hard*link, the link still works
-- If you delete the oritinal file with a *soft*link the link will be broken
+- If you delete the original file with a *hard*link, the link still works
+- If you delete the original file with a *soft*link the link will be broken
 - You can link both files and folders
 
 
@@ -544,7 +544,7 @@ create partition primary size=[#_in_MB]
 > **Troubleshooting MB Size Issue**: You may get a message saying: "No usable free extent could be found. It may be that there is insufficient free space to create a partition at the specified size and offset." In my experience, I had to subtract exactly 18MB from the total volume size listed in the drive properties to get it to work.
 >> If that doesn't work for you, try this method:
 >>
->> * Open Disk Mangagment (Windows button + search "disk" + click on "create and format hard disk partitions"
+>> * Open Disk Management (Windows button + search "disk" + click on "create and format hard disk partitions"
 >> * Right-click the drive you want to partition (it helps to `clean` and `convert` the drive you want to partition in diskpart first).
 >> * Click "New Simple Volume" > Hit next on the wizard GUI > take note of the value in "Simple volume size in MB"
 >> <br> ![alt_text](./images/simple-vol-wiz.jpg)
@@ -554,7 +554,7 @@ create partition primary size=[#_in_MB]
 - Format partition: `list volume`, if the file system (Fs) reads as "RAW" then you must first format the volume to a useable file system first. To do so simply type:
 ```sh
 select volume [#]
-fortmat fs=exfat quick
+format fs=exfat quick
 ```
 
 > Note: you can format to other fs by changing `exfat` to: `ntfs`, `fat`, `fat32` <br>
@@ -581,7 +581,7 @@ select disk [#]
 assign letter=[drive_letter]
 ```
 
-- Mark Parition as Active:
+- Mark Partition as Active:
 ```sh
 list volume
 select volume [#]
@@ -591,7 +591,7 @@ active
 ## ProxMox Type 1 Hypervisor Install
 ![alt_text](./images/proxmox-setup.jpg)
 
-- Download the lateset "ProxMox ISO [version#] ISO installer" from the [official website](https://www.proxmox.com/en/downloads/category/iso-images-pve)
+- Download the latest "ProxMox ISO [version#] ISO installer" from the [official website](https://www.proxmox.com/en/downloads/category/iso-images-pve)
 - Flash the ISO image to a USB drive (at least 8GB in size) using BalenaEtcher or Rufus (free Windows programs)
 - Plug the flashed USB drive into the PC you wish to use as your hypervisor
  
@@ -613,20 +613,20 @@ active
 - Confirm all the settings and then click "Install" wait for ProxMox to fully install
 - After ProxMox has finished installing, it will automatically reboot (reboot manually if it did not). Ensure your ProxMox PC is running and plugged into a working ethernet connection, and then open up a web browser on a different machine and type in the IP CIDR address your created (typically it is https://192.168.1.1:8006 by default, but if you changed it in the set up, you need to use your specific IP to access it).
 
-> Don't forget to include "https://" and add ":8006" at the end of the of the IP address.
+> Don't forget to include "https://" and add ":8006" at the end of the IP address.
 
 - You will get a warning screen from your web browser telling you the URL address you went to is unsafe, but that's just because you don't have SSL for your ProxMox. It's a false alarm. Just click on whatever options you have to continue to the site.
-- Next, you will be promted to login to ProxMox. Input `root` for the username and enter the password you created at setup to gain access.
+- Next, you will be prompted to login to ProxMox. Input `root` for the username and enter the password you created at setup to gain access.
 
-> Before deploying and VMs, you can consilidate and expand your storage. Do this *before* creating VMs.
+> Before deploying and VMs, you can consolidate and expand your storage. Do this *before* creating VMs.
 
 ## Increase Available HD Storage
 
-- Once you are in, you will notice two separate storage units inside of the node created by defaulty (local-lvm and local). It turns out you don't need the local-lvm. So we can delete it to increase your storage capacity. Navigate to `Storage` and then select the "local-lvm" storage unit, and then click `Remove` to delete, and it will be gone.
+- Once you are in, you will notice two separate storage units inside of the node created by default (local-lvm and local). It turns out you don't need the local-lvm. So we can delete it to increase your storage capacity. Navigate to `Storage` and then select the "local-lvm" storage unit, and then click `Remove` to delete, and it will be gone.
 
 > Note: We still have some work to do in the shell to fully remove "local-lvm" and increase the storage for "local".
 
-- Click on the node (underneat the `Datacenter` dropdown under the server view_.
+- Click on the node (underneath the `Datacenter` dropdown under the server view_.
 - Next, click on `>_ Shell` to enter the command line needed now.
 
 -This will remove the local-lvm:
@@ -637,7 +637,7 @@ ENTER
 y
 ```
 
--Now to resize the storage to the maxium size available on the target HD:
+-Now to resize the storage to the maximum size available on the target HD:
 
 ```sh
 lvresize -l +100%FREE /dev/pve/root
@@ -651,7 +651,7 @@ resize2fs /dev/mapper/pve-root
 ENTER
 ```
 
--Now if you check the summar, you will see the "local" storage unit of your ProxMox node has been increased fully.
+-Now if you check the summary, you will see the "local" storage unit of your ProxMox node has been increased fully.
 
 ## VM Time, Baby!
 
@@ -672,7 +672,7 @@ ENTER
 - Now it is time to set the CPU usage for this VM. Set the number of CPUs you want to set apart for this VM and hit next.
 - Now set the memory in MiB.
  
-> Note: GB is to MiB *not* a 1:1 raitio like GB is to MB. Use [this conversion calculator for reference](https://mbtogb.com/128-gb-to-mb)
+> Note: GB is to MiB *not* a 1:1 ratio like GB is to MB. Use [this conversion calculator for reference](https://mbtogb.com/128-gb-to-mb)
 
 > Note: You can always edit the disk space, core, and memory allocations later.
 
@@ -690,6 +690,3 @@ ENTER
 - Installed Ubuntu to get started installing necessary packages
 
 > Refer to [Ubuntu's official download and install website for instructions](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview)
-
-- 
-
