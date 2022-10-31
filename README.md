@@ -526,6 +526,8 @@ create partition primary size=[#_in_MB]
 
 > Note: if you want to create a different types of partition, simply replace `primary` with the desired partition type such as:  `efi`, `extended`, `logical`, or `msr`
 
+> Note on HD Sizing: If you are unsure how many MB to type in as a number when you partition the drive, you can use view it in the drive properties > volumes tab. Just copy and paste the number you see when partitioning a drive. <br>![alt_text](./images/volume-properties.jpg)
+
 
 - Format partition: `list volume`, if the file system (Fs) reads as "RAW" then you must first format the volume to a useable file system first. To do so simply type:
 ```sh
