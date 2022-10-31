@@ -516,6 +516,19 @@ delete volume
 ```
 > Note: you cannot delete system volumes
 
+- Convert MBR to GPT:
+
+```sh
+list disk
+select disk [#]
+```
+
+> **Important Note**: this next command will *completely wipe the drive, erasing all files*. When working with new drives, it is helpful to first run the `clean` command. Also, Windows will not allow you to add a volume to a drive unless you have first converted the drive `convert <mbr or gpt>`.
+
+```sh
+clean
+convert [gpt/mbr]
+```
 
 - Create a partition: 
 ```sh 
@@ -527,6 +540,14 @@ create partition primary size=[#_in_MB]
 > Note: if you want to create a different types of partition, simply replace `primary` with the desired partition type such as:  `efi`, `extended`, `logical`, or `msr`
 
 > Note on HD Sizing: If you are unsure how many MB to type in as a number when you partition the drive, you can use view it in the drive properties > volumes tab. Just copy and paste the number you see when partitioning a drive. <br>![alt_text](./images/volume-properties.jpg)
+
+> **Troubleshooting MB Size Issue**: You may get a message saying: "No usable free extent could be found. It may be that there is insufficient free space to create a partition at the specified size and offset." In my experience, I had to subtract exactly 18MB from the total volume size listed in the drive properties to get it to work.
+>> If that doesn't work for you, try this method:
+>>
+>> * Open Disk Mangagment (Windows button + search "disk" + click on "create and format hard disk partitions"
+>> * Right-click the drive you want to partition (it helps to `clean` and `convert` the drive you want to partition in diskpart first).
+>> * Click "New Simple Volume" > Hit next on the wizard GUI > take note of the value in "Simple volume size in MB"
+>> * This value is the *max amount* you can partition. Enter this value in the the `diskpart` CLI `create primary partition =size <that_value>`
 
 
 - Format partition: `list volume`, if the file system (Fs) reads as "RAW" then you must first format the volume to a useable file system first. To do so simply type:
@@ -564,20 +585,6 @@ assign letter=[drive_letter]
 list volume
 select volume [#]
 active
-```
-
-- Convert MBR to GPT:
-
-```sh
-list disk
-select disk [#]
-```
-
-> **Important Note**: this next command will *completely wipe the drive, erasing all files*
-
-```sh
-clean
-convert [gpt/mbr]
 ```
 
 ## ProxMox Type 1 Hypervisor Install
