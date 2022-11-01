@@ -1,6 +1,6 @@
-![alt text](./images/road_to_cloud_dev.gif)[^canva]
+![alt text](./images/road-to-cloud-dev.gif)[^canva]
 [^canva]: Created in [Canva](https://www.canva.com/))
-# Follow my daily journey to certified Cloud DevOps Engineer
+# Follow my daily journey to certified Cloud Engineer
 
 >He who aims at perfection<br>will probably miss the mark,<br>but he who aims at nothing,<br>is sure to hit it every time.
 >
@@ -682,6 +682,12 @@ ENTER
 > Note: You will still have to go through the initial install and setup phase like you normally would when you first are installing a new OS. When you start the system, go through the necessary install process.
 
 > About Creating Containers: You can also create Docker-like containers with ProxMox by downloading Linux container ISOs and uploading them to ProxMox, and then click on the `Create CT` blue button (right next to the `Create VM` button). The process for creating containers is the same as creating VMs.
+  
+# Day :keycap_ten:
+  
+## Kemp LoadMaster - Enterprise Load-balancer Setup
+
+- Initial setup
 
 ## MadMax (Chia Plotting) CLI
 
