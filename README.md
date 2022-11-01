@@ -658,6 +658,7 @@ ENTER
 > Before we can write an ISO file to our new ProxMox setup, we must edit the directory to allow `Disk Image`.
 
 - Click on `Datacenter` (underneath the "Sever view" pane).
+- Click on `Storage` from the list
 - Click on the ID (the only ID listed should be "local" if you followed the previous step), and then click `Edit`.
 - Click on the `Content` dropdown box and click on `Disk Image` to include it and allow it.
 
@@ -697,14 +698,74 @@ ENTER
   - You will notice that ProxMox is not listed among other Hypervisors, but that's not a problem. Kemp will still work! Here's how:
   - Select "VMware (OVF)" to download and agree to the terms (there's no difference in functionality, it is just packaged differently)
   - Next, unpack the downloaded zip file that contains the LoadMaster VM image. You can use a free tool like [WinRar](https://www.win-rar.com/start.html?&L=0) or [7-zip](https://www.7-zip.org/). You'll notice some *zip-insception* or *folder-inception* going on because there's another folder within the orginal folder, so just open both. After unzipping everything and getting to *Limbo-level-inception* you will find Mal--I mean--the files you really looking for.<br> ![alt_text](https://media.giphy.com/media/Ajf5GjjVwUYI8/giphy.gif)
-  - Find the `ovf` and the `vmdk` files, and go to your ProxMox evironment.
-  - Login to your ProxMox environment, and click on your "local" node (under `Server View`), then click on `ISO Images`, then
-  - You will need to use the `importovf` feature to delpoy Kemp.
-  - 
+  - Like Leonardo DiCaprio, you want to find something down in Limbo. Look for the `.ovf` and the `.vmdk` files. Got 'em? Good, you'll need to know the directory and files names so you can copy them into ProxMox using `ssh` and a SCP client.
+
+  ### Copy Files with SCP
+- Linux and macOS systems have a SCP client built in, but you will need to download [Git bash for Windows](https://git-scm.com/download/win). Or just run the following command in Windows Powershell and approve the install when prompted:
+  
+```sh
+winget install --id Git.Git -e --source winget
+```
+  
+<br>![alt_text](./images/gitbash-insall.jpg)
+  
+- Next, using terminal or Windows Powershell, wyou want to `scp` the .ovf file to your ProxMox home folder. Type the following:
+  
+```sh
+scp C:\Users\[user]\[directory]\Free-VLM-VMware-OVF-64bit\Free-VLM-VMware-OVF-64bit\[filename].ovf roo@[your_proxmox_ip]:/root/`
+```
+  
+- Next, you need to run and `scp` copy command. We want to copy **2** files (the .ovf and the .vmdk files) from the PC with those files to the ProxMox home directory. First, let's get the `.ovf` file uploaded.
+  
+```sh
+scp C:\Users\[user]\[directory]\Free-VLM-VMware-OVF-64bit\Free-VLM-VMware-OVF-64bit\[filename].ovf roo@[your_proxmox_ip]:/root/`
+```
+
+> Tip: Once you have spelled out (or copy & pasted it in the terminal window), you can start the first few letters of the file name and press `TAB` to auto-complete the file you want.
+
+- This `scp` command will securely copy & transfer that file into the `/root/` dir of ProxMox. Now, lets send the other one:
+  
+```sh
+scp C:\Users\[user]\[directory]\Free-VLM-VMware-OVF-64bit\Free-VLM-VMware-OVF-64bit\[filename].vmdk roo@[your_proxmox_ip]:/root/`
+```
+  
+> If you fail to copy/transfer both files, you will get an error message saying the file could not be parsed. So make sure you upload both files.
+  
+> You can check if the file made it by `ssh` & `ls` into your ProxMox evironment. <br> 
+  
+### Deploying Kemp via `importovf` CLI
+
+- Now we are ready to import Kemp into the ProxMox environment. You will need to use the `importovf` feature to delpoy Kemp.Use the following command:
+  
+  ```sh
+  qm importovf [ID] LoadMaster-VLM-[VERSION].RELEASE-VMware-VBox-OVF-FREE.ovf [SERVER]
+  ```
+  
+  > The `ID` number will be whatever the next ID for your VM is available (i.e. if you only made 1 VM then "101" is the next available ID, just check it in the `Server View` and `Datacenter` dropdown menu). The `SERVER` is name of the local storage listed in the `Data center`. It is probably just `local`.
+
 - Configure your domain nameservers with Cloudflare
 
 > You could always get a free domain from Freenom, but the major drawback is that many free domains available (ending in `.tk`, `.ml`, `.cf`, `.gq`) **will not work** with some remote access applications like Apache Gauacamole.
+  
+### Modifying the Config
+- When you first boot the "LoadMasterVLM" you will have problems. It wll throw errors and reboot. The problem has to do with the SCSI Controller. By default, ProxMox runs it as LSI, so we need to change it to VMware PVSCSI. We can change that direcly from the terminal:
+  
+```sh
+nano etc/pve/qemu-server/[ID].conf
+```
 
+- Once you are in the .conf file, use the down arrow to toggle to the bottom line and add the following entry `scsihw: pvscsi` then press `CTRL + X` then `y` then `ENTER` to save this new configuration..
+  
+<br>![alt_text](./images/vmware-pvscsi-1.jpg)
+  
+- If that worked, you will see the change on the hardware screen.
+  
+<br>![alt_text](./images/vmware-pvscsi-2.jpg)
+  
+- Also, you wan to give Kemp LoadMaster an internet connection, so go ahead and add it whil you are on this screen. Just click `Add` and add your `Network Device`.
+  
+<br>![alt_text](./images/loadmaster-working.jpg)
+  
 ## MadMax (Chia Plotting) CLI
 
 ## Kubernetes Homelab Install
