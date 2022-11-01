@@ -707,7 +707,7 @@ ENTER
 winget install --id Git.Git -e --source winget
 ```
   
-<br>![alt_text](./images/gitbash-insall.jpg)
+<br>![alt_text](./images/gitbash-install.jpg)
   
 - Next, using terminal or Windows Powershell, wyou want to `scp` the .ovf file to your ProxMox home folder. Type the following:
   
@@ -754,7 +754,7 @@ scp C:\Users\[user]\[directory]\Free-VLM-VMware-OVF-64bit\Free-VLM-VMware-OVF-64
 nano etc/pve/qemu-server/[ID].conf
 ```
 
-- Once you are in the .conf file, use the down arrow to toggle to the bottom line and add the following entry `scsihw: pvscsi` then press `CTRL + X` then `y` then `ENTER` to save this new configuration..
+- Once you are in the .conf file, use the down arrow to toggle to the bottom line and add the following entry `scsihw: pvscsi` then press `CTRL + X` then `y` then `ENTER` to save this new configuration.
   
 <br>![alt_text](./images/vmware-pvscsi-1.jpg)
   
@@ -763,8 +763,12 @@ nano etc/pve/qemu-server/[ID].conf
 <br>![alt_text](./images/vmware-pvscsi-2.jpg)
   
 - Also, you wan to give Kemp LoadMaster an internet connection, so go ahead and add it whil you are on this screen. Just click `Add` and add your `Network Device`.
+- I also recommend adding additional CPU cores and RAM (at least 4GB) to help with running Kemp without a problem as some users mentioned issues when the RAM was below 2 cores and 4GB of RAM (by default, it will give Kemp only 2GB).
   
 <br>![alt_text](./images/loadmaster-working.jpg)
+
+ > I want to five credit to Lusk.blog for the helpful insights on setting up Kemp with ProxMox. You can [check out his blog here](https://lusk.blog/how-to/running-free-load-balancer-on-proxmox-or-preventing-a-kemp-loadmaster-boot-loop/). And I thought to leave his helpful last remarks here:
+>> "While the free version of Kemp’s LoadMaster does limit the bandwidth to 20mbps, it’s quite sufficient for a lab environment. If you need something without the limitations and can’t afford (or don’t need) the LoadMaster Commercial version, or if you would just prefer to go with an open-source solution, [HAProxy](https://www.haproxy.org/) would be the tool of choice."
   
 ## MadMax (Chia Plotting) CLI
 
