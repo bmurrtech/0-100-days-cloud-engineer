@@ -588,38 +588,6 @@ select volume [#]
 active
 ```
 
-## ProxMox Type 1 Hypervisor Install
-![alt_text](./images/proxmox-setup.jpg)
-
-- Download the latest "ProxMox ISO [version#] ISO installer" from the [official website](https://www.proxmox.com/en/downloads/category/iso-images-pve)
-- Flash the ISO image to a USB drive (at least 8GB in size) using BalenaEtcher or Rufus (free Windows programs)
-- Plug the flashed USB drive into the PC you wish to use as your hypervisor
- 
-> Ensure your PC has an ethernet connection during the ProxMox install
-
-- Press `F12` or other key to enter your boot disk selection or BIOS
-- Force the PC to boot from the flash drive you created by selecting the flashdrive from the BIOS menu (google your PC BIOS for how to find the boot drive settings)
-- Allow ProxMox to load up and then select "Install ProxMox VE"
-- Agree the the terms of service EULA
-- Select the harddrive you wish to erase and install the hypervisor on
-
-> Note: This action will erase the drive. If you have files you don't want to lose, first back them up before proceeding.
-
-- Create a password to access your ProxMox hypervisor remotely using a web browser (you will be prompted for this password to access it)
-- Customize your install by editing the settings (timezone, hostname, IP CIDR, Gateway, DNS, etc.)
-
-> You should be able to leave the default, pre-filled information for the IP, gateway, and DNS, but you can always customize them to your liking.
-
-- Confirm all the settings and then click "Install" wait for ProxMox to fully install
-- After ProxMox has finished installing, it will automatically reboot (reboot manually if it did not). Ensure your ProxMox PC is running and plugged into a working ethernet connection, and then open up a web browser on a different machine and type in the IP CIDR address your created (typically it is https://192.168.1.1:8006 by default, but if you changed it in the set up, you need to use your specific IP to access it).
-
-> Don't forget to include "https://" and add ":8006" at the end of the IP address.
-
-- You will get a warning screen from your web browser telling you the URL address you went to is unsafe, but that's just because you don't have SSL for your ProxMox. It's a false alarm. Just click on whatever options you have to continue to the site.
-- Next, you will be prompted to login to ProxMox. Input `root` for the username and enter the password you created at setup to gain access.
-
-> Before deploying and VMs, you can consolidate and expand your storage. Do this *before* creating VMs.
-
 ## Increase Available HD Storage
 
 - Once you are in, you will notice two separate storage units inside of the node created by default (local-lvm and local). It turns out you don't need the local-lvm. So we can delete it to increase your storage capacity. Navigate to `Storage` and then select the "local-lvm" storage unit, and then click `Remove` to delete, and it will be gone.
@@ -653,6 +621,38 @@ ENTER
 
 -Now if you check the summary, you will see the "local" storage unit of your ProxMox node has been increased fully.
 
+## ProxMox Type 1 Hypervisor Install
+![alt_text](./images/proxmox-setup.jpg)
+
+- Download the latest "ProxMox ISO [version#] ISO installer" from the [official website](https://www.proxmox.com/en/downloads/category/iso-images-pve)
+- Flash the ISO image to a USB drive (at least 8GB in size) using BalenaEtcher or Rufus (free Windows programs)
+- Plug the flashed USB drive into the PC you wish to use as your hypervisor
+ 
+> Ensure your PC has an ethernet connection during the ProxMox install
+
+- Press `F12` or other key to enter your boot disk selection or BIOS
+- Force the PC to boot from the flash drive you created by selecting the flashdrive from the BIOS menu (google your PC BIOS for how to find the boot drive settings)
+- Allow ProxMox to load up and then select "Install ProxMox VE"
+- Agree the the terms of service EULA
+- Select the harddrive you wish to erase and install the hypervisor on
+
+> Note: This action will erase the drive. If you have files you don't want to lose, first back them up before proceeding.
+
+- Create a password to access your ProxMox hypervisor remotely using a web browser (you will be prompted for this password to access it)
+- Customize your install by editing the settings (timezone, hostname, IP CIDR, Gateway, DNS, etc.)
+
+> You should be able to leave the default, pre-filled information for the IP, gateway, and DNS, but you can always customize them to your liking.
+
+- Confirm all the settings and then click "Install" wait for ProxMox to fully install
+- After ProxMox has finished installing, it will automatically reboot (reboot manually if it did not). Ensure your ProxMox PC is running and plugged into a working ethernet connection, and then open up a web browser on a different machine and type in the IP CIDR address your created (typically it is https://192.168.1.1:8006 by default, but if you changed it in the set up, you need to use your specific IP to access it).
+
+> Don't forget to include "https://" and add ":8006" at the end of the IP address.
+
+- You will get a warning screen from your web browser telling you the URL address you went to is unsafe, but that's just because you don't have SSL for your ProxMox. It's a false alarm. Just click on whatever options you have to continue to the site.
+- Next, you will be prompted to login to ProxMox. Input `root` for the username and enter the password you created at setup to gain access.
+
+> Before deploying and VMs, you can consolidate and expand your storage. Do this *before* creating VMs.
+
 ## VM Time, Baby!
 
 > Before we can write an ISO file to our new ProxMox setup, we must edit the directory to allow `Disk Image`.
@@ -685,9 +685,25 @@ ENTER
   
 # Day :keycap_ten:
   
-## Kemp LoadMaster - Enterprise Load-balancer Setup
+## Kemp LoadMaster - Enterprise Load-balancer Setup on ProxMox
+- First-off, why use a load-balancer?
+  - **Industry-standared Epic-ness**: If you want to fit in with the cool kids (NASA, Harvard University, Apple, EA, Sony, US Army, JPMorgan, and more!) then you want the Kemp LoadMaster for your homelab.
+  - **Custom Domain URL Access**: Access your Plex/Jellyfin server by entering a custom URL (ex. https://<your_custom_domain_name.com>). So, if you want to  access your homelab services (i.e. NAS files, Plex/Jellyfin media server, Prolouge audiobooks, VMs, etc.) remotely (when you are not connected to your home network), you will want a load balancer.
+  - **Security**: More ports = more network vunerabilities! Hackers love ports. These digital pirates will growl, "Ahoy! I see me an open port" and then they sail right into your network with their malicious intent. So, if you self-host a webiste, watch Plex when away from home or at a friend's house, or you just want to access your NAS files outside your house, you must open up multiple ports which, in turn, exposes you to hackers. A load-balancer solves this problem. A load-balancer only requires *one* open port (443), greatly reducing your network vunerability.
+  - **Hide Your Public IP Address**: You *never* should share your public IP address! So, how can you hide it from attackers, and still want to share those amazing homelab apps you built and are so proud of without risking revealing your public IP? Two-words: "load balancer."
+- Get a [*multi-compatible* domain name](https://www.a2hosting.com/domains?aid=presearchnode&bid=75dbf1c0) or use one you already have
+- Get an enterprise-grade load-balancer called Kemp [get this 100% free version](https://freeloadbalancer.com/)
+  - You will first need to create an account with Kemp and then verify your email to get to the download page.
+  - You will notice that ProxMox is not listed among other Hypervisors, but that's not a problem. Kemp will still work! Here's how:
+  - Select "VMware (OVF)" to download and agree to the terms (there's no difference in functionality, it is just packaged differently)
+  - Next, unpack the downloaded zip file that contains the LoadMaster VM image. You can use a free tool like [WinRar](https://www.win-rar.com/start.html?&L=0) or [7-zip](https://www.7-zip.org/). You'll notice some *zip-insception* or *folder-inception* going on because there's another folder within the orginal folder, so just open both. After unzipping everything and getting to *Limbo-level-inception* you will find Mal--I mean--the files you really looking for.<br> ![alt_text](https://media.giphy.com/media/Ajf5GjjVwUYI8/giphy.gif)
+  - Find the `ovf` and the `vmdk` files, and go to your ProxMox evironment.
+  - Login to your ProxMox environment, and click on your "local" node (under `Server View`), then click on `ISO Images`, then
+  - You will need to use the `importovf` feature to delpoy Kemp.
+  - 
+- Configure your domain nameservers with Cloudflare
 
-- Initial setup
+> You could always get a free domain from Freenom, but the major drawback is that many free domains available (ending in `.tk`, `.ml`, `.cf`, `.gq`) **will not work** with some remote access applications like Apache Gauacamole.
 
 ## MadMax (Chia Plotting) CLI
 
