@@ -688,16 +688,16 @@ ENTER
   
 ## Kemp LoadMaster - Enterprise Load-balancer Setup on ProxMox
 - First-off, why use a load-balancer?
-  - **Industry-standared Epic-ness**: If you want to fit in with the cool kids (NASA, Harvard University, Apple, EA, Sony, US Army, JPMorgan, and more!) then you want the Kemp LoadMaster for your homelab.
-  - **Custom Domain URL Access**: Access your Plex/Jellyfin server by entering a custom URL (ex. https://<your_custom_domain_name.com>). So, if you want to  access your homelab services (i.e. NAS files, Plex/Jellyfin media server, Prolouge audiobooks, VMs, etc.) remotely (when you are not connected to your home network), you will want a load balancer.
-  - **Security**: More ports = more network vunerabilities! Hackers love ports. These digital pirates will growl, "Ahoy! I see me an open port" and then they sail right into your network with their malicious intent. So, if you self-host a webiste, watch Plex when away from home or at a friend's house, or you just want to access your NAS files outside your house, you must open up multiple ports which, in turn, exposes you to hackers. A load-balancer solves this problem. A load-balancer only requires *one* open port (443), greatly reducing your network vunerability.
+  - **Industry-standard Epic-ness**: If you want to fit in with the cool kids (NASA, Harvard University, Apple, EA, Sony, US Army, JPMorgan, and more!) then you want the Kemp LoadMaster for your homelab.
+  - **Custom Domain URL Access**: Access your Plex/Jellyfin server by entering a custom URL (ex. https://<your_custom_domain_name.com>). So, if you want to  access your homelab services (i.e. NAS files, Plex/Jellyfin media server, Prologue audiobooks, VMs, etc.) remotely (when you are not connected to your home network), you will want a load balancer.
+  - **Security**: More ports = more network vulnerabilities! Hackers love ports. These digital pirates will growl, "Ahoy! I see me an open port" and then they sail right into your network with their malicious intent. So, if you self-host a website, watch Plex when away from home or at a friend's house, or you just want to access your NAS files outside your house, you must open up multiple ports which, in turn, exposes you to hackers. A load-balancer solves this problem. A load-balancer only requires *one* open port (443), greatly reducing your network vulnerability.
   - **Hide Your Public IP Address**: You *never* should share your public IP address! So, how can you hide it from attackers, and still want to share those amazing homelab apps you built and are so proud of without risking revealing your public IP? Two-words: "load balancer."
 - Get a [*multi-compatible* domain name](https://www.a2hosting.com/domains?aid=presearchnode&bid=75dbf1c0) or use one you already have
 - Get an enterprise-grade load-balancer called Kemp [get this 100% free version](https://freeloadbalancer.com/)
   - You will first need to create an account with Kemp and then verify your email to get to the download page.
   - You will notice that ProxMox is not listed among other Hypervisors, but that's not a problem. Kemp will still work! Here's how:
   - Select "VMware (OVF)" to download and agree to the terms (there's no difference in functionality, it is just packaged differently)
-  - Next, unpack the downloaded zip file that contains the LoadMaster VM image. You can use a free tool like [WinRar](https://www.win-rar.com/start.html?&L=0) or [7-zip](https://www.7-zip.org/). You'll notice some *zip-insception* or *folder-inception* going on because there's another folder within the orginal folder, so just open both. After unzipping everything and getting to *Limbo-level-inception* you will find Mal--I mean--the files you really looking for.<br> ![alt_text](https://media.giphy.com/media/Ajf5GjjVwUYI8/giphy.gif)
+  - Next, unpack the downloaded zip file that contains the LoadMaster VM image. You can use a free tool like [WinRar](https://www.win-rar.com/start.html?&L=0) or [7-zip](https://www.7-zip.org/). You'll notice some *zip-insception* or *folder-inception* going on because there's another folder within the original folder, so just open both. After unzipping everything and getting to *Limbo-level-inception* you will find Mal--I mean--the files you really looking for.<br> ![alt_text](https://media.giphy.com/media/Ajf5GjjVwUYI8/giphy.gif)
   - Like Leonardo DiCaprio, you want to find something down in Limbo. Look for the `.ovf` and the `.vmdk` files. Got 'em? Good, you'll need to know the directory and files names so you can copy them into ProxMox using `ssh` and a SCP client.
 
   ### Copy Files with SCP
@@ -709,7 +709,7 @@ winget install --id Git.Git -e --source winget
   
 <br>![alt_text](./images/gitbash-install.jpg)
   
-- Next, using terminal or Windows Powershell, wyou want to `scp` the .ovf file to your ProxMox home folder. Type the following:
+- Next, using terminal or Windows Powershell, you want to `scp` the .ovf file to your ProxMox home folder. Type the following:
   
 ```sh
 scp C:\Users\[user]\[directory]\Free-VLM-VMware-OVF-64bit\Free-VLM-VMware-OVF-64bit\[filename].ovf roo@[your_proxmox_ip]:/root/`
@@ -731,7 +731,7 @@ scp C:\Users\[user]\[directory]\Free-VLM-VMware-OVF-64bit\Free-VLM-VMware-OVF-64
   
 > If you fail to copy/transfer both files, you will get an error message saying the file could not be parsed. So make sure you upload both files.
   
-> You can check if the file made it by `ssh` & `ls` into your ProxMox evironment. <br> 
+> You can check if the file made it by `ssh` & `ls` into your ProxMox environment. <br> 
   
 ### Deploying Kemp via `importovf` CLI
 
@@ -745,10 +745,10 @@ scp C:\Users\[user]\[directory]\Free-VLM-VMware-OVF-64bit\Free-VLM-VMware-OVF-64
 
 - Configure your domain nameservers with Cloudflare
 
-> You could always get a free domain from Freenom, but the major drawback is that many free domains available (ending in `.tk`, `.ml`, `.cf`, `.gq`) **will not work** with some remote access applications like Apache Gauacamole.
+> You could always get a free domain from Freenom, but the major drawback is that many free domains available (ending in `.tk`, `.ml`, `.cf`, `.gq`) **will not work** with some remote access applications like Apache Guacamole.
   
 ### Modifying the Config
-- When you first boot the "LoadMasterVLM" you will have problems. It wll throw errors and reboot. The problem has to do with the SCSI Controller. By default, ProxMox runs it as LSI, so we need to change it to VMware PVSCSI. We can change that direcly from the terminal:
+- When you first boot the "LoadMasterVLM" you will have problems. It will throw errors and reboot. The problem has to do with the SCSI Controller. By default, ProxMox runs it as LSI, so we need to change it to VMware PVSCSI. We can change that directly from the terminal:
   
 ```sh
 nano etc/pve/qemu-server/[ID].conf
@@ -769,6 +769,20 @@ nano etc/pve/qemu-server/[ID].conf
 
  > I want to five credit to Lusk.blog for the helpful insights on setting up Kemp with ProxMox. You can [check out his blog here](https://lusk.blog/how-to/running-free-load-balancer-on-proxmox-or-preventing-a-kemp-loadmaster-boot-loop/). And I thought to leave his helpful last remarks here:
 >> "While the free version of Kemp’s LoadMaster does limit the bandwidth to 20mbps, it’s quite sufficient for a lab environment. If you need something without the limitations and can’t afford (or don’t need) the LoadMaster Commercial version, or if you would just prefer to go with an open-source solution, [HAProxy](https://www.haproxy.org/) would be the tool of choice."
+  
+# Day :one::one:
+
+- Researched blog hosting options
+  - Both Ghost and Hashnode are my choices, but I want to set up Zapier to automate blog auto-post to Medium and Twitter, too
+- Added IT cover letter to my resume
+- Updated resume on Indeed (uploaded to Github, too)
+- Applied to many different entry-level IT jobs (and jobs way out of my skill range)
+- Adapted my IT cert. roadmap to:
+  - CompTIA A+ (via the Google IT Support course)
+  - Linux LFCA
+  - Azure Dev AZ-204
+  - AZ-900
+- Started [Google IT Support Professional Certificate on Courera](https://www.coursera.org/professional-certificates/google-it-support) 
   
 ## MadMax (Chia Plotting) CLI
 
