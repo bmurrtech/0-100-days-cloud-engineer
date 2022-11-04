@@ -770,19 +770,27 @@ nano etc/pve/qemu-server/[ID].conf
  > I want to five credit to Lusk.blog for the helpful insights on setting up Kemp with ProxMox. You can [check out his blog here](https://lusk.blog/how-to/running-free-load-balancer-on-proxmox-or-preventing-a-kemp-loadmaster-boot-loop/). And I thought to leave his helpful last remarks here:
 >> "While the free version of Kemp’s LoadMaster does limit the bandwidth to 20mbps, it’s quite sufficient for a lab environment. If you need something without the limitations and can’t afford (or don’t need) the LoadMaster Commercial version, or if you would just prefer to go with an open-source solution, [HAProxy](https://www.haproxy.org/) would be the tool of choice."
   
-# Day :one::one:
+# Day 11
 
 - Researched blog hosting options
   - Both Ghost and Hashnode are my choices, but I want to set up Zapier to automate blog auto-post to Medium and Twitter, too
+- Updated IT Resume (this is the resume that got me an interview at an IT biz)
 - Added IT cover letter to my resume
 - Updated resume on Indeed (uploaded to Github, too)
 - Applied to many different entry-level IT jobs (and jobs way out of my skill range)
 - Adapted my IT cert. roadmap to:
-  - CompTIA A+ (via the Google IT Support course)
-  - Linux LFCA
+  - ~~CompTIA A+ (via the Google IT Support course)~~
+  - By Feburary 2023 [Google IT Automation with Python Professional Certificate](https://www.coursera.org/professional-certificates/google-it-automation)
   - Azure Dev AZ-204
   - AZ-900
-- Started [Google IT Support Professional Certificate on Courera](https://www.coursera.org/professional-certificates/google-it-support) 
+  - Linux LFCA
+- Started ~~[Google IT Support Professional Certificate on Courera](https://www.coursera.org/professional-certificates/google-it-support)~~ [Google IT Automation with Python Professional Certificate](https://www.coursera.org/professional-certificates/google-it-automation)
+  
+# Day 12
+- Started interview process at local IT job
+- Discovered/learned more about Jupyter Labs/Notebook
+- Researching way to launch Jupyter Notebook server from homelab to set up Python and RMarkdown environment
+- Researching VS server to enable Python and RMarkdown coding on iPadOS
   
 ## MadMax (Chia Plotting) CLI
 
