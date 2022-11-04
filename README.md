@@ -773,7 +773,7 @@ nano etc/pve/qemu-server/[ID].conf
 # Day 11
 
 - Researched blog hosting options
-  - Both Ghost and Hashnode are my choices, but I want to set up Zapier to automate blog auto-post to Medium and Twitter, too
+  - Both ~~Ghost~~ Shopify w (with apps) and Hashnode are my choices, but I want to set up Zapier to automate blog auto-post to Medium and Twitter, too
 - Updated IT Resume (this is the resume that got me an interview at an IT biz)
 - Added IT cover letter to my resume
 - Updated resume on Indeed (uploaded to Github, too)
@@ -791,6 +791,28 @@ nano etc/pve/qemu-server/[ID].conf
 - Discovered/learned more about Jupyter Labs/Notebook
 - Researching way to launch Jupyter Notebook server from homelab to set up Python and RMarkdown environment
 - Researching VS server to enable Python and RMarkdown coding on iPadOS
+- Set up a Google Docs [Zapier integration](https://zapier.com/apps/google-docs/integrations/zapier)/automation with Hashnode [github zapier integration: publish hashnode story](https://github.com/MihaiBojin/zapier-integration-create-hashnode-story)
+  - Automate when file is added to a blog "publish" folder
+  - Google Doc to Medium Zapier integration
+  - Google Doc to Shopify integration (add google doc manually to Shopify to upload new blog)
+  - [Shopify natively supports Markdown text](https://apps.shopify.com/doc2blog?search_id=9e115761-85d8-4ac9-b6a3-0812fc5100d9&surface_detail=markdown+blog&surface_inter_position=1&surface_intra_position=6&surface_type=search)
+  - Google docs also supports Markdown if you change the settings. To enable Markdown compatibility with Google Docs:
+    - Tools > Preferences > "Automatically Detect Markdown"
+- Can add [courses and membership feature to Shopify](https://apps.shopify.com/inflowkit-2?search_id=5506c052-c66a-40f2-a4a4-545b34a640d8&surface_detail=membership&surface_inter_position=1&surface_intra_position=4&surface_type=search)
+- Can add [digital content for sale via Shopify](https://apps.shopify.com/digital-downloads-2?search_id=b80c1c88-05da-4a77-890f-7fa6905c39ee&surface_detail=digital&surface_inter_position=1&surface_intra_position=7&surface_type=search)
+
+## Create Custom Copyright-free AI Generated Images
+- Thanks for the open source tech of [Stable Diffusion](https://stability.ai/blog/stable-diffusion-public-release), it is possbible to use your home GPU to generate incredible 512x512 AI images by simply inputing a description of what photo you want.
+  
+> I know that 512x512 is low res, but you can use a AI tool to upscale those 1x1 images to 2X or more! The open-source software is aptly named, [Video2X](https://github.com/k4yt3x/video2x/wiki/GUI) (available for Windows). If you are trying to upscale photo-real images (not anime-sytle characters), **remember to change the output setting to "RealSR" or "SRMD"**. There's other AI algorithms with varying degrees of quaility to render-speed results (there's realy only two art-types at the time of writing this: anime-styled arts and real-life arts). You can read more about the pros and cons of the algos on [k4yt3x's Wiki](https://github.com/k4yt3x/video2x/wiki/Algorithms)
+  
+- In addition to Stable Diffusion, a developer created a GUI for it so average users can easily create AI images. He has a Patreon for a more polished release of his GUI, but you can [get his free version](https://grisk.itch.io/stable-diffusion-gui) and it will work.
+- If you have trouble thinking of a photo description, you can utilize [this free art archive, Lexica Art](https://lexica.art/) to fine tune and generate useable text and a more desireable outcome for the GUI to work with.
+  
+> Always be cautious about running random `.exe` programs. Double check your download before installing. If it has a `CHECKSUM` that's even better.
+  
+
+
   
 ## MadMax (Chia Plotting) CLI
 
