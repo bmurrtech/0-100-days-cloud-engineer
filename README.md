@@ -802,17 +802,18 @@ nano etc/pve/qemu-server/[ID].conf
 - Can add [digital content for sale via Shopify](https://apps.shopify.com/digital-downloads-2?search_id=b80c1c88-05da-4a77-890f-7fa6905c39ee&surface_detail=digital&surface_inter_position=1&surface_intra_position=7&surface_type=search)
 
 ## Create Custom Copyright-free AI Generated Images
-- Thanks for the open source tech of [Stable Diffusion](https://stability.ai/blog/stable-diffusion-public-release), it is possbible to use your home GPU to generate incredible 512x512 AI images by simply inputing a description of what photo you want.
+- Thanks for the open source tech of [Stable Diffusion](https://stability.ai/blog/stable-diffusion-public-release), it is possbible to use your home GPU to generate incredible AI images by simply inputing a description of what photo you want.
   
-> I know that 512x512 is low res, but you can use a AI tool to upscale those 1x1 images to 2X or more! The open-source software is aptly named, [Video2X](https://github.com/k4yt3x/video2x/wiki/GUI) (available for Windows). If you are trying to upscale photo-real images (not anime-sytle characters), **remember to change the output setting to "RealSR" or "SRMD"**. There's other AI algorithms with varying degrees of quaility to render-speed results (there's realy only two art-types at the time of writing this: anime-styled arts and real-life arts). You can read more about the pros and cons of the algos on [k4yt3x's Wiki](https://github.com/k4yt3x/video2x/wiki/Algorithms)
+> **LowRes Art Upscale Trick**:So, depending on your GPU RAM capacity, you may only be able to generate low res images (4GB can make 256x512 images, 11+GB can make 640x640 art).  In the chipper spirit of letting AI robots take over the world, let's use AI to upscale our lowres art! Thanks to AI intelligence, you can use an AI tool to upscale those AI-generated images by 2X or more! Robots helping robots--it's robot-inception! Anyway, the open-source software is aptly named, [Video2X](https://github.com/k4yt3x/video2x/wiki/GUI) (available for Windows) if you want to check it out.
+  
+> **Photo-real Images**: If you are trying to upscale photo-real images (not anime-sytle characters), **remember to change the output setting to "RealSR" or "SRMD"**. By default, Video2x is set to AI-upscale anime-style art. You'll notice there's other AI algorithms with varying degrees of quaility to render-speed results (there's realy only two art-types at the time of writing this: anime-styled arts and real-life arts). You can read more about the pros and cons of the algos on [k4yt3x's Wiki](https://github.com/k4yt3x/video2x/wiki/Algorithms)
   
 - In addition to Stable Diffusion, a developer created a GUI for it so average users can easily create AI images. He has a Patreon for a more polished release of his GUI, but you can [get his free version](https://grisk.itch.io/stable-diffusion-gui) and it will work.
 - If you have trouble thinking of a photo description, you can utilize [this free art archive, Lexica Art](https://lexica.art/) to fine tune and generate useable text and a more desireable outcome for the GUI to work with.
+- Polyfjord made a great video tutorial on these amazing tools with incredible results. Check out his [tutorial video here]()
   
 > Always be cautious about running random `.exe` programs. Double check your download before installing. If it has a `CHECKSUM` that's even better.
   
-
-
   
 ## MadMax (Chia Plotting) CLI
 
