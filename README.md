@@ -802,6 +802,8 @@ nano etc/pve/qemu-server/[ID].conf
 - Can add [digital content for sale via Shopify](https://apps.shopify.com/digital-downloads-2?search_id=b80c1c88-05da-4a77-890f-7fa6905c39ee&surface_detail=digital&surface_inter_position=1&surface_intra_position=7&surface_type=search)
 
 ## Create Custom Copyright-free AI Generated Images
+- First up, the easiest (but limited) way to generate AI art is to use free services like [Midjourney](https://midjourney.gitbook.io/docs/) or [Simplified Graphic Design](https://simplified.com/graphic-design). Obviously, all free services will have limitations (i.e. only 10 AI-generated images) that will make users want to buy a subscription. If you just need some one-off AI-art, these services will work, but if you want more powerful features and no limitations--and you happen to have a decent GPU--I recommend using the following resources:
+  
 - Thanks for the open source tech of [Stable Diffusion](https://stability.ai/blog/stable-diffusion-public-release), it is possbible to use your home GPU to generate incredible AI images by simply inputing a description of what photo you want.
   
 > **LowRes Art Upscale Trick**:So, depending on your GPU VRAM capacity, you may only be able to generate low res images (4GB can make 256x512 images, 11+GB can make 640x640 art).  In the chipper spirit of letting AI robots take over the world, let's use AI to upscale our lowres art! Thanks to AI intelligence, you can use an AI tool to upscale those AI-generated images by 2X or more! Robots helping robots--it's robot-inception! Anyway, the open-source software is aptly named, [Video2X](https://github.com/k4yt3x/video2x/wiki/GUI) (available for Windows) if you want to check it out.
