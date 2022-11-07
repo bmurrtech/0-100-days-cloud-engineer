@@ -824,3 +824,268 @@ nano etc/pve/qemu-server/[ID].conf
 - Installed Ubuntu to get started installing necessary packages
 
 > Refer to [Ubuntu's official download and install website for instructions](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview)
+  
+# Day 13
+  
+- Used a [free Google Doc to Markdown converter](https://docswrite.com/google-docs-to-markdown) to convert Azure notes to markdown
+
+## Azure Fundamentals Part 1
+  
+Training Day Resources: [https://on24static.akamaized.net/event/39/50/54/4/rt/1/documents/resourceList1627979893310/mavtdfy22h1fundamentalsresourcelist1627979891280.pdf](https://on24static.akamaized.net/event/39/50/54/4/rt/1/documents/resourceList1627979893310/mavtdfy22h1fundamentalsresourcelist1627979891280.pdf)
+
+![](https://lh4.googleusercontent.com/Aj2OWOctYJMbYVgT6MYUJvlzUNbTc6eO4AJhHLckPTBWkv6LdiKetmL1QkgoOptdHvnLFpZb-USd66HE2TsV-N1foO7vdOZymPKCpMNEz3qoV57M7bzjERszztu-kqE6L2s7BUEDe9jBj63Y5sd7zm17q8Tm6eQFrnZfx8Y8r6cvLialrHGMk-l16GqflI9RgZAvyjU "")
+
+![](https://lh4.googleusercontent.com/Bf9ZLHUweK-ZgWObbu95p2Is1jtIHoVyrrasEdh0I2iE70r7BjizXD9RE7M7bSOYQX-P-qaoNgFt0WBhdJ2NoYxBYb_QuNzqKeQlnrzFUPbW9iZEUggZQowDbKlI-tAA80_OvwigSTQQcH2vF8UDqz9cAzfaK4yCr2ITolOkYzBcP_ZS9bVm2U_UBMCjEC9pv3m1u20 "")
+
+![](https://lh6.googleusercontent.com/X8iJxf1j5NTNSJy4kE0k1LW43v1kP0Ww_5vi4s4yqTHJJsrYq22H2JP-vMZO7pS76VH352xz1_2TrSVIVZY24pchBu7QlPZxiMPPa9pgnAEyRcH5fCIxsqksLHe9CSx591791zAP5Ih4xOxVo0oiSALIo8sSvqLYX9oWc7y_EmOJUWSx2N2UlAQiW5dE_TOjrt30M5Q "")
+
+![](https://lh5.googleusercontent.com/oXOAT8ftaQCjTLFCnZCCglekAFmHJ8TpfRKUCCoZMXURjO4WD3wlsuDZVx8LKkp_SAdYe6VZl9EIJrsxkN_NtK2C5A8Iom6xrcNU4YUPlXZK8aGuzBfKuyQcCNaNYP3YJn2mC_U9aoNDStHnhl_a8LScRRD0rJL3Cet_YHY0E3gDJrix6bdowWxPeZ2vcdyM7DA3M3Q "")
+
+
+Cloud Benefits
+
+
+ - High availability - 99.99% uptime
+ - Scalability - virtually no hardware limitations
+ - Global reach - servers all over the world
+ - Agility - adapt to workload demand
+ - Fault tolerance - protect yourself against hardware failure
+ - Elasticity - (think of a rubber band) automatically increase or decrease services as needed
+ - Customer latency capabilities - servers closer to the customer location
+ - Predict cost considerations - your able to quote what you spend before you spend it
+
+![](https://lh5.googleusercontent.com/EnoVx9guG7Nzh0yRB4T_h8AFf22Qeufy6h2G6dfAY7vlkJZESKdGK4vgxjzqgCm7PabUjQBQERVSt-38jkuuoLbhKMxWsNPOImnKHV2zx2O7iJBRS4MC9h1jmSWoJdSUUijo0cQNoJ3FwbV6LtBwi1vOrmXyjuaFUX2kvxu81auaGfmNltQLSHnRgprDJ1ISJ6P79uQ "")
+
+![](https://lh5.googleusercontent.com/GCtJO2lRYl-eGozcRxwPXHR6SM69Np8ePJWBU4ZZn4laJ0Sx9O5HaowslSurjgW7AundTxyG7YWEW8BRAyZYOcEZugoAR9KmhsDu9HoXgJe7HXQt5BLbENll7IHS8zqQIkdMXss_l3qKwjBP6gN8H33pog5BpUNrBySu9RljoXo9lLI4Lq2aTJyBmvvbpzhnGm6j6u4 "")
+
+
+Cloud Services:
+
+![](https://lh5.googleusercontent.com/fYgJC6nCLy7Tkd8cw7JS7UhQ7L7zyVS1pwU5-wP-xPLikdJs3oqHzZhk5HuXS9a1D7DDvMBVojG8_Z9ILOLBBHwZB9EG6Og791lbwpVkb5DZsvVGkKwtSYPo21ML96cANNICLDhcALnOfryrQJzGA38YH3FUcMiObS3XZm2OXRyms1zCfmk8lALbMmjTzkTBqgty8bE "")
+
+
+ - IaaS - infrastructure
+
+![](https://lh4.googleusercontent.com/RsWOJBnHQkjF5y-imU-ZU3bKjRsZfF5P4riCxSgKOS-zUyKfoQSI2k-mi2zMrHYku70mjJm1xRtgdpZp7jKiG4Cl4DHfvsdoJIcLT92Lp1Oqt6S4AE7xmuX9mH0z_rUIRtplm9JZUkrT6yNnpx_GCD_sJUk9f8bI6Je_D9GbklMk5Pvd9PZ2pdYcHrPocdOvX74_42I "")
+
+
+ - PaaS
+
+![](https://lh5.googleusercontent.com/8vwyvMWXu3RciRxxpKzeAQDDc8qlOgOrx6v3Rz4VTVPMyixhZaUQKcAEL2xLOrva6rcLrPGEzfaQo0fgx9meHY3W2OTHPzzSd3-Z_rFzCnUOEDhLETjNC-k_YzgBEen_RDJwKz9AdQQPWMN15i_KJpRcHn0gByT4HpAaJJZZgCT5moTkQopzHIciDVihpEWEL2Wd2Jg "")
+
+
+ - SaaS
+
+![](https://lh4.googleusercontent.com/4JlCQM-mKzjKDE9VLKBG3FoDH2C1Ee9dUS7S5Twdud9UzD6YLjUEwtMIqnXKqsSAml8somZ72Dj5cHd-2OZ7pt1QtxC56dRepvY7XhnOkJZnT72k4V29K8ixbA-7KRuaDl6tFCgU1cGoMcodgzKd1tccw9lr6T_aFuWrQb34y6jDP4hkLpbIhewuT0ikWt7Y6U8zvmw "")
+
+![](https://lh6.googleusercontent.com/c0AbYmr2RstnNxqtKbd11GHYnXVG2NDctVUzcQK_7N7dkqs32-993P9K0Ib5XVn5qmukAaBwd6pEbuz_1wV7lvnXIJizg93vXBNVO4JdORUmQqio8Y82zNnKyaW_xf-jeGK_zoGo4VFvTRc5AHMx366DSuA4BcZGNw6Z0Ede1M1pgJc8wzE5gyl-yxtXoGA6gyOfZlE "")
+
+![](https://lh5.googleusercontent.com/Zcm5azYfbZHpsGeENkeSmF4uLClpaVh9e1R-nRBijWyicV3bf1STuo1O4LhVvQQxwpb0vCUbytlgIbf9O-Gj6Z19GT1eCBBAY3L-iXYYdyT1GGGZ30fxuWlGmk9YO8bzjq05A4htKDyN9fzD-bVHRgHIGiHag49Zy_29nu9wUegPN07i6T64Hosi_BfAKAqaYQMhG4s "")
+
+![](https://lh3.googleusercontent.com/f2ghM1g9hGg7MXIPF7UzEyV6oGv6GbJGrWlRsqBKFyfY5gT4hOtRKdrNjJhj3uRDzPUZ4ORHuL46MwKRwpFdWhJ5ehtjMDu8Hz6XtnHhytmL0Zg2b1PEjfW460pp_amTCZHTGpedAYFCmr76ueFwEhfR8db0Km2PJ_q8WhrMG_klJIXSff5_HilFeqwprg-2GXh4iGg "")
+
+![](https://lh3.googleusercontent.com/cc15z3tavlWdFskgoVNR6TwMJ26m0qDDKZOjSEgQTrddixuLJclOehlNpsa49KXYRa9wmYtL9ttLAAu6Eb_F25NvDDLMqNgNQ-swjiXAhriU6uNOncPuDeNadsHIYZFbYzmVq_Y0YBu8tDEFh27825Sk6hD8vNraocy_R0IA5unEkbkdKyY_PUHhgQjQlfLwbF4OY0E "")
+
+
+ - [https://portal.azure.com](https://portal.azure.com)
+
+![](https://lh6.googleusercontent.com/zzW0svyQP98MQgrPZkLe3BsUxzv0UkMAHeX7FtSoqmQG1F7rwUKlB4oiOqkk2-BltkTwSEYXlgLSKv6lADLjHkN8mAt3FC-8lIZjVZh2pP93SnD76-ha8sHuEgDOCVegAzkGRbxFq3IARXlK56Cvm33We3UFa4i7VqwuMs0eqjKM4BFJr4gbQgwzW5F2vO2O2Afb9SA "")
+
+![](https://lh4.googleusercontent.com/EsV28MKf00k_LREAdLLYYoLd225esBnviTnJbx5VGf9f9aVVSpYusHXBy98QDr1Ssi12QrD_0eZH003kWIAyEQ2vOZCcUwf2rzhWrQO3A8loC1Wd9c0htrJnNhP4El96Nl5gWGEeW9Ax66QLNdqHV1v71ghFB0SxDQJpVvZC3K4KhEN9MAk6Lu64sbb2c1t-DCLpZpI "")
+
+![](https://lh4.googleusercontent.com/U3LiaahvuJiy186y4GvdN7r-rVNAHvS7lR4zyMMFOO_em6NN6_bcTeLroWa6TuTi9LqaxZ0aNmSyi6hkuJTzDsVtqdATGUuG6ArJGvYA8iP7c5-CT9m4cfn97ezIXgc1TuQWSz0TCTSuwZuMm7yCilqA31kdNJK4ipqUEDwzblwwwaEzUQX7RbM7MPYiTq8rHs8HsgA "")
+
+![](https://lh3.googleusercontent.com/JvbaeJwOUcSihFw_vougjtntHyzqYi3IZ4pFQwTvWNK3zOEhSPSTypb5epNJhom5dVJ1UHwWYiya-DJ8aOkccgd_hBMaqn7pjgoNcdku0_dJscF-3OrpFm6UCmqn-u0TacDaBMjeDTS5M_7t1M0Fz1UmEkxWy4anNUs0e_MANyWnIjB8wp40eJbAlEGY4zhrJM1vDWE "")
+
+
+**Create an Azure VM**
+
+
+ - All services > Compute > VMs > Add Virtual Machine > "Create a virtual machine"
+ - Put resources in the subscription account
+ - Click "Create" to make a resource group
+ - Name the resource group
+ - Name the VM (pick a name that makes sense to you)
+ - Select the region close to you (note all data centers have the same availability zones)
+ - Select availability zones
+     - Availity sets is putting VMs on the machine/server
+     - Availability Sets provide redundancies within a single Data Center by protecting against physical hardware failures. :) Very unlikely to be on the same machine, otherwise both would go down with a machine failure!
+    
+ - Select an image to install on the VM
+ - Azure Spot instance is a cheap, utility-only, testing option
+ - Select the ideal size for your VM needs
+ - Create your username for the admin account
+ - Create a password for the admin account (it will not allow you to choose "password" as your password), and reenter your password to check if they match
+ - Configure your inbound ports (select the ports you want open so you can access your machine via SSH)
+ - Under disk the disk tab, select your ideal disk setup
+ - Under the network tab, you can check the radio button that allows public access to your VM
+ - Under the management tab, you congruent auto-shutdown settings and backups
+ - If you have multiple projects, you can use the tab feature to set up filter tabs (especially helpful when you have multiple projects and VMs running for different groups and sections of your business)
+ - Under the review + create tab, you can click the "download a template for automation" to save time when you want to create new VMs. Now you can launch it
+ - You need to download the RDP connect file (click the button to download it)
+     - You can run the RDP file to connect to your VM
+     - You must use the credentials you made to log in as the admin user
+     - Click to continue to connect if you get a message saying the connection is not secure
+    
+ - Run Powershell to [install a web server role](https://learn.microsoft.com/en-us/powershell/module/servermanager/install-windowsfeature?view=windowsserver2022-ps)
+     - [What is Powershell?](https://learn.microsoft.com/en-us/powershell/scripting/overview?view=powershell-7)
+     - `Install-WindowsFeature -Name Web-Server -IncludeAllSubFeature -ComputerName Server1 -WhatIf`
+    
+ - To test if you can connect to the web server:
+     - Get the IP of the VM, and paste it in the URL in the web browser
+    
+
+![](https://lh3.googleusercontent.com/9pHXVl8hCaZJjnbjG7G19mquTCx1mdtyt0Un7jfTb1Xz63i2MitbCiE4km7LTvLtr7P6bl1XxAAHuDDvfZHMYjEaW_hL0jugwv6bHw8pXjL0_tWpvY7n8BU3G1mHCRxtxrCtqEghKDhVjN8ljbvnKNtlYXbJ604Psvl7txSY_ULR9a6ZsWzCsHjnxJ2Ys_0JCRX8mSw "")
+
+![](https://lh6.googleusercontent.com/cw5O_P9_7WRZLSydGEfvKDAzJoFAg8d3liGe8tJk_2QX6laQzwqkSUieN5IE-HsUHf5-D8H96vt_xnnuBB0qfjeng8UppKvD9iyXvv0Wo2ziA9v14tOXpYk1wQMZrXV-vunn5jWUp5wRX7aw1Lziznyor9wCufcublIoSl6yiNTW1XVrGllNvJvRfSFC8kUUOtxYhRc "")
+
+![](https://lh3.googleusercontent.com/AVb-EMAUAtTiFi7IbhLAoDARclpYpyx-5jQx91xDXI0YK7fpEJb-N5wNiYLLx2uBiFwWG8mzchnmVoX4n7jbnQf6vC8Zj5_zIwTqkLQg7XblslmINBQekp6BVJC3nYLsFWBLqdR7dR9ITMVYyhpCVFAF3gvHfbwlpEGAPUYSKjfj0XUmXVvq496R6kj4VKwh8knP29k "")
+
+
+ - **Kubernetes loosely translated means, "captain"--yeah like a sea captain**
+
+
+**Deploy a Container in Azure**
+
+
+ - Portal Search > Container Instances > Add
+ - Select the subscription
+ - If needed, created a new resource group
+ - Type in a container name
+ - Select your region for the container deployment
+ - For the "Image source" choose "Docker Hub"
+ - For testing, select the hello world image " microsoft/aci-helloworld"
+     - Choose your OS system (i.e. Linux)
+    
+ - Set networking as public
+ - Enter an available DNS name label (it is required for access)
+     - The "mycontainer20202020" was used in this tutorial (see URL below)
+    
+ - Once you launch the container, you can click "go to resource" to see the overview
+ - Now, you can access the container (running hello-world or anything else)
+
+![](https://lh5.googleusercontent.com/2AC8liXIy8vT8ZIEn8rsPa5iG5HfsKnGPCZnN2b-p3UG1LwhsLbdqRrC5A4oS_oEvtMdzrg9afFLNb5zeCQW6PUSnzP1vUa8x_Md4Ya_CrY1wEVxq-X4KmBfHXr6sUD6IoJZi8WssOKvjRVBBMndQKSlyXJ6Icnb2JTZltCRRL79K8Pu3Q6IkdLF7PE8-sAPO3Zojfk "")
+
+![](https://lh6.googleusercontent.com/AZE7Dr4b69fl2jfOhNj4F4Tz4jobXyRcsfo8mnR79uQhrZVl17w8MHmEMSWhjOOXAly3EIJnterOtgK4lyqqreNkWgiaCd9jPSHRC5S6Xc9BPz8XS-LjVGxOW2XyB5JDQL3Tnxax13oV73qDgl1Kb6e1D2EQ6y8qmwEJ_9hpYBD1Ka_t24nEorarLDv23IRMQRXxtkI "")
+
+
+**Create Two VMs and Ping Each Other**
+
+
+ - Find Virtual Network and then click "Add" to make a new virtual network
+ - Create a new resource group for the virtual network
+ - Follow all previous steps until you get to IP Addresses
+     - You can use the default settings
+    
+ - Then validate and create
+ - Now create a new VM within the same resource group
+ - For the image, choose the Windows server ISO
+ - Create an administrator account and password
+ - Port rules: choose "allow selected ports"
+     - Use RDP for this instance
+    
+ - Proceed to disks and use the default settings
+ - Go to networking and select the virtual network you created previously
+     - Ensure your RDP port is still connected
+     - You can skip the load balancing option 
+    
+ - Disable boot diagnostics
+ - Create the VM in the new virtual network previously created
+ - Click on "go to resource" to see the overview page
+
+
+VM 2
+
+
+ - Follow all the previous steps to create this second VM
+     - Place it in the same resource group as before
+     - Use the same 2019 Windows Server ISO
+     - Add the administrator account login information
+     - Open inbound port to RDP as before
+     - In networking, use the same virtual network
+    
+ - If everything looks good, create the second VM and go to the resource overview page after it is created
+
+
+Now search for the first VM and connect via RDP connection (download the RDP file)
+
+
+ - Open the RDP file (click continue on opening the file)
+ - Sign-in with the admin account previously created
+ - A second warning may prompt you to exit, just proceed.
+ - You now will be connected to the VM
+ - Open up powershell in the VM and run it as administrator
+ - Enter the following: `ping <the name of the other VM you made>` and hit `ENTER`
+     - You will not be able to ping the other machine because of the Windows Firewall blocks ICMP requests
+    
+ - Navigate to the second VM and download the RDP file to connect to this other VM (follow the previous RDP access instructions)
+ - Now, open Powershell and run it as admin on this other VM
+ - Enter the following command (this can also be copied from the overview screen; look for "Allow ICMP")
+     - Enter the following command as admin in Powershell (or copy and paste the ICMP command) `-DisplayName "Allow ICMPv-In -Protocol ICMPv4`
+    
+
+![](https://lh3.googleusercontent.com/We0nBnIFy7JiBafSwHW1-oQi0KarmkDOVjlQs6h9fKyiJ-t3Bidn8u5-a2czdvBLh-huxelfFqcToi2B9tsMwlrkNd4rD9Zas6GryWDukIWLYTOlNdMmKxnM4p72mRFLUr9y_iZlPptFEiRlBoRzp9I_YEGloNtPSCVecbGTw8HpFioQtbzKrVuB-mQSc85pGQz9EyI "")
+
+
+ - Go back to the first VM and try to ping this second VM again. Success!
+
+![](https://lh5.googleusercontent.com/8Z6bxA3PyMrwL6zGv53Y6hl6UZZFAXoocjqHbZDMBJcJRdeRKzoBYTOGGs0je5HEvI61_jVpQ6XNKeMjtl6gwj_aokjUzeh3xCJWjMvf4JXvqMsX0a31yznaz5Ps4fKmu2deNvlCBXH7gc11RFnvZ4CTKW_aeY4Xo8PqsecuXZLXmLO89eJOoMONIMCPQ2bOELVfyIc "")
+
+![](https://lh5.googleusercontent.com/hwOsGBMWE5SbKJtoTwXEk1EN7OHkAIRo-LA2ifgFwxyY4PnMDiswNSAJ7DopPVvbyxvTI3F_j8POJvclnJLX0mIL4H-3ZTw2Neb2xJT1nTddSmv3PE3SY_T1BjNFd0zgqZL0einq-wh9jggj2ByY7En9s0RQwVpkPnANi05scdsPH2QQHBfZE4g_j152imjwlH6DR-I "")
+
+![](https://lh4.googleusercontent.com/pOwHPDDzySvJIQIPVDMsu8LJ5tO2lM3Kfg1eNxqNKNKYysdmVf4dm87pJlS1KiQBGrfXiEK8_ZBKqYi684zGAdy5tRxrWb36SuVtO_OfoxkBROW2BixENwmI7P-sbrM9ZkFeh5drgv2MQdz9vYx72cDsqEcI-kRCYwFOAXtjyLGtYV8gsGIuiymyCkgJYoTfehJoAGI "")
+
+
+ - Search "Marketplace" from the Azure search bar to view all the available applications
+ - The Marketplace has a side pane on the left side of the screen that organizes the thousands of apps by category (machine learning, databases, etc.)
+
+![](https://lh4.googleusercontent.com/5cbX9uuNqAbQGA9Ewcf_EBwPDUeehgrtfPakDAfTFGMFxw4aNJFcwpcZrWDtzdRidUp_tvbY7d6O1uC2zu9AVtuw-PZaO1Nrhzx48go0LWBwI7cPhU6uicsNMrtIyCHDeibfaWS_Kfpdg0qZelyCxPEOIAcy3sX80DwXK7sjUZilsnZH3Krwn91MZjHs8kq3ReUNdBw "")
+
+![](https://lh5.googleusercontent.com/yU368jIUqp4l-gDOXJc2I7g18WRwuPIlV4mVVKhcN8KK6eCuOxFr6A1GpujCReK8nDctIUtjudQySQrAW2E2mwTUh27nKLvYta1tor-kKNj6qRgCe28HqNP6-VZwWk3tic7BL8Ex6mu6vO2Dr-Byvzo3uBIDHfla69U9FjWx9g-ZYkj750xlOP8bDOGa0D0whec6ojI "")
+
+![](https://lh4.googleusercontent.com/6Du2qyWADbyHFLcFFwzcBTPWwc_s3qJ1NBs8LaEsCbYv16VLV-dZH0j-EAF0yBeE-lqmuta0NetQkAH0YNnVWmYXJO9R4QxwmskUny6SlOOmvZOdx1eFbaSIgmzJxYW3gGtW0jFQkXEJMxcYfsAOrmsbrR5q0pJNpcR_a-MNX4fzYGEY3nTxzk2KHRSZQ9QKzzZauMg "")
+
+![](https://lh3.googleusercontent.com/6Bh9_qyWbllxEd0cVsKRD-0EPwY9u0zE5nAe9GeGkkvbPeen08UEt1Puwk1tFAWCi-DcflqtH5-kaqlptg51Fd23WhArbqs7ZXsJ3Uw3rlhY878yMjRJaQnHQoepvKdcx3ubm_VhwnmtVCbyhjEuXB2daUbcUQri_WbN2_YAERT32wMTmVZ5W0zWctHbLhBFNYY15Hk "")
+
+![](https://lh3.googleusercontent.com/VGDogvE2JDs2tXEz62PgW38dea5PVYEYDJy_WR_8S9wj_HFS59xWNh0EWxs60tfEo4reHK0AFVPJ5N5C-pjHBzstlnlRLsnuWEET8Xoe56oOexvH0iWnCw7_EWeF8-zeHhNvMBGdeHpfxXwho7jL2ZP7awCNx8rF1B3iRUJUSiKnECI9tAA5ICxBYjzZv3W7IvH6VNw "")
+
+
+ - [Get started with Azure CLI](https://learn.microsoft.com/en-us/cli/azure/get-started-with-azure-cli?view=azure-cli-latest)
+
+
+**Create a VM Using Powershell**
+
+
+ - Before you can use powershell you have to create a storage account where you can store your code.
+ - Request a cloud shell environment
+     - By default it is set to Bash, you can change it by clicking on the Bash dropdown and clicking on Powershell
+    
+
+![](https://lh3.googleusercontent.com/bF-ep4cCAPnnxGf8vBJR85ESRhX378jRAKxSrs7jWifW4siMRF7gIDKA4W2IOwcj7R2dtRBUTN_UFXjMNhXYw7Eta1De6o3j76ezmQh13ZxmLUFYa2SlrF8LHG6PGuZQlnRb0yZETwFs9S7Uo7duOHRNbZc4ttGaM-cQ_b8pmEeHXlh4KoRSDhq6pzIx6HGblTw2LO8 "")
+
+
+~~`get-azresourcegourm | formate-table~~
+
+![](https://lh5.googleusercontent.com/0xbaRJm2JPO1xXOWkPkTPR8Xoq89RHPoHAbUk463b1Ui57DXbdZ17_VI9Q7Taizj2X4R-M5CHktzAdVoi3oPzuKs4hgqNvUkLGQAtLd3P222I8i3me59Z4Hjb5rkXDRyaeySOP-TMWhyrYScQw1--PcWClVx0ZvJGiDxiI4iAx-yNEUhzYIRNnS9-Kc_Lxnp29h6vUg "")
+
+
+ - When prompted, set your user name and password.
+ - It will be created and you can do a search for the name of the VM to find the VM overview
+
+
+Get VM info from PS:
+
+![](https://lh3.googleusercontent.com/TsHxmUzysNVcz2EQdIfaSbYHgqDZJD5_321JnHEpbh9-b_X2W7U6Ky6aDkNEvaJaUlvuBXPHiexBRgn4vj7pEwrLmNHWK-KdK2MjLl7sm9rNHierBi5j0DcQPtN_U0ICd4S5a7iLfiIdFoM1naEWMQrKfE89-yLIR2YGLCUVnAt-SHjK8-YFL7jJmeoOJVfVmBGH-tk "")
+
+
+To stop a VM from PS:
+
+![](https://lh5.googleusercontent.com/paR9VBM1qWpSQVzfMnZmvZDR8fNwmU8s4RCDDTS4jHYvmu3s9vEOI2SP403bgFG72PLOlAOIc71Z9jCQEZrYecdoD6lYgOmnUtX3inpy_muzYuRdFA0F44Wu5ckd0VmVDRXPUxzx1Ja0qmPEEey4pH-T_rRaYoKEFa5wgIM4zYs693RaCmijJ8em7mSXNMuKz3rMtjM "")
+
+
+Check the status of the stopped VM:
+
+![](https://lh4.googleusercontent.com/3c5J4w9YXmpEwvQreXSJqgrF54cgBdS-KVonjSV5Slnsv9mdTjM9fZ1YgHq3yM_YBFtE2n0LaBGlAGMceZLSwefbyFW0U-MqjIDTSxccspZfLm-14zv_kT1JQOfMSkHVKe5QW-WrQLfK34Nl-UZEDDDNW5pUosIuOc3mULLrKtzY8Fe0wn_u2c9_LT--2iI8AUtCdAM "")
+
+![](https://lh6.googleusercontent.com/iAhS8Ddjnb2CZrDkSD6Yaeq_wUn6t8GbqmLY_KBaXH-T1N3ddVTuYGDBO_nn08_FjU6mG2Egp8WuVn64ikRllhV6wutI3sMe0e5BA1sZm_2sS5AiD50__B7O7x4GQqkMQV0RXjkmSekDTd7HmRwXwwdZ1yK3tL69HRP_GdFNHy-Uk-EGZQFbvzvrt8mLLKrwASSQdlQ "")
+
