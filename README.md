@@ -762,7 +762,7 @@ nano etc/pve/qemu-server/[ID].conf
   
 <br>![alt_text](./images/vmware-pvscsi-2.jpg)
   
-- Also, you wan to give Kemp LoadMaster an internet connection, so go ahead and add it whil you are on this screen. Just click `Add` and add your `Network Device`.
+- Also, you wan to give Kemp LoadMaster an internet connection, so go ahead and add it while you are on this screen. Just click `Add` and add your `Network Device`.
 - I also recommend adding additional CPU cores and RAM (at least 4GB) to help with running Kemp without a problem as some users mentioned issues when the RAM was below 2 cores and 4GB of RAM (by default, it will give Kemp only 2GB).
   
 <br>![alt_text](./images/loadmaster-working.jpg)
@@ -780,7 +780,7 @@ nano etc/pve/qemu-server/[ID].conf
 - Applied to many different entry-level IT jobs (and jobs way out of my skill range)
 - Adapted my IT cert. roadmap to:
   - ~~CompTIA A+ (via the Google IT Support course)~~
-  - By Feburary 2023 [Google IT Automation with Python Professional Certificate](https://www.coursera.org/professional-certificates/google-it-automation)
+  - By February 2023 [Google IT Automation with Python Professional Certificate](https://www.coursera.org/professional-certificates/google-it-automation)
   - Azure Dev AZ-204
   - AZ-900
   - Linux LFCA
@@ -804,14 +804,14 @@ nano etc/pve/qemu-server/[ID].conf
 ## Create Custom Copyright-free AI Generated Images
 - First up, the easiest (but limited) way to generate AI art is to use free services like [Midjourney](https://midjourney.gitbook.io/docs/) or [Simplified Graphic Design](https://simplified.com/graphic-design). Obviously, all free services will have limitations (i.e. only 10 AI-generated images) that will make users want to buy a subscription. If you just need some one-off AI-art, these services will work, but if you want more powerful features and no limitations--and you happen to have a decent GPU--I recommend using the following resources:
   
-- Thanks for the open source tech of [Stable Diffusion](https://stability.ai/blog/stable-diffusion-public-release), it is possbible to use your home GPU to generate incredible AI images by simply inputing a description of what photo you want.
+- Thanks for the open source tech of [Stable Diffusion](https://stability.ai/blog/stable-diffusion-public-release), it is possible to use your home GPU to generate incredible AI images by simply inputting a description of what photo you want.
   
 > **LowRes Art Upscale Trick**:So, depending on your GPU VRAM capacity, you may only be able to generate low res images (4GB can make 256x512 images, 11+GB can make 640x640 art).  In the chipper spirit of letting AI robots take over the world, let's use AI to upscale our lowres art! Thanks to AI intelligence, you can use an AI tool to upscale those AI-generated images by 2X or more! Robots helping robots--it's robot-inception! Anyway, the open-source software is aptly named, [Video2X](https://github.com/k4yt3x/video2x/wiki/GUI) (available for Windows) if you want to check it out.
   
-> **Photo-real Images**: If you are trying to upscale photo-real images (not anime-sytle characters), **remember to change the output setting to "RealSR" or "SRMD"**. By default, Video2x is set to AI-upscale anime-style art. You'll notice there's other AI algorithms with varying degrees of quaility to render-speed results (there's realy only two art-types at the time of writing this: anime-styled arts and real-life arts). You can read more about the pros and cons of the algos on [k4yt3x's Wiki](https://github.com/k4yt3x/video2x/wiki/Algorithms)
+> **Photo-real Images**: If you are trying to upscale photo-real images (not anime-style characters), **remember to change the output setting to "RealSR" or "SRMD"**. By default, Video2x is set to AI-upscale anime-style art. You'll notice there's other AI algorithms with varying degrees of quality to render-speed results (there's really only two art-types at the time of writing this: anime-styled arts and real-life arts). You can read more about the pros and cons of the algos on [k4yt3x's Wiki](https://github.com/k4yt3x/video2x/wiki/Algorithms)
   
 - In addition to Stable Diffusion, a developer created a GUI for it so average users can easily create AI images. He has a Patreon for a more polished release of his GUI, but you can [get his free version](https://grisk.itch.io/stable-diffusion-gui) and it will work.
-- If you have trouble thinking of a photo description, you can utilize [this free art archive, Lexica Art](https://lexica.art/) to fine tune and generate useable text and a more desireable outcome for the GUI to work with.
+- If you have trouble thinking of a photo description, you can utilize [this free art archive, Lexica Art](https://lexica.art/) to fine tune and generate usable text and a more desirable outcome for the GUI to work with.
 - Polyfjord made a great video tutorial on these amazing tools with incredible results. Check out his [tutorial video here]()
   
 > Always be cautious about running random `.exe` programs. Double check your download before installing. If it has a `CHECKSUM` that's even better.
