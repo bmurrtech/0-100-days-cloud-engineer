@@ -806,7 +806,12 @@ nano etc/pve/qemu-server/[ID].conf
   
 - Thanks for the open source tech of [Stable Diffusion](https://stability.ai/blog/stable-diffusion-public-release), it is possible to use your home GPU to generate incredible AI images by simply inputting a description of what photo you want.
   
-> **LowRes Art Upscale Trick**:So, depending on your GPU VRAM capacity, you may only be able to generate low res images (4GB can make 256x512 images, 11+GB can make 640x640 art).  In the chipper spirit of letting AI robots take over the world, let's use AI to upscale our lowres art! Thanks to AI intelligence, you can use an AI tool to upscale those AI-generated images by 2X or more! Robots helping robots--it's robot-inception! Anyway, the open-source software is aptly named, [Video2X](https://github.com/k4yt3x/video2x/wiki/GUI) (available for Windows) if you want to check it out.
+> **Prompt Crafting**: If you have tried to make your own AI art, you will quickly realize the complexities of getting results you want. In fact, people have created full Master Courses on how to craft AI prompts. Whereas I don't think it is necessary to buy any classes on AI prompt crafting, I do think you should watch free videos on YouTube and use tools to help you generate the AI art you want.
+  
+* Here's a [**great YouTube video explaining how to craft amazing prompts for AI**](https://youtu.be/lQQzeMeVczo) to get even more amazing AI art.
+* Here's a [**GitHub page dedicated to AI Prompt Crafting**](https://github.com/willwulfken/MidJourney-Styles-and-Keywords-Reference). It has an incredible library of terms and art style references you can test out in your AI prompts. If this developer (willwulken) has helped you out, consider buying the guy a cup of gratitude coffee (see his Github page).
+  
+> **LowRes Art Upscale Trick**: So, depending on your GPU VRAM capacity, you may only be able to generate low res images (4GB can make 256x512 images, 11+GB can make 640x640 art).  In the chipper spirit of letting AI robots take over the world, let's use AI to upscale our lowres art! Thanks to AI intelligence, you can use an AI tool to upscale those AI-generated images by 2X or more! Robots helping robots--it's robot-inception! Anyway, the open-source software is aptly named, [Video2X](https://github.com/k4yt3x/video2x/wiki/GUI) (available for Windows) if you want to check it out.
   
 > **Photo-real Images**: If you are trying to upscale photo-real images (not anime-style characters), **remember to change the output setting to "RealSR" or "SRMD"**. By default, Video2x is set to AI-upscale anime-style art. You'll notice there's other AI algorithms with varying degrees of quality to render-speed results (there's really only two art-types at the time of writing this: anime-styled arts and real-life arts). You can read more about the pros and cons of the algos on [k4yt3x's Wiki](https://github.com/k4yt3x/video2x/wiki/Algorithms)
   
@@ -815,15 +820,6 @@ nano etc/pve/qemu-server/[ID].conf
 - Polyfjord made a great video tutorial on these amazing tools with incredible results. Check out his [tutorial video here]()
   
 > Always be cautious about running random `.exe` programs. Double check your download before installing. If it has a `CHECKSUM` that's even better.
-  
-  
-## MadMax (Chia Plotting) CLI
-
-## Kubernetes Homelab Install
-- Repurpose old PC or get a tiny test computer - [check out the Raspberry Pi Killer!](#zima-board)
-- Installed Ubuntu to get started installing necessary packages
-
-> Refer to [Ubuntu's official download and install website for instructions](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview)
   
 # Day 13
   
@@ -842,7 +838,7 @@ Training Day Resources: [https://on24static.akamaized.net/event/39/50/54/4/rt/1/
 ![](https://lh5.googleusercontent.com/oXOAT8ftaQCjTLFCnZCCglekAFmHJ8TpfRKUCCoZMXURjO4WD3wlsuDZVx8LKkp_SAdYe6VZl9EIJrsxkN_NtK2C5A8Iom6xrcNU4YUPlXZK8aGuzBfKuyQcCNaNYP3YJn2mC_U9aoNDStHnhl_a8LScRRD0rJL3Cet_YHY0E3gDJrix6bdowWxPeZ2vcdyM7DA3M3Q "")
 
 
-Cloud Benefits
+### Cloud Benefits
 
 
  - High availability - 99.99% uptime
@@ -859,7 +855,7 @@ Cloud Benefits
 ![](https://lh5.googleusercontent.com/GCtJO2lRYl-eGozcRxwPXHR6SM69Np8ePJWBU4ZZn4laJ0Sx9O5HaowslSurjgW7AundTxyG7YWEW8BRAyZYOcEZugoAR9KmhsDu9HoXgJe7HXQt5BLbENll7IHS8zqQIkdMXss_l3qKwjBP6gN8H33pog5BpUNrBySu9RljoXo9lLI4Lq2aTJyBmvvbpzhnGm6j6u4 "")
 
 
-Cloud Services:
+### Cloud Services:
 
 ![](https://lh5.googleusercontent.com/fYgJC6nCLy7Tkd8cw7JS7UhQ7L7zyVS1pwU5-wP-xPLikdJs3oqHzZhk5HuXS9a1D7DDvMBVojG8_Z9ILOLBBHwZB9EG6Og791lbwpVkb5DZsvVGkKwtSYPo21ML96cANNICLDhcALnOfryrQJzGA38YH3FUcMiObS3XZm2OXRyms1zCfmk8lALbMmjTzkTBqgty8bE "")
 
@@ -898,7 +894,7 @@ Cloud Services:
 ![](https://lh3.googleusercontent.com/JvbaeJwOUcSihFw_vougjtntHyzqYi3IZ4pFQwTvWNK3zOEhSPSTypb5epNJhom5dVJ1UHwWYiya-DJ8aOkccgd_hBMaqn7pjgoNcdku0_dJscF-3OrpFm6UCmqn-u0TacDaBMjeDTS5M_7t1M0Fz1UmEkxWy4anNUs0e_MANyWnIjB8wp40eJbAlEGY4zhrJM1vDWE "")
 
 
-**Create an Azure VM**
+### Create an Azure VM
 
 
  - All services > Compute > VMs > Add Virtual Machine > "Create a virtual machine"
@@ -945,7 +941,7 @@ Cloud Services:
  - **Kubernetes loosely translated means, "captain"--yeah like a sea captain**
 
 
-**Deploy a Container in Azure**
+### Deploy a Container in Azure 
 
 
  - Portal Search > Container Instances > Add
@@ -969,7 +965,7 @@ Cloud Services:
 ![](https://lh6.googleusercontent.com/AZE7Dr4b69fl2jfOhNj4F4Tz4jobXyRcsfo8mnR79uQhrZVl17w8MHmEMSWhjOOXAly3EIJnterOtgK4lyqqreNkWgiaCd9jPSHRC5S6Xc9BPz8XS-LjVGxOW2XyB5JDQL3Tnxax13oV73qDgl1Kb6e1D2EQ6y8qmwEJ_9hpYBD1Ka_t24nEorarLDv23IRMQRXxtkI "")
 
 
-**Create Two VMs and Ping Each Other**
+### Create Two VMs and Ping Each Other
 
 
  - Find Virtual Network and then click "Add" to make a new virtual network
@@ -994,7 +990,7 @@ Cloud Services:
  - Click on "go to resource" to see the overview page
 
 
-VM 2
+**VM 2**
 
 
  - Follow all the previous steps to create this second VM
@@ -1053,7 +1049,7 @@ Now search for the first VM and connect via RDP connection (download the RDP fil
  - [Get started with Azure CLI](https://learn.microsoft.com/en-us/cli/azure/get-started-with-azure-cli?view=azure-cli-latest)
 
 
-**Create a VM Using Powershell**
+### Create a VM Using Powershell
 
 
  - Before you can use powershell you have to create a storage account where you can store your code.
@@ -1088,4 +1084,14 @@ Check the status of the stopped VM:
 ![](https://lh4.googleusercontent.com/3c5J4w9YXmpEwvQreXSJqgrF54cgBdS-KVonjSV5Slnsv9mdTjM9fZ1YgHq3yM_YBFtE2n0LaBGlAGMceZLSwefbyFW0U-MqjIDTSxccspZfLm-14zv_kT1JQOfMSkHVKe5QW-WrQLfK34Nl-UZEDDDNW5pUosIuOc3mULLrKtzY8Fe0wn_u2c9_LT--2iI8AUtCdAM "")
 
 ![](https://lh6.googleusercontent.com/iAhS8Ddjnb2CZrDkSD6Yaeq_wUn6t8GbqmLY_KBaXH-T1N3ddVTuYGDBO_nn08_FjU6mG2Egp8WuVn64ikRllhV6wutI3sMe0e5BA1sZm_2sS5AiD50__B7O7x4GQqkMQV0RXjkmSekDTd7HmRwXwwdZ1yK3tL69HRP_GdFNHy-Uk-EGZQFbvzvrt8mLLKrwASSQdlQ "")
+  
+  ---
+  
+  ## MadMax (Chia Plotting) CLI
+
+## Kubernetes Homelab Install
+- Repurpose old PC or get a tiny test computer - [check out the Raspberry Pi Killer!](#zima-board)
+- Installed Ubuntu to get started installing necessary packages
+
+> Refer to [Ubuntu's official download and install website for instructions](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview)
 
