@@ -1084,6 +1084,193 @@ Check the status of the stopped VM:
 ![](https://lh4.googleusercontent.com/3c5J4w9YXmpEwvQreXSJqgrF54cgBdS-KVonjSV5Slnsv9mdTjM9fZ1YgHq3yM_YBFtE2n0LaBGlAGMceZLSwefbyFW0U-MqjIDTSxccspZfLm-14zv_kT1JQOfMSkHVKe5QW-WrQLfK34Nl-UZEDDDNW5pUosIuOc3mULLrKtzY8Fe0wn_u2c9_LT--2iI8AUtCdAM "")
 
 ![](https://lh6.googleusercontent.com/iAhS8Ddjnb2CZrDkSD6Yaeq_wUn6t8GbqmLY_KBaXH-T1N3ddVTuYGDBO_nn08_FjU6mG2Egp8WuVn64ikRllhV6wutI3sMe0e5BA1sZm_2sS5AiD50__B7O7x4GQqkMQV0RXjkmSekDTd7HmRwXwwdZ1yK3tL69HRP_GdFNHy-Uk-EGZQFbvzvrt8mLLKrwASSQdlQ "")
+
+# Day 14
+
+## <span id="h.r9rkfoixa6sg">Azure Fundamentals Part 2</span>
+
+ - Module 4 provides a basic overview of Azure security
+
+![](https://lh4.googleusercontent.com/5vH8_MMoPL3J7S6Z07jIQTRVs6R8ybuXaqMKdYXYBz8KBY3WayfLGHNomKroicMokiBZ_qASMs0qsTqw-fxuziRuwN4oZ3H-6iV-XNfW60VEGQNxQc1HFcOVHP0UkRZcSGt6ybSePNnJq2b4tKMCShPpGDphvwwkzlghICyHD_Fh-5NnLpk3ZRdVjv8l90tB2LkLbA "")
+
+
+ - Access the "Security Center" via:
+     - Portal menu
+     - Search bar
+     - Toolbar on the main home page
+    
+ - For the exam, you will **not** have to remediate security issues
+ - You can click on the "Quick file" button to remediate/examine any issues automatically
+
+![](https://lh3.googleusercontent.com/NBa8z3CcMwMFKma4ItX-8sAPtfSKhw9gzBm_ZTYFXnrLz1Lu3qFQ37gg1anEHvOmqKIag7frWnnFzWZIOEg7pQ5fZo16h7RAc7ga8VXyVivk7XANVwQk6OriLWB_V5lQUSKtqVRDpWSY9cCa6i6bNNkEZI6eQRcCJjtv1zlqth6qatHdR1LzG7AdDGWYp5xOjvPhvw "")
+
+![](https://lh4.googleusercontent.com/hj7BX1GmpNSbttz8wezBGz0oPfJhLtDQPREAecPncBI6Jz-pYvzTM-Ng_9Dy0So34etXwEj770aVTHdi6J53-LNzWAS2nxqTW1k5A4tNL5RlXYk5JOa5BHkvR1-CLGuvxSmVFNBok4F7RKpApZC1_LYqaDqjjMktxQEdjN9tP6ZpFavLsW0-0aVdbLm6J-jtwpRwbw "")
+
+![](https://lh3.googleusercontent.com/LKdvcvZNeowW_Eb7hJHsnkQco_vuSz4wRlmo1gx0fqoNs8YTAlwD73WQ2HkJX_2TeWQsyHYOBc4c-UqJByVEqqfenT0YD0K0CzIN82So4eyLIoX9sjxbFWGQh4Ehw0-QA_LDKCkgJIpu-yrAqxiJNIKom971wZIhKfGn0IWpVbZqub1irr-ej5IZIEfxb3XNvLo00A "")
+
+
+ - Azure sentinel is a security overview – a bird’s eye view – of your entire enterprise.
+ - AI is built into Azure sentinel to automatically address threat issues.
+
+![](https://lh4.googleusercontent.com/LbwhG_yBgDIvTT927ES3e3uairVcM2kkTIVpwkflx8FokEc66H2UcGK-D9MZ4nZYcMJe0BWFms68vSHh9NWU-ugGhokVRPv1XDgiwEN5jlY-t3-B5KP0esyVEfAIym8iTC9hAuICyWWtoj5lT7uEihnM4sfPYONUfXbTbDDAOP1Op7yCfK2klFqOl6x1-pB8faiEEg "")
+
+
+ - Instead of having to share the keys or username and password directly for login access, you can set up a secret key that will be loaded into the RDP file (JSON template) which will avoid having to show passwords.
+
+
+### How to Create a Key Vault with a Secret Key for Remote Access
+
+
+ - Search Key Vaults and click add.
+ - Select a subscription and select/create a resource group
+ - Enter a name for the key vault
+ - Two pricing tiers: "Standard" & "Premium" ([learn more about these features](https://azure.microsoft.com/en-us/pricing/details/key-vault/))
+ - Proceed to deploy the key vault, and once it is complete, "Go to resource"
+ - Once you are in your key vault overview screen, there are number of features that can be found on the left pane
+     - Select "secrets"
+     - Input the name of the "secret"
+     - Input a super-secret password in the "Value" box.
+     - Enable the secret and then create it.
+     - Go into the resource.
+    
+ - The "Secret Identifier" is the sharable key that keeps users from seeing the "super-secret" value entered before.
+     - If you are admin, you can see the secret key value, but non-admin users cannot view it.
+    
+
+![](https://lh4.googleusercontent.com/OuGZTLI44dzgqjZkKorILlk9AYHFw8pFRpwYUlxccS27EIYw-ZZRiKKfwnGN8pAu5ZbRlxCkILrTo69UXLegkhYN7wDYo6OIdLVJK1_emabCdb489KRhq8AtvLWMP0Z1HYCCarRvdjO5x3JSPAjCc3QyZlxTEaudW63kTMcaDm8AW-BOGJEQoYFthFtmtm9yhVVveA "")
+
+
+ - Depending on the security or the resource needs of your applications and business, a dedicated host may be useful.
+ - You can provision a dedicated host (entire server)
+ - With a dedicated host, you use SQL or Azure licenses
+
+![](https://lh5.googleusercontent.com/SGf73S97y6CHntSXn5C0R3wBAYStW_PSFl8K1wcDeM059VtXIc751uzLSSScTaaQoGYx1xig6LvJpgBhizawB1C-K1uud0meQ4OKZl9RFVUyooIb18nglj30z0J4AztNd0RojtwgUFZ1DOghI2xGAx1afJacx5Ta74XSeUIiE8Dz3QACGFIO8c2XPVDZ7ivj_r7kow "")
+
+
+ - If one layer is breached, the next layer is still protected. 
+ - Security is a shared responsibility which means that both customer and cloud provider are responsible (i.e. data, account management, configure secure network, patching and updating). See the "Shared Security" chart for reference.
+
+![](https://lh4.googleusercontent.com/2xhLrA-PydbbJpVRj8zYGmsu2Yw6LXkfuidlLifXxAyOjeVCTAugE1_UOfNZRf6XYnS6H--iWy9fdA_t-MtiQqr4OYvHEEVADbefo_uvLkV9TvFnkNyQOS4oOMAJoFGj8q9vfFCjb3De7SFEfdtFUy6nmXugqQPedCi42MHrjkXpOkGdQVEs-9yh_GLiMpVBvHrIjg "")
+
+### <span id="h.af28mtmauprf">How to Protect Your Network</span>
+
+![](https://lh4.googleusercontent.com/1_xabmMNalAhcKjfp2KDTpReECSTk22Pik1wyrynlIg2s9du3TXE9LqFtCmFLGzy8fjLz6rm67G35sxyREW1wGNTkV7jl3UYcu6eeyYIkUoWyGrwM0h5wyAAHdObJL4ne918cV7sHkAxNtAiGtwfEvzAjqDdUX3UraqiOUxnRDQ6BADsy_7vZdI1EpAmA4ygSAQ5zw "")
+
+
+ - Configure remote access via filters (i.e. port, protocol, IP address)
+ - To view your network security in a VM,
+     - Go to a VM instance
+     - Go to networking
+     - If you want to create a network security group (it will be created automatically by default unless configured differently)
+     - You cannot have two roles with the same priority role
+    
+
+![](https://lh6.googleusercontent.com/evlH7h7ot_fPlk6mDMgAVIqFbeF6Aouq5TwWz945qE0NNP-cFGgfc7rbpUxnI9zmQ30rpdCw5GJ9Ej3S2NuZJVWhIk186wQQOAKSaLk4JBFoBLScZwkpOriWmfSf72WFqWIfIXyGjynuA-uQUICkQgQZOTjSKvVLZACs7VvJvMzIlYIIwK3Ve_hbptAxPnX2NO_YhQ "")
+
+
+ - The firewall is the first line of defense on the perimeter layer (i.e. http traffic)
+
+![](https://lh3.googleusercontent.com/5nPEnaO9nCq4WNVt7y-t3Kh8TPSMWcekeEe9HT2qyG_pewdGlnkQIy7OEMz5AWOWk_Vxnvn4ptHfIJgMCSr_SReUv7z3oqRno63ZBPmDSGvsXYE024v35uXPu3qMyW-SEpz5UYWW_hlkeebBFa_aklAI4lw2In6INgU3Q4lYF-RahJQMR5iperly23h_nuEctPzt7w "")
+
+
+ - DDoS protection is a load balancer that works to validate incoming traffic as valid or not
+ - Due to the higher price, DDoS protection is recommended for business-critical applications only.
+
+![](https://lh5.googleusercontent.com/3Mb9bgiah-zvxClKp7pyRe1vXmMDi-XADjArrX34PRzG6A8A3bHl34-ZY_AxuPXZ8jBDMUqtHr6HGBat4k4ka799mz-MkNgbSltd8WfEx6TznPmynxYQMqx1ALwtr_QfnmOj-uMH1PMstgbmmr6MdzYkzouDGL5iY7cHgNYPKOf8K-KNj-rR5FbKAyOdgs3TeKXPyA "")
+
+### <span id="h.ssio6iunrv8l">Azure Governance</span>
+
+![](https://lh6.googleusercontent.com/HLejZYCgQzGvhdgAQakJTAIDWj5sol0__7y3T-WV9kLZN5mPZMDO5LazGsK_r69f9_Y8P0I45RPowf_k8R8pdzmEUzvFsSfA1ulo92JF3zaMFt1YmXNV2P7Rrlifvjja1qZ0jpYcGzgnLiLb9Obh6efIJKS1WYE_W6vaPUyyg2YNSrLHD6lugT1lEleJpzpAC66TEg "")
+
+
+ - Module 5 details user management: identity, governance, privacy, and compliance
+
+![](https://lh3.googleusercontent.com/FzqwtGELjmvjigcEJxYZTUuGYFvmi7U49wYE_1DDsDbS7p9-sQelcRF11hzh1MUPIkPDANOC-fDEGnkpc5FiZNaQGplXN0FFPFracjkEyPfQqJhnt-fr95Tw8qigol6SnpB3kX7IX007lXCtkr69c8mzdhJGbd0y4oxJxqBfPW0rlxlS3DysPsgQOUm7TlSgc__vqg "")
+
+
+ - Once the identity is confirmed (authentication), the level of access is determined (authorization)
+     - Think of it like an airport security terminal: a traveler is only allowed/authorized to go to a certain gate, board a certain flight, and sit in a predetermined seat.
+    
+
+![](https://lh5.googleusercontent.com/vKvlHB5RDbh4HGeW_kVtnkaXOVaCZ73He4U9hMknf06poARwhOlgx06Bhe1L2IaMexfDViqY7b8KCPw0oj9WzctCqBrdV5xkAmHjem_9tm2ayoD6QkfVZT0X0DHGjcLDZADNbP6eh9-kVTkmwKFTJvvaDRoUx7EBfE2clHNlHzZSlusAvVNAwWwCtL2cH20O-M0djQ "")
+
+
+ - Something you know: password, security questions (hometown, first pet’s name, etc.)
+ - Something you possess: a mobile app, email, or token generation
+ - Something you are: biometric properties (face scan, fingerprint)
+     - Currently, Azure does not have the capability to verify identity using biometric properties
+    
+
+![](https://lh4.googleusercontent.com/CD5YkVb2U1h38vQWnGCtLnTBe3MjWsc2LwNObOO3SwrL25GfEXBvVc02jSL9xRNrMjgt3V66CQQqA6YQqFl_Jkr9WC0ZjHY2dQeC9_QApuy7_Qi5SfU04iAnYBn_9vxNBG0tcbWQoKXA7HAXjPyQD5NrYgAdXWBZRM8lq8zzt1C7_Z1wC7O0AOnuLtdo7cXvsAmWKw "")
+
+
+ - Control access of in-house apps, internet connectivity, etc.
+ - Self-service password reset (include password banning features: i.e. "password123")
+ - Single sign-on (SSO) makes it so you only have to remember one username and password to access everything
+     - This is also helpful when you want to revoke access for users. You do not have to track down and remove all the login credentials. You just need to revoke access of the single SSO user.
+    
+ - Device management controls the devices allowed to access your Azure resources
+
+![](https://lh5.googleusercontent.com/GxJXv1b0BgwefQ3JGVJKL0Ac1WHda7Fg08B4EHsx_mwJTE_pMPknlkxckW5oeqn8MeAmy-gPWzxc05a4G1webflffWbpMjgOiEAm8rTyj9cJguJi5DZdnj8jqUdTUoME5YKimoc_tTaGTL6S9Da9x1NZuWL-BpcR8uRHYzRgDS6tHusI5o8LRBN2paLa7KVysW2YuQ "")
+
+
+ - Think of conditional access as if-then statements
+     - For example, if someone wishes to access the payroll applications, that use must go through a multi-level authentication process
+     - If someone is working from home, only whitelisted IP addresses will be allowed to access the Azure resources (i.e. private VPN to encrypt data)
+    
+
+![](https://lh3.googleusercontent.com/e3GtiBmGrJObiE0TbrqoCVKHYX0Zdt_U0jfZEOLpHrhgod9_ExAi1rKh9g6YBaG9FbVDRFV3ZfN2YX0by2k5dZ7vBnusSGuoRrc0DUnu24u2bdA2LtLbw26SdiwCtSO6IDxdmtkUaPpliKTVsqeumnQg7uP1sROveV0YCpbmP7Wsn9PfYrNOq2IsfksKR9nUhoIKvg "")
+
+
+ - In the "Subscriptions" tab you can confiture the "Access Control (IAM)" (see left side pane) to edit or create roles for access
+     - A new pane on the right side of screen will populate showing roles, access, and user assignment (email address granting access to that member)
+     - By assigning roles to people, you grant them access to the subscription resource (i.e. create VMs, assign roles, security controls, and more)
+    
+
+![](https://lh4.googleusercontent.com/YmSixdATqVgf4WqvLPlKAswSGqcYWDbQVwBhcGTVSGKINajQdfhiALdk5JXcGz54LGyFcRg3-zjJ5QGbGUId2ChxDTKlyK_c8QBOlgkn4Nz3RSNdK1ZyWHPvnqipqqAzb4lvQv3KOkoXDhXRjWSdJ0PbWLVTTAuHKohsn5xuEHMJbp1lwG3sI7FP4te-N5sc7AQl5A "")
+
+
+ - When you delete a resource group or other resources, these actions cannot be undone. Therefore, resource locks prevent accidental deletion of resource groups.
+ - Read only prevents accidental modification
+ - Under the resource groups main tab, you can create "locks" (under settings of the left pane)
+     - You have two lock types: delete and read only
+     - Name the lock and create it
+     - If you apply something at a subscription level, it will change permissions for all child or sub-level accounts.
+    
+
+![](https://lh3.googleusercontent.com/Ce-zN3vxg05ncz_R09459O0qbOt1GXlRi6PQYXlp8XXwpleiYZFKs-57egWde1mrP3ix4gvUzDE0d16ZAUTQDH_ThWbpRw1Veqn91t8-zCNUQUny8RP5PPoduASVTwQHY15OG-i9nJo-B-4FTO-b71vENJ8Sod5l4LEDzokR_cN_pqLc9LyYoCP916SYAmsHm-Zahg "")
+
+
+ - These policies will automatically reinforce company practices and policies (i.e. cannot launch storage > 1TB or VM > 40 cores, etc.)
+
+### <span id="h.t086q1c0b8xe">Create Subscription-wide Policies</span>
+
+
+ - Search for "Policy" and go to it.
+     - Note: When you create a new policy, it will not revert or change previous activities or deployments.
+    
+ - Select "assign policy" and do a search for pre-made policies in the search bar (i.e. location)
+ - Under the parameters tab, you can set the allowed locations for deploying new resources
+ - To put the policy in full force, you must complete the set up, then review and create it.
+
+![](https://lh4.googleusercontent.com/IqL6cU2FVHc5oKW2CU7Ml81kA11eRawDzAWESkdLHIWHZfICpO-nb8XgityUu_Q5Ut9H6gKfUX3onAZsJWqHe4fnXmsHnLkwLB5mmIHQyeqS3jtNNuAJqG1C-u8AI5kAlfxvwLsy6dhiOahGbkbodZGoRLrdyrI44hnXKosdm17p50SYxkjDR2nLI7A4j8tVoeqdiQ "")
+
+
+ - Blueprints allow you to deploy pre-made templates for faster deployment (great for DevOps team)
+ - Blueprints are different than ARM templates
+     - Every deployment is tied to the blueprint template
+     - This is important for auditing and tracking dev activities
+    
+
+![](https://lh6.googleusercontent.com/obfTPTnXA9s88dLtufec92wqHD4hVnXzZ82Ll5EmO_rWvQjZgWNhqXgfs1_frlzTfTo8ADGTg2pxi69hsKbiYXZHVYLMeVi2bH-nxu8Fcz9gxWnT4hsWlLX0GQU12JumYyB_2ejrp_j8YN6TtnCXkjPakDVVCR936JpZ_oRABdc2T6kKVcudjH7DHaWKxlgSQ85mtQ "")
+
+
+ - This is the learning library for guidance for 
+
+![](https://lh3.googleusercontent.com/9jqMv_aO2CeFAlYtMjglhnMV95r2-Emj1KqpyCUiPXBTzzhSflnylQTdYGjF_ud0kEXGYfjm8-QjDUqh4YkYAoyzTJuq9lEw4QSTQ1oyEiEQvc2YX-copM8QyU0aN5czGykUFrSSjVJD_5Tx_zngtpFA5ZBRFIkJv8xAwVeVY5ft3a85RkDnZdANtO1j_vqyObZNkw "")
+
+![](https://lh5.googleusercontent.com/HFHkxBmMr-_xC3zm0G9DwbJC3Nkxmotgb1GscqInXRL6-oh-HWP51K00xDMaDwnO1r6PFWbQz7c8IFOBAdB3R1Ow5URF4lH3fMH624g2HzyTr-SeHUysRv2K29oImEbIpUogbKQRChlrsMa_-dFaGCld91PwqsNvJ1j02SfIXZGmtwvWuWcQAq3sXKGK82WCqJhw-g "")
+
   
   ---
   
