@@ -838,6 +838,53 @@ Training Day Resources: [https://on24static.akamaized.net/event/39/50/54/4/rt/1/
   ---
   
   ## MadMax (Chia Plotting) CLI
+  
+  ## How to Check Chia XCH Plot Quality via Chia CLI
+
+`cd $ENV:LOCALAPPDATA\chia-blockchain\[app ver.]\resources\app.asar.unpacked\daemon`
+
+1. Run 50 Check
+
+`.\chia.exe plots check -n 50`
+
+2. Search for proofs with results below "0.77" (ie. "Proofs [33/50], [0.66]")
+
+3. Hit "CTRL + C" to stop process
+
+4. Copy the plot address directory
+
+5. Run a 1000 Check
+
+`.\chia.exe plots check -n 1000 -g [copy & paste chia plot here]`
+  
+6. Does it approach 1? Look for "Proofs [981/1000], [0.981]" Closer to "1" the better.
+  
+  ## Create New Network Share Folder in Synology NAS GUI
+
+1. Open Synology NAS GUI
+2. Open File Station
+3. Create New Share Folder
+4. Assign the correct drive
+  
+  ## Map New Network Drives
+
+1. Right click This PC
+2. Select "Map Network Drive"
+3. Enter the NAS IP and Bay # (network share name)
+4. Select a drive letter from dropdown list
+
+\\[assigned ip address to network attached storage]\[name of share folder]
+
+PC-to-PC Drive Sharing:
+1. Right click the drive you want to share between to PCs
+2. Click "Give Access to" -> "Advance Sharing"
+3. Click on "Advance Sharing" in the properties tab.
+4. Check the "Share this folder" box and hit OK, then copy the new network path from the properties tab.
+5. Go to the other PC and open file explorer
+6. Select This PC then click on "Add a network location" at the top of the window
+7. Follow the prompts then enter the "network path" (see the properites tab) to access the drive.
+
+`\\[PC identifier name]\[driver letter]`
 
 ## Kubernetes Homelab Install
 - Repurpose old PC or get a tiny test computer - [check out the Raspberry Pi Killer!](#zima-board)
