@@ -858,7 +858,7 @@ Training Day Resources: [https://on24static.akamaized.net/event/39/50/54/4/rt/1/
 `.\chia.exe plots check -n 1000 -g [copy & paste chia plot here]`
   
 6. Does it approach 1? Look for "Proofs [981/1000], [0.981]" Closer to "1" the better.
-  
+
   ## Create New Network Share Folder in Synology NAS GUI
 
 1. Open Synology NAS GUI
@@ -885,6 +885,23 @@ PC-to-PC Drive Sharing:
 7. Follow the prompts then enter the "network path" (see the properites tab) to access the drive.
 
 `\\[PC identifier name]\[driver letter]`
+
+## Raspberry Pico W Garage Door Sensor
+
+- Raspberry Pi Pico W garage door sensor project, with instructions for how you can set up the
+same thing at your house: https://github.com/geerlingguy/pico-w-garage-door-sensor
+
+- And here are the items I purchased to complete the
+installation (some are affiliate links):
+- Seco-Larm SM-4201-LQ Overhead Door Sensor: https: //
+amzn.to/3EjG1ap
+- Pi Pico Terminal Block Breakout Board: https://amzn.to/
+3tkZQYg
+- Small breadboards for prototyping: https://amzn.to/
+3A6ha7b
+- Breadboard solderless jumper wires: https://amzn.to/
+3UHCmYO
+  
 
 ## Kubernetes Homelab Install
 - Repurpose old PC or get a tiny test computer - [check out the Raspberry Pi Killer!](#zima-board)
