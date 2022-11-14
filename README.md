@@ -20,7 +20,7 @@ To-do:<br>
   - [ ] Step 2 - Create Resume using LaTeX[^tyalt1resume]
 [^tyalt1resume]: Inspiration credit goes to [Tlyer Alterio](https://github.com/tyalt1/Resume)
 
-# Day :one:
+# Day 1
 - Started a course I thought would be everything I needed to become a DevOps Cloud Engineer
 - First 5 hours into the course was all about the history of DevOps: agile, social coding, collaboration of developers and operations, etc.
 - Listened to a cloud engineer livestream interview of an IT professional’s story of how he transitioned to cloud engineering.
@@ -31,7 +31,7 @@ To-do:<br>
   - He later realized that he lacked basic Linux, Bash scripting, and Python skills
   - He started Python on codecademy, completed 50% and got hired as a jr. cloud engineer months later (he said codecademy it is worth every penny)
 
-# Day :two:
+# Day 2
 
 - Ditched the first DevOps IBM course to deep-dive into research of what it really takes to be a cloud engineer
 - Started searching job listings for the top required and most common skills mentioned
@@ -42,7 +42,7 @@ To-do:<br>
 - Found courses for Linux LFCA Certification, Google Cloud Associate certification prep, and Python
 - Created roadmap and timeline (visualizing my goals)
 
-# Day 3 :three:
+# Day 3
 - Completed required job skill research
 - Completed creating learning roadmap by identifying key courses and optimizing for maximum learning to hours invested ratio
 - Purchased [bmurr.tech](https://www.bmurr.tech) domain name with SSL and email mailbox
@@ -94,7 +94,7 @@ To-do:<br>
 | history | will show a historical list of commands that were entered in the terminal session |
 | touch | can create new files & update the time & date |
 
-# Day :four:
+# Day 4
 - Completed Week 1 of Linux Fund. 100% score on week 1 module quiz :raised_hands: in 1-2 days. See the [Linux week 1 overview](https://d18ky98rnyall9.cloudfront.net/qRQY1L8KRNeUGNS_CnTXuQ_af9f7d4c30204287ac279be086d0c1f1_LinuxSpecializationCourse1Module1.pdf?Expires=1666656000&Signature=UJCINfl9vmCn1I33lc9u3J1zjFtZqeHU5Y33vUs2l35LE2GHXeaxIR~FvMFsgcCcfRKZ2~vk7v8g~wU6eskvWli0NK03Ghx85~Z3hstrd-tjtlCB58xGM0B0EY~nVB2gBYCiWyx5VmOw8JkKo8bPdArWbZOAMpE06p5BTXn4SqU_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A).
 - Learned how to add folders to Git repository
   1. Go to the folder inside which you want to create another folder
@@ -126,7 +126,7 @@ The Raspberry-Pi-Killer :knife:
   1. Compatible OS Linux/Windows/OpenWrt/pfSense/Android/Libreelec
   1. Passive Cooling
 
-# Day :five:
+# Day 5
 - Watched [Wolfgang Home Server Ansible Setup video](https://youtu.be/f5jNJDaztqk?t=1334) & was inspired to take on personal homelab/network project utilizing existing my server hardware from home
 - Added [cybersecurity.md](https://github.com/bmurrtech/0-100-days-cloud-engineer/blob/main/home_network_cybersecurity.md) for personal home NAS security project
 - Added [Ansible Data Dump .md](https://github.com/bmurrtech/0-100-days-cloud-engineer/blob/main/ansible-nas-doc.md) for future reference, for Ansible learning, & for Ansible automation home server project
@@ -198,7 +198,7 @@ The Raspberry-Pi-Killer :knife:
   - Relational is transactional focused
   - NoSQL is document focused
 
-# Day :six:
+# Day 6
 - researched some AWS cloud project ideas
 - created new banner in .gif format
 - organized goals and projects by creating new .md files
@@ -276,7 +276,7 @@ The Raspberry-Pi-Killer :knife:
   - Click "Create" and that will make a new item on the list called "bash."
   - Click on "bash" to access the CentOS Docker Terminal.
 
-# Day :seven:
+# Day 7
 
 - Learned more about the `kill` command
   - `kill -l` will list all the types of kill commands and numbers
@@ -363,7 +363,7 @@ The Raspberry-Pi-Killer :knife:
 
 - [x] Linux Foundations Week 2 Complete
 
-# Day :eight: 
+# Day 8
 
 ## Cybersecurity Project 1
 - New Sudo Linux User
@@ -490,7 +490,7 @@ The Raspberry-Pi-Killer :knife:
 - You can link both files and folders
 
 
-# Day :nine:
+# Day 9
 
 ## Windows Disk Utility CLI
 
@@ -684,7 +684,7 @@ ENTER
 
 > About Creating Containers: You can also create Docker-like containers with ProxMox by downloading Linux container ISOs and uploading them to ProxMox, and then click on the `Create CT` blue button (right next to the `Create VM` button). The process for creating containers is the same as creating VMs.
   
-# Day :keycap_ten:
+# Day 10
   
 ## Kemp LoadMaster - Enterprise Load-balancer Setup on ProxMox
 - First-off, why use a load-balancer?
@@ -787,6 +787,7 @@ nano etc/pve/qemu-server/[ID].conf
 - Started ~~[Google IT Support Professional Certificate on Courera](https://www.coursera.org/professional-certificates/google-it-support)~~ [Google IT Automation with Python Professional Certificate](https://www.coursera.org/professional-certificates/google-it-automation)
   
 # Day 12
+  
 - Started interview process at local IT job
 - Discovered/learned more about Jupyter Labs/Notebook
 - Researching way to launch Jupyter Notebook server from homelab to set up Python and RMarkdown environment
@@ -833,9 +834,13 @@ nano etc/pve/qemu-server/[ID].conf
 Training Day Resources: [https://on24static.akamaized.net/event/39/50/54/4/rt/1/documents/resourceList1627979893310/mavtdfy22h1fundamentalsresourcelist1627979891280.pdf](https://on24static.akamaized.net/event/39/50/54/4/rt/1/documents/resourceList1627979893310/mavtdfy22h1fundamentalsresourcelist1627979891280.pdf)
 
 
+  # Day 14
 
+  ## Azure Fundamentals Part 2
   
-  ---
+- I am [linking the Azure notes to a google doc here](https://docs.google.com/document/d/1JjoQVgTbCJX2BE3J3x3BqHYt1mkxo2ezkdPsX_gPuwE/edit?usp=sharing).
+  
+  # Day 15
   
   ## MadMax (Chia Plotting) CLI
   
@@ -885,6 +890,8 @@ PC-to-PC Drive Sharing:
 7. Follow the prompts then enter the "network path" (see the properites tab) to access the drive.
 
 `\\[PC identifier name]\[driver letter]`
+  
+# Day 16
 
 ## Raspberry Pico W Garage Door Sensor
 
@@ -901,6 +908,20 @@ amzn.to/3EjG1ap
 3A6ha7b
 - Breadboard solderless jumper wires: https://amzn.to/
 3UHCmYO
+  
+# Day 17
+  
+  - I was extended an offer to an entry IT Tech job on the southeast coast.
+    - At the time of the offer, I have absolutely 0 professional IT job exprience, 0 certifications, 0 IT schooling/degrees.
+    - This IT company was looking **less** for someone with skills and **more** for someone with ethics, character, and proven problem-solving skills (key trait).
+    - Moral of the story, 1. get your own webdomain and personal email 2. do home projects to demonstrate your ability to trouble-shoot (i.e. create a hypervisor and VM homelab setup) 3. level up your skills through guided labs, online courses, and free youtube videos
+  - Entry IT Job Specs:
+    - Starting Salary: $42K (after 90 days $45K)
+    - 9% annual salary raise + quarterly evaluation for increase pay
+    - Full medical benefits
+    - Holiday pay, PTO, volunteer time
+    - 401k 4% matching + many other perks
+  
   
 ## Create Peer to Peer Network Connection (Windows PC to Windows PC)
   
@@ -932,7 +953,7 @@ amzn.to/3EjG1ap
   
   ## iPerf Network Testing
   
-  - JPerf is a GUI that allows you to set up a connection between PCs to test the speed and stability of your custom peer to peer network. However, I will be using iPerf and command line to test the network connection. In my case, I downloaded [iPerf 2.0.9] (https://iperf.fr/iperf-download.php).
+  - JPerf is a GUI that allows you to set up a connection between PCs to test the speed and stability of your custom peer to peer network. However, I will be using iPerf and command line to test the network connection. In my case, I downloaded [iPerf 2.0.9](https://iperf.fr/iperf-download.php).
   - You will get a .zip file. To run the command line, you need to move the contents of the zip file to the C drive root directory. So create a folder called "iperf" there and then copy and paste the iperf binary files (all the contents of the zip) into that new folder. 
   
   > You will need to install iperf on both PCs.
