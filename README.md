@@ -978,7 +978,75 @@ amzn.to/3EjG1ap
   - To run the server version, first double-click the jperf.bat file, then click on the radio button that says "Server" (take note of the listening port, by default it is 5001)
   - Then click on the "Run IPerf" button on the right (it looks like a heart beat monitor). You will be prompted to allow access through the Windows firewall. Accept to proceed and test your peer to peer network. 
   
+
+# Day 18
   
+## AUTOMATE CHIA PLOT TRANSFER HOW-TO:
+
+### Create a Share Folder 1
+ - Create the folder in the root directory of drive for the final plot destination
+ - Right click the folder and mouse over to "Give access to" and then click "Specific people..."
+ - Click the drop down menu and click on "everyone" and then click the "Add" button
+ - Once "everyone" has been added to the list, click on the dropdown menue under permission level and select "Read/Write"
+ - Then click the "Share" button
+ - Next, take note of the \\[name of the computer]\[share folder name you made in the destination directory]
+
+### Create a Share Folder 2 (to dump all files in the root directory instead of a folder)
+ - Right click the drive you want to store all the plots and click on "Properties"
+ - Find and click on the "Sharing" tab, then click on the "Advance sharing..." button.
+ - Check the "Share this folder" box
+ - Give your share a name (typically the drive letter Windwos assigned the drive for simplicty)
+ - Click on the "Permissions" button.
+ - Click the "Add..." button and check the following boxes: "Full control," "Change," "Read" (make sure all the boxed are checked in the "allowed" column and leave the "deny" column empty)
+ - Click `OK` and then `OK` again to close. Now we need to connect to this shared drive from the plotting PC
+
+### Create a peer to peer connection on the plotting PC
+ - Open a file browser and click on "This PC"
+ - On the top, you'll see "Map network drive," click it.
+ - Assign a letter (maybe the same drive letter as the other PC for simplicity), and enter the network address you took note of when you first created the share folder/drive (i.e. \\desktop-wsda\a])
+ - You will be prompted to enter credientials. If you have already turned off password requirements for networks (see netowrk settings), then you can just enter "admin" and "admin" and hit `Enter`
+ - Now you are in!
+
+### Set Up Auto Plot Transfer
+
+- In order to automatically transfer files to a new destination after the plot has been created, you can run a [PowerShell automation script created by Kostya](https://github.com/kostya12071/chia)
+- First of all, you must enable PowerShell to run automation scripts. Run PS by pressing `WIN + R` then enter `powershell` to open a new PS window.
+- Next, you need to enter the following command `Set-ExecutionPolicy RemoteSigned` and then type `y` to allow it to access network directories.
+- Now it is time to create the automation script. Open Notepad and copy and paste the following text inside the note:
+
+```sh
+
+# Chia Plotting Automation Script 
+# by Kostya
+
+<#
+    Simple robocopy command to move files from source to destination in a continious process
+    Modify as follows:
+
+    .\chia2drive.ps1 d:\ f:\ c:\scripts\filelog.log
+
+#>
+
+
+param (
+    [Parameter(Mandatory=$true)][string]$tempPath,
+    [Parameter(Mandatory=$true)][string]$plotPath,
+	[string]$log = "c:\log\chia2drive.log"
+)
+
+
+robocopy $tempPath $plotPath *.plot /J /MOV /MOT:15 /LOG+:$log /TEE
+
+```
+
+- Then hit `CTRL + Shift + S` to name the file something (i.e. "plotmover") and then add ".PS1" to the end of the name
+
+> You must add this file extension for PS to run this text as a script.
+
+- To run this script, simply right-click the file and then click "Run with PowerShell" to execute the script.
+- You will then be prompted to provide the origin directory (i.e. the temporary storage dir of the completed plot), and the final directory drive letter (i.e. "D:"). After each prompt and entry, hit `Enter` and then the plot mover will wait the set amount of time (15 minutes) for a new plot to be generated before it starts to automatically transfer that new plot off the temporary drive to the final directory you specified.
+
+> The drive letters are not case sensitive.
 
 ## Kubernetes Homelab Install
 - Repurpose old PC or get a tiny test computer - [check out the Raspberry Pi Killer!](#zima-board)
