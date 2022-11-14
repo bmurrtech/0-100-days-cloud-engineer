@@ -902,6 +902,62 @@ amzn.to/3EjG1ap
 - Breadboard solderless jumper wires: https://amzn.to/
 3UHCmYO
   
+## Create Peer to Peer Network Connection (Windows PC to Windows PC)
+  
+- First we need to confiture the ethernet connections by assigning a static IP address for each PC and network adapter.
+- Locate the ethernet adapter you will physically be connecting from PC to PC
+- In Windows, navigate to `Control Panel\Network and Internet\Network Connections` and configure the correct ethernet adapter
+
+> Note about locating the right ethernet port: So, you can get an idea of which adapter is which by seeing if it has a connection or not, if you are not sure, you can check the packet counts of the ethernet port in question from the properties tab and just see which has the lowest packets to determine which ethernet you just plugged the cable into most recently.
+
+- Next, configure the settings by right clicking that specific ethernet connection:
+  - Click "Properties"
+  - Double left click "Internet Protocol Version 4 (TCP/IPv4)"
+  - Click the radio button that says, "Use the following IP address"
+  - Input `10.10.10.1` for the static IP and `255.255.255.0` for the subnet mask.
+  - Leave the rest totally blank and hit `OK` to save the settings.
+ 
+> 10Gbit Networking Note: If you have 10Gbit connections between PCs, make sure to set Jumbo Packets to 9000 or 9014 and disable "Interrupt Moderation" (these settings can be found in the advance tab of the properties of the ethernet adapter. Click on the "configure" button within the properties to change these advance settings.)
+  
+  - Next, we need to edit the `host` file in Widows System32. To find this file, you can copy and paste this directory: `C:\Windows\System32\drivers\etc` and you should see a file called `hosts` inside this folder.
+  - However, you cannot edit this file unless you run your text editor as adminstrator. I suggest opening Notepad as admin by right clicking the application and clicking `run as administrator` and then opening the `hosts` file through the Notepad app by holding down CTRL + O and pasting the directory path and then clicking the drop down file type menu, setting it to "all files" and finally selecting to open `hosts` to input the following lines at the bottom of the document:
+  
+```sh
+  10.10.10.1  hspc1
+  10.10.10.2  hspc2
+```
+  
+  - Hit CTRL + S to save the file with the new lines added, then close out of Notepad. Now you redo everything you just did on the other PC.
+  - Repeat these previous steps on the second PC except change the static IP to: `10.10.10.2` instead. Everything else is the same.
+  
+  ## iPerf Network Testing
+  
+  - JPerf is a GUI that allows you to set up a connection between PCs to test the speed and stability of your custom peer to peer network. However, I will be using iPerf and command line to test the network connection. In my case, I downloaded [iPerf 2.0.9] (https://iperf.fr/iperf-download.php).
+  - You will get a .zip file. To run the command line, you need to move the contents of the zip file to the C drive root directory. So create a folder called "iperf" there and then copy and paste the iperf binary files (all the contents of the zip) into that new folder. 
+  
+  > You will need to install iperf on both PCs.
+  
+  - On one PC, you need to run the iperf server. To do this, run the following commands:
+ 
+  
+  ```sh
+  cd c:/iperf
+  iperf -s
+  ```
+  
+  - This will run the server on one of the PCs. So now, go to the other PC and run the iperf client using the command: `iperf -c [server IP address]` (unless you changed the IP, it should by 10.10.10.1 or 10.10.10.2 as instructed)
+  
+ ## JPerf GUI
+  
+  - JPerf is basically iPerf, but with a GUI
+ 
+  > Note: You MUST install Java before the program can run on both PCs.
+  
+  - On one PC, run the client version of JPerf. On the other PC, run the server version.
+  - To run the server version, first double-click the jperf.bat file, then click on the radio button that says "Server" (take note of the listening port, by default it is 5001)
+  - Then click on the "Run IPerf" button on the right (it looks like a heart beat monitor). You will be prompted to allow access through the Windows firewall. Accept to proceed and test your peer to peer network. 
+  
+  
 
 ## Kubernetes Homelab Install
 - Repurpose old PC or get a tiny test computer - [check out the Raspberry Pi Killer!](#zima-board)
