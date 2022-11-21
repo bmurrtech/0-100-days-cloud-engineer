@@ -1,24 +1,32 @@
-![alt text](./images/road-to-cloud-dev.gif)[^canva]
+![alt text](./images/road-to-tech-job.gif)[^canva]
 [^canva]: Created in [Canva](https://www.canva.com/))
-# Follow my daily journey to certified Cloud Engineer
+# My daily journey to getting a tech job with **absolutely 0** work experience.
 
 >He who aims at perfection<br>will probably miss the mark,<br>but he who aims at nothing,<br>is sure to hit it every time.
 >
 ><br>--<cite>*Henry Wheeler Shaw, 1876*</cite>
 <br>
 
-**Table of Achievements & Resources:**
-1. [Linux Command Lines 1](#linux-command-lines-1)
-1. [Cybersecurity Best Practices How-to](#Cybersecurity-Project-1)
-1. [How-to Setup ProxMox - a Type 1 Hypervisor](ProxMox-Type-1-Hypervisor-Install)
+# My *10 Hacks* to Get a Tech Job in 22 days
 
-To-do:<br>
-- [ ] Visual roadmap to Cloud Engineer (design in Canva)
-- [ ] Create Chia + MadMax CLI command reference and list (in this repo)
-- [ ] Create Online Resume
-  - [ ] Step 1 - Markdown Resume (in this repo)
-  - [ ] Step 2 - Create Resume using LaTeX[^tyalt1resume]
-[^tyalt1resume]: Inspiration credit goes to [Tlyer Alterio](https://github.com/tyalt1/Resume)
+These are the *10 life hacks* or *10 principles* I followed to land an entry-level tech job with 0 previous work expreience in just 22 days.[^mercy]
+
+[^mercy]: My job story is a unique tale of perfect timing. Literally, just moments after the hiring manager was talking to his peers about needing hire a few more tech personnel, I knocked on the front door of the company with my paper resume in-hand. Some may call this good luck; others may find this story reminiscent of a common hiring phenomenon in the tech industry in general (i.e. too many jobs, not enough personnel). You are totally free to think whatever you want, but I prefer to think of it as a merciful, providential act of God. Suffice it to say, I would not be where I am today if it wasn't for the amazing grace and forgiveness offered through Jesus Christ, my Lord. He rescued me from destroying my life figuratively and literally. We all have self-destructive tendencies and we all make terrible blunders, but my eyes were opened to my dire need for Christ, and I've never been the same. I want to give all honor to God.
+
+1. (Hack 1) **Mindset** - Determine if you really want this first. If you do, then fully commit to the tech career path.
+1. (Hack 2) **Personal** - Self-care is crucial to success. Unteachable traits like integrity and a no-quit attitude matter most.
+1. (Hack 3) **Authority** - Setting up an affordable, simple custom domain and email address establishes you as a tech authority.
+1. (Hack 4) **Accountability** - Self is the worst enemy. If you want to win, be accountable (tip: make a Github account).
+1. (Hack 5) **Research** - Know your industry. Learn what tech companies want and teach yourself those high-paying skills.
+1. (Hack 6 ) **Focus** - Make your tech resume job-specific by highlighting your most job-relevant accomplishments (i.e. type 1 hypervisor)
+1. (Hack 7) **Certification** - Certs show you have a theoretical knowledge, but they don't prove you are capable.
+1. (Hack 8) **Projects** - Projects show your capability and prove you can execute your theoretical cert. knowledge.
+1. (Hack 9) **Fearless** - Don't be afraid of failure. Success always follows failure. If you never try, you'll always fail.
+1. (Hack 10) **Perseverance** - Rome wasn't built in a day. Set small goals and don't give up until you reach them one-by-one.
+
+> **My TOP Hiring Advice**: Even though I totally bombed my technical interview (I had no idea how to even prepare for it in advance), the primary traits my future employer was looking for could not be taught. These key, unteachable characteristics are: **A) integrity, character, and professionalism** and **B) strong trouble-shooting skills**. Perhaps not every employer values these traits as highly as my employer, but IF you can demonstrate your aptitude for trouble-shooting and provide a proven track-record of good character (via recommendations and consistent employment) and you *will* have a competitive edge even against certified technicians with more work experience than you.
+
+> **I want a tech job, too!** That's awesome! Your ambition and excitement for a challenge is an admirable and necessary attribute most tech professionals share in common. Every tech employer will look for people with *avid appetite to learn and improve* their tech skills. So, if you don't feel like you want to put in the work of advancing your tech skill set, and you would rather just learn enough to maintain, I'm afraid you will get left behind and better tech jobs will pass you up in favor of someone else who has that drive. Hey, I get it, we all have lives and higher priorities. Know your limits. Access your commitment level before embarking on this tech journey. If you don't like a challenge or the ever-changing nature of tech, perhaps the tech career path is not best for you. Do yourself a favor and opt for a career that best matches your lifestyle and passion. Alternatively, decide to commit to this path for 100 days (like I did), and just see what happens. Who knows, you might find you  like it, and maybe you'll even get a stellar job offer in 22 days like me!
 
 # Day 1
 - Started a course I thought would be everything I needed to become a DevOps Cloud Engineer
@@ -365,7 +373,7 @@ The Raspberry-Pi-Killer :knife:
 
 # Day 8
 
-## Cybersecurity Project 1
+## Cybersecurity Project
 - New Sudo Linux User
 - Authentication Key Pair - Passwordless Login
 - Lockdown All Password Entry Attempts
@@ -778,17 +786,25 @@ nano etc/pve/qemu-server/[ID].conf
 - Added IT cover letter to my resume
 - Updated resume on Indeed (uploaded to Github, too)
 - Applied to many different entry-level IT jobs (and jobs way out of my skill range)
+  
+# Day 12
+
 - Adapted my IT cert. roadmap to:
   - ~~CompTIA A+ (via the Google IT Support course)~~
   - By February 2023 [Google IT Automation with Python Professional Certificate](https://www.coursera.org/professional-certificates/google-it-automation)
   - Azure Dev AZ-204
   - AZ-900
   - Linux LFCA
+
+
+# Day 13
+
 - Started ~~[Google IT Support Professional Certificate on Courera](https://www.coursera.org/professional-certificates/google-it-support)~~ [Google IT Automation with Python Professional Certificate](https://www.coursera.org/professional-certificates/google-it-automation)
   
-# Day 12
-  
+# Day 14
 - Started interview process at local IT job
+
+# Day 15
 - Discovered/learned more about Jupyter Labs/Notebook
 - Researching way to launch Jupyter Notebook server from homelab to set up Python and RMarkdown environment
 - Researching VS server to enable Python and RMarkdown coding on iPadOS
@@ -802,6 +818,7 @@ nano etc/pve/qemu-server/[ID].conf
 - Can add [courses and membership feature to Shopify](https://apps.shopify.com/inflowkit-2?search_id=5506c052-c66a-40f2-a4a4-545b34a640d8&surface_detail=membership&surface_inter_position=1&surface_intra_position=4&surface_type=search)
 - Can add [digital content for sale via Shopify](https://apps.shopify.com/digital-downloads-2?search_id=b80c1c88-05da-4a77-890f-7fa6905c39ee&surface_detail=digital&surface_inter_position=1&surface_intra_position=7&surface_type=search)
 
+# Day 16
 ## Create Custom Copyright-free AI Generated Images
 - First up, the easiest (but limited) way to generate AI art is to use free services like [Midjourney](https://midjourney.gitbook.io/docs/) or [Simplified Graphic Design](https://simplified.com/graphic-design). Obviously, all free services will have limitations (i.e. only 10 AI-generated images) that will make users want to buy a subscription. If you just need some one-off AI-art, these services will work, but if you want more powerful features and no limitations--and you happen to have a decent GPU--I recommend using the following resources:
   
@@ -822,7 +839,7 @@ nano etc/pve/qemu-server/[ID].conf
   
 > Always be cautious about running random `.exe` programs. Double check your download before installing. If it has a `CHECKSUM` that's even better.
   
-# Day 13
+# Day 17
   
 - Used a [free Google Doc to Markdown converter](https://docswrite.com/google-docs-to-markdown) to convert Azure notes to markdown.
 - This free service works, but it doesn't last. The images disappear after a day or two it seems.
@@ -834,13 +851,13 @@ nano etc/pve/qemu-server/[ID].conf
 Training Day Resources: [https://on24static.akamaized.net/event/39/50/54/4/rt/1/documents/resourceList1627979893310/mavtdfy22h1fundamentalsresourcelist1627979891280.pdf](https://on24static.akamaized.net/event/39/50/54/4/rt/1/documents/resourceList1627979893310/mavtdfy22h1fundamentalsresourcelist1627979891280.pdf)
 
 
-  # Day 14
+  # Day 18
 
   ## Azure Fundamentals Part 2
   
 - I am [linking the Azure notes to a google doc here](https://docs.google.com/document/d/1JjoQVgTbCJX2BE3J3x3BqHYt1mkxo2ezkdPsX_gPuwE/edit?usp=sharing).
   
-  # Day 15
+  # Day 19
   
   ## MadMax (Chia Plotting) CLI
   
@@ -891,7 +908,7 @@ PC-to-PC Drive Sharing:
 
 `\\[PC identifier name]\[driver letter]`
   
-# Day 16
+# Day 20
 
 ## Raspberry Pico W Garage Door Sensor
 
@@ -909,7 +926,7 @@ amzn.to/3EjG1ap
 - Breadboard solderless jumper wires: https://amzn.to/
 3UHCmYO
   
-# Day 17
+# Day 21
   
   - I was extended an offer to an entry IT Tech job on the southeast coast.
     - At the time of the offer, I have absolutely 0 professional IT job exprience, 0 certifications, 0 IT schooling/degrees.
@@ -979,7 +996,7 @@ amzn.to/3EjG1ap
   - Then click on the "Run IPerf" button on the right (it looks like a heart beat monitor). You will be prompted to allow access through the Windows firewall. Accept to proceed and test your peer to peer network. 
   
 
-# Day 18
+# Day 22
   
 ## AUTOMATE CHIA PLOT TRANSFER HOW-TO:
 
