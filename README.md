@@ -7,6 +7,21 @@
 ><br>--<cite>*Henry Wheeler Shaw, 1876*</cite>
 <br>
 
+# Table of Contents
+* [Some Linux CLI](#some-linux-cli)
+* [Manage Linux Services](#managing-services)
+* [CentOS Docker Container on Synology NAS](#centos-docker-container)
+* [NextCloud Docker Container Setup](#nextcloud-docker-container)
+* [Linux Kill Command Variations](#day-7)
+* [Top APKs to Install on Linux Machine](#top-apks-to-install)
+* [My Cybersecurity Project](#cybersecurity-project)
+* [Handling Linux Files & Dir](#handling-files-and-directories)
+* [Windows Disk Utility CLI How-to](#windows-disk-utility-cli)
+* [ProxMox Type 1 Hypervisor Install](#proxmox-hypervisor-setup)
+* [KempLoad Master Setup on ProxMox](#kemp-loadmaster)
+* [Copy Files with SCP on Linux and MacOS](#copy-files-with-scp)
+* [Create Peer to Peer Windows Connection](#create-peer-to-peer-network-connection)
+
 # My *10 Hacks* to Get a Tech Job in 22 days
 
 These are the *10 life hacks* or *10 principles* I followed to land an entry-level tech job with 0 previous work expreience in just 22 days.[^mercy]
@@ -24,7 +39,7 @@ These are the *10 life hacks* or *10 principles* I followed to land an entry-lev
 1. (Hack 9) **Fearless** - Don't be afraid of failure. Success always follows failure. If you never try, you'll always fail.
 1. (Hack 10) **Perseverance** - Rome wasn't built in a day. Set small goals and don't give up until you reach them one-by-one.
 
-> **My TOP Hiring Advice**: Even though I totally bombed my technical interview (I had no idea how to even prepare for it in advance), the primary traits my future employer was looking for could not be taught. These key, unteachable characteristics are: **A) integrity, character, and professionalism** and **B) strong trouble-shooting skills**. Perhaps not every employer values these traits as highly as my employer, but IF you can demonstrate your aptitude for trouble-shooting and provide a proven track-record of good character (via recommendations and consistent employment) and you *will* have a competitive edge even against certified technicians with more work experience than you.
+> **My TOP Hiring Advice**: The primary traits my future employer was looking for could not be taught. These key, unteachable characteristics are: **A) integrity, character, and professionalism** and **B) strong trouble-shooting skills**. Perhaps not every employer values these traits as highly as my employer, but IF you can demonstrate your aptitude for trouble-shooting and provide a proven track-record of good character (via recommendations and consistent employment) and you *will* have a competitive edge even against certified technicians with more work experience than you.
 
 > **I want a tech job, too!** That's awesome! Your ambition and excitement for a challenge is an admirable and necessary attribute most tech professionals share in common. Every tech employer will look for people with *avid appetite to learn and improve* their tech skills. So, if you don't feel like you want to put in the work of advancing your tech skill set, and you would rather just learn enough to maintain, I'm afraid you will get left behind and better tech jobs will pass you up in favor of someone else who has that drive. Hey, I get it, we all have lives and higher priorities. Know your limits. Access your commitment level before embarking on this tech journey. If you don't like a challenge or the ever-changing nature of tech, perhaps the tech career path is not best for you. Do yourself a favor and opt for a career that best matches your lifestyle and passion. Alternatively, decide to commit to this path for 100 days (like I did), and just see what happens. Who knows, you might find you  like it, and maybe you'll even get a stellar job offer in 22 days like me!
 
@@ -72,7 +87,7 @@ These are the *10 life hacks* or *10 principles* I followed to land an entry-lev
 - Ubuntu is based on Debian (major category of distribution); free to download; ideal for desktop, server, core IoT devices, and robots (note about support: every two years a new update is released and long-term support is offered for 5 years total)
 - Debian comes in stable, testing, and untested; similar to Ubuntu but Debian focuses on freedom (community-driven)
 
-## Linux Command Lines 1
+# Some Linux CLI
 - Resource: [Linux CLI Intro Guide](https://linuxjournal.com/content/linux-command-line-interface-introduction-guide)
 - 90% of the cloud is Linux based
 - ssh is faster than interacting with a GUI
@@ -211,7 +226,7 @@ The Raspberry-Pi-Killer :knife:
 - created new banner in .gif format
 - organized goals and projects by creating new .md files
 
-### L4 Managing Services
+# Managing Services
 - Init Process - an init program or systemd is the parent process for every process
 - init will show the location of the init process (i.e. `readlink -f /usr/sbin/init`)
 - [*Systemd*](https://en.wikipedia.org/wiki/Systemd) a software suit that provides an array of system components for Linux operating systems.
@@ -241,7 +256,7 @@ The Raspberry-Pi-Killer :knife:
   - [x] Install a Linux distro in Docker.
   - [x] Share distro version and name the process used as "PID 1" with peers in Linux course.
 
-**CentOS - Docker Container**
+# CentOS Docker Container
 
  - Install Docker on Synology NAS (this will create a "docker" folder in your "File Station"
     - Open the "Package Center" app on the Synology NAS
@@ -263,7 +278,7 @@ The Raspberry-Pi-Killer :knife:
   - If you did everything correctly, you should now see the OS you installed running in in the "Overview" tab of Docker <br> ![alt_text](./images/centos_docker.jpg)
 
 
-- **NextCloud - Docker Container**
+# NextCloud Docker Container
   - Navigate to the [Docker Hub for NextCloud](https://hub.docker.com/r/linuxserver/nextcloud)
   - Copy the `/linuxserver/nextcloud` line (see photo) <br>![alt_text](./images/linux_nextcloud.jpg)
   - Click on "Image" from the selection menu in Docker, and paste the line into the "Hub Page" box. Hit "Add" and wait for the next popup screen.
@@ -319,7 +334,8 @@ The Raspberry-Pi-Killer :knife:
     - Zombie (stopped but still has an entry in the process table)
 
 - Discovered a Linux simulation/emulator/virtualization app for iPad and iPhone called [iSH Shell](https://apps.apple.com/us/app/ish-shell/id1436902243)
-- Top APKs to install
+
+# Top APKs to install
   - `apk add bash`
   - `apk add openssh` (to remote access any Linux-based servers)
   - `apk add net-tools`
@@ -373,7 +389,7 @@ The Raspberry-Pi-Killer :knife:
 
 # Day 8
 
-## Cybersecurity Project
+# Cybersecurity Project
 - New Sudo Linux User
 - Authentication Key Pair - Passwordless Login
 - Lockdown All Password Entry Attempts
@@ -466,7 +482,7 @@ The Raspberry-Pi-Killer :knife:
 
 > Problem: Enabling automatic updates is a good way to break things. In other words, not all updates are security-related and may break other apps with frequent automatic updates. Normally, this isn't a problem for, say, a homelab where it's okay to have downtime, but if you are a system admin at a company that requires 99.9% uptime, enabling unattended upgrades is sure to cause unwanted, unplanned downtime and service outages. Therefore, the best practice is to schedule maintenance times for important security updates. But if you are just running a homelab for personal use, then automatic updates is a nice feature to enable.
 
-## Handle Files & Directories
+# Handling Files and Directories
 
 ### `ls` Commands *Expanded*:
 - `ls [options] [paths]`
@@ -500,7 +516,7 @@ The Raspberry-Pi-Killer :knife:
 
 # Day 9
 
-## Windows Disk Utility CLI
+# Windows Disk Utility CLI
 
 | Command | Description |
 | ----------- | ----------- |
@@ -629,7 +645,7 @@ ENTER
 
 -Now if you check the summary, you will see the "local" storage unit of your ProxMox node has been increased fully.
 
-## ProxMox Type 1 Hypervisor Install
+# ProxMox Hypervisor Setup
 ![alt_text](./images/proxmox-setup.jpg)
 
 - Download the latest "ProxMox ISO [version#] ISO installer" from the [official website](https://www.proxmox.com/en/downloads/category/iso-images-pve)
@@ -694,7 +710,8 @@ ENTER
   
 # Day 10
   
-## Kemp LoadMaster - Enterprise Load-balancer Setup on ProxMox
+# Kemp LoadMaster
+- An Enterprise Load-balancer Setup on ProxMox
 - First-off, why use a load-balancer?
   - **Industry-standard Epic-ness**: If you want to fit in with the cool kids (NASA, Harvard University, Apple, EA, Sony, US Army, JPMorgan, and more!) then you want the Kemp LoadMaster for your homelab.
   - **Custom Domain URL Access**: Access your Plex/Jellyfin server by entering a custom URL (ex. https://<your_custom_domain_name.com>). So, if you want to  access your homelab services (i.e. NAS files, Plex/Jellyfin media server, Prologue audiobooks, VMs, etc.) remotely (when you are not connected to your home network), you will want a load balancer.
@@ -708,7 +725,7 @@ ENTER
   - Next, unpack the downloaded zip file that contains the LoadMaster VM image. You can use a free tool like [WinRar](https://www.win-rar.com/start.html?&L=0) or [7-zip](https://www.7-zip.org/). You'll notice some *zip-insception* or *folder-inception* going on because there's another folder within the original folder, so just open both. After unzipping everything and getting to *Limbo-level-inception* you will find Mal--I mean--the files you really looking for.<br> ![alt_text](https://media.giphy.com/media/Ajf5GjjVwUYI8/giphy.gif)
   - Like Leonardo DiCaprio, you want to find something down in Limbo. Look for the `.ovf` and the `.vmdk` files. Got 'em? Good, you'll need to know the directory and files names so you can copy them into ProxMox using `ssh` and a SCP client.
 
-  ### Copy Files with SCP
+  # Copy Files with SCP
 - Linux and macOS systems have a SCP client built in, but you will need to download [Git bash for Windows](https://git-scm.com/download/win). Or just run the following command in Windows Powershell and approve the install when prompted:
   
 ```sh
@@ -940,8 +957,8 @@ amzn.to/3EjG1ap
     - 401k 4% matching + many other perks
   
   
-## Create Peer to Peer Network Connection (Windows PC to Windows PC)
-  
+# Create Peer to Peer Network Connection
+(Windows PC to Windows PC)
 - First we need to confiture the ethernet connections by assigning a static IP address for each PC and network adapter.
 - Locate the ethernet adapter you will physically be connecting from PC to PC
 - In Windows, navigate to `Control Panel\Network and Internet\Network Connections` and configure the correct ethernet adapter
