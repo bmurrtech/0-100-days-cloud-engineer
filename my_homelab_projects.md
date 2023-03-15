@@ -1,4 +1,10 @@
 # My Project Ideas
+- [ ] Reverse Proxy via [Kemp Loadmaster](https://github.com/bmurrtech/my-road-to-tech-job-in-22-days#kemp-loadmaster)
+- [ ] DDNS (Dynamic Domain Name Service) via Cloudflare
+- [ ] VNC Remote Access to Homelab via [Guacamole}(https://www.youtube.com/watch?v=gsvS2M5knOw)
+  - [ ] Setup [Cloudron](https://www.cloudron.io/store/index.html) free account
+  - [ ] Add subdomain DNS A records to Cloudflare
+  - [ ] Install Guacamole
 - [ ] [Deploy WordPress website in AWS](https://www.aosnote.com/offers/xFzqby9z/checkout) (use `TECHWITHLUCY` promo code at check out for 20% off)
   - [ ] Add "AWS Project. Deployed and hosted a highly-available WordPress app using EC2, RDS, Route 53, ASG, and VPC." to resume
 - [ ] [Serverless Web Application on AWS](https://aws.amazon.com/getting-started/hands-on/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/)
@@ -18,3 +24,4 @@
   - [ ] PiHole (VPN into home network, local DNS server, recursive DNS resolver, run Unbound)
   - [ ] pfSense (VLANs, cybersecurity, port-forwarding)
   - [ ] HomeAssistant (for home automation)
+  - [ ] [Paperless-ngx](https://docs.paperless-ngx.com/) - open-sorce document managment system that transforms physical documents into a searchable online archive. Can install via Cloudron.
