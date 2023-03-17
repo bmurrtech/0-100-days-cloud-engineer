@@ -1,9 +1,8 @@
 # My Project Ideas
-- [ ] [Set up secure tunnel via CloudFlare's DNS](https://www.youtube.com/watch?v=ey4u7OUAF3c)
-- [ ] [Expose homelab to the internet](https://www.youtube.com/watch?v=ey4u7OUAF3c)
+- [x] [Set up secure tunnel via CloudFlare's DNS](https://www.youtube.com/watch?v=ey4u7OUAF3c)
+- [x] [Expose homelab to the internet](https://www.youtube.com/watch?v=ey4u7OUAF3c)
 - [ ] Reverse Proxy via [Kemp Loadmaster](https://github.com/bmurrtech/my-road-to-tech-job-in-22-days#kemp-loadmaster)
-- [ ] DDNS (Dynamic Domain Name Service) via Cloudflare
-- [ ] VNC Remote Access to Homelab via [Guacamole}(https://www.youtube.com/watch?v=gsvS2M5knOw)
+- [ ] VNC Remote Access to Homelab apps via [Guacamole}(https://www.youtube.com/watch?v=gsvS2M5knOw)
   - [ ] Setup [Cloudron](https://www.cloudron.io/store/index.html) free account
   - [ ] Add subdomain DNS A records to Cloudflare
   - [ ] Install Guacamole
