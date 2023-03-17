@@ -1,18 +1,14 @@
-# My Project Ideas
+# My Homelab Project Ideas
 - [x] [Set up secure tunnel via CloudFlare's DNS](https://www.youtube.com/watch?v=ey4u7OUAF3c)
 - [x] [Expose homelab to the internet](https://www.youtube.com/watch?v=ey4u7OUAF3c)
 - [ ] Reverse Proxy via [Kemp Loadmaster](https://github.com/bmurrtech/my-road-to-tech-job-in-22-days#kemp-loadmaster)
 - [ ] VNC Remote Access to Homelab apps via [Guacamole}(https://www.youtube.com/watch?v=gsvS2M5knOw)
-  - [ ] Setup [Cloudron](https://www.cloudron.io/store/index.html) free account
-  - [ ] Add subdomain DNS A records to Cloudflare
-  - [ ] Install Guacamole
-- [ ] [Deploy WordPress website in AWS](https://www.aosnote.com/offers/xFzqby9z/checkout) (use `TECHWITHLUCY` promo code at check out for 20% off)
-  - [ ] Add "AWS Project. Deployed and hosted a highly-available WordPress app using EC2, RDS, Route 53, ASG, and VPC." to resume
-- [ ] [Serverless Web Application on AWS](https://aws.amazon.com/getting-started/hands-on/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/)
-- [ ] [Chat Bot Amazon Connect Call Center on AWS](https://github.com/aws-samples/amazon-lex-connect-workshop)
-- [ ] Homelab NAS Projects (run on Ubuntu server):
-  - [ ] **Priority** [ ] Self-hosting cybersecurity | [click here]([place-holder](https://github.com/bmurrtech/0-100-days-cloud-engineer/blob/main/home_network_cybersecurity.md)) for step-by-step process and documentation
-  - [ ] Docker Containers to run all the following web apps
+- [ ] Setup [Cloudron](https://www.cloudron.io/store/index.html) free account
+- [ ] Add subdomain DNS A records to Cloudflare
+- [ ] Install Guacamole
+- [ ] [Cybersecurity](https://github.com/bmurrtech/0-100-days-cloud-engineer/blob/main/home_network_cybersecurity.md) steps to secure homelab.
+  - [ ] SSO Authelia Setup
+- [ ] Docker Containers to run all the following web apps:
   - [ ] Homer (interface for NAS)
   - [ ] Nextcloud (dropbox and google cloud alternative; calendar + contact sync)
   - [ ] Jellyfin media server (install on Synology NAS)
@@ -21,8 +17,14 @@
   - [ ] Jakcett (torrent tracker) + Sonarr & Radarr
   - [ ] PhotoPrism - The iPhone Photo Killer (set up automation in WebDav to auto-upload)
   - [ ] BitWarden | run [VaultWarden - open-source compatible server](https://github.com/dani-garcia/vaultwarden)
-  - [ ] Pi-KVM (video-capture of home server: HDMI capture card + Raspberry Pi)
   - [ ] PiHole (VPN into home network, local DNS server, recursive DNS resolver, run Unbound)
   - [ ] pfSense (VLANs, cybersecurity, port-forwarding)
   - [ ] HomeAssistant (for home automation)
   - [ ] [Paperless-ngx](https://docs.paperless-ngx.com/) - open-sorce document managment system that transforms physical documents into a searchable online archive. Can install via Cloudron.
+- [ ] Pi-KVM (video-capture of home server: HDMI capture card + Raspberry Pi)
+
+# Cloud Provider Projects
+- [ ] [Deploy WordPress website in AWS](https://www.aosnote.com/offers/xFzqby9z/checkout) (use `TECHWITHLUCY` promo code at check out for 20% off)
+  - [ ] Add "AWS Project. Deployed and hosted a highly-available WordPress app using EC2, RDS, Route 53, ASG, and VPC." to resume
+- [ ] [Serverless Web Application on AWS](https://aws.amazon.com/getting-started/hands-on/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/)
+- [ ] [Chat Bot Amazon Connect Call Center on AWS](https://github.com/aws-samples/amazon-lex-connect-workshop)
