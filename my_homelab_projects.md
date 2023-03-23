@@ -1,16 +1,23 @@
 # My Homelab Project Ideas
+See MikeRoyal's [Master HomeLab Guide](https://github.com/mikeroyal/Self-Hosting-Guide) for reference and homelab ideas!
+
 - [x] [Set up secure tunnel via CloudFlare's DNS](https://www.youtube.com/watch?v=ey4u7OUAF3c)
 - [x] [Expose homelab to the internet](https://www.youtube.com/watch?v=ey4u7OUAF3c)
-- [ ] Reverse Proxy via [Kemp Loadmaster](https://github.com/bmurrtech/my-road-to-tech-job-in-22-days#kemp-loadmaster)
-- [ ] VNC Remote Access to Homelab apps via [Guacamole}(https://www.youtube.com/watch?v=gsvS2M5knOw)
-- [ ] Setup [Cloudron](https://www.cloudron.io/store/index.html) free account
-- [ ] Add subdomain DNS A records to Cloudflare
-- [ ] Install Guacamole
-- [ ] [Cybersecurity](https://github.com/bmurrtech/0-100-days-cloud-engineer/blob/main/home_network_cybersecurity.md) steps to secure homelab.
-  - [ ] SSO Authelia Setup
-- [ ] Docker Containers to run all the following web apps:
+- [ ] Create HA Kubernetes cluster via Ansible playbook; [see Techno Tim's doc](https://docs.technotim.live/posts/k3s-etcd-ansible/)
+- [ ] [Install Rancher on top of Kubernetes cluster](https://ranchermanager.docs.rancher.com/v2.5/pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster)
+- [ ] Build Docker containers via Rancher w/K3S to run all the following web apps:
+  - [ ] Secure network access via [TailScale](https://tailscale.com/kb/1039/install-ubuntu-2004/)
+  - [ ] Reverse Proxy via [Kemp Loadmaster](https://github.com/bmurrtech/my-road-to-tech-job-in-22-days#kemp-loadmaster)
+  - [ ] VNC Remote Access to Homelab apps via [Guacamole}(https://www.youtube.com/watch?v=gsvS2M5knOw)
+  - [ ] Setup [Cloudron](https://www.cloudron.io/store/index.html) free account
+    - [ ] Add subdomain DNS A records to Cloudflare
+    - [ ] Install Apache Guacamole
+  - [ ] [Cybersecurity](https://github.com/bmurrtech/0-100-days-cloud-engineer/blob/main/home_network_cybersecurity.md) steps to secure homelab.
+    - [ ] SSO Authelia Setup
+  - [ ] Pterodactyl + Docker [game server](https://docs.technotim.live/posts/pterodactyl-game-server/)
   - [ ] Homer (interface for NAS)
-  - [ ] Nextcloud (dropbox and google cloud alternative; calendar + contact sync)
+  - [ ] [ownCloud](https://owncloud.com/pricing/) - self-hosted cloud with mobile apps; [see support docs](https://owncloud.com/docs-guides/)
+  - [ ] [MongoDB Database](https://www.mongodb.com/pricing) 512MB "Shared" free version - for building user database (i.e. Ant Media Server, Wordpress users, etc.)
   - [ ] Jellyfin media server (install on Synology NAS)
   - [ ] Openbooks (ebooks media server)
   - [ ] Deluge (BitTorrent client written in Python)
