@@ -17,7 +17,7 @@ See MikeRoyal's [Master HomeLab Guide](https://github.com/mikeroyal/Self-Hosting
   - [ ] Pterodactyl + Docker [game server](https://docs.technotim.live/posts/pterodactyl-game-server/)
   - [ ] Homer (interface for NAS)
   - [ ] [ownCloud](https://owncloud.com/pricing/) - self-hosted cloud with mobile apps; [see support docs](https://owncloud.com/docs-guides/)
-  - [ ] Backup software for Windows/Mac and more, [Kopia](https://kopia.io/)
+  - [ ] Backup software for Windows/Mac and more via [BackupPC](https://github.com/backuppc/backuppc) or [Kopia](https://kopia.io/)
   - [ ] [PhotoSync for iOS](https://www.photosync-app.com/home.html)
   - [ ] Build HTML Website using [Hugo](https://gohugo.io/getting-started/quick-start/) or [Kopage](https://www.kopage.com/tour)
     - [ ] View Hugo [themes](https://themes.gohugo.io/)
