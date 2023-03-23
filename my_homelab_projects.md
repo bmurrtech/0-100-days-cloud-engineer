@@ -17,7 +17,13 @@ See MikeRoyal's [Master HomeLab Guide](https://github.com/mikeroyal/Self-Hosting
   - [ ] Pterodactyl + Docker [game server](https://docs.technotim.live/posts/pterodactyl-game-server/)
   - [ ] Homer (interface for NAS)
   - [ ] [ownCloud](https://owncloud.com/pricing/) - self-hosted cloud with mobile apps; [see support docs](https://owncloud.com/docs-guides/)
+  - [ ] Backup software for Windows/Mac and more, [Kopia](https://kopia.io/)
+  - [ ] [PhotoSync for iOS](https://www.photosync-app.com/home.html)
+  - [ ] Build HTML Website using [Hugo](https://gohugo.io/getting-started/quick-start/) or [Kopage](https://www.kopage.com/tour)
+    - [ ] View Hugo [themes](https://themes.gohugo.io/)
+  - [ ] Self-host website
   - [ ] [MongoDB Database](https://www.mongodb.com/pricing) 512MB "Shared" free version - for building user database (i.e. Ant Media Server, Wordpress users, etc.)
+    - [ ] Read about MongoDB basics in [this book](https://github.com/miollek/Free-Database-Books/blob/master/book/MongoDB%20Basics.pdf)
   - [ ] Jellyfin media server (install on Synology NAS)
   - [ ] Openbooks (ebooks media server)
   - [ ] Deluge (BitTorrent client written in Python)
