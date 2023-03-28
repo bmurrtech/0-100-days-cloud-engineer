@@ -947,16 +947,8 @@ amzn.to/3EjG1ap
   
   - I was extended an offer to an entry IT Tech job on the southeast coast.
     - At the time of the offer, I have absolutely 0 professional IT job exprience, 0 certifications, 0 IT schooling/degrees.
-    - This IT company was looking **less** for someone with skills and **more** for someone with ethics, character, and proven problem-solving skills (key trait).
-    - Moral of the story, 1. get your own webdomain and personal email 2. do home projects to demonstrate your ability to trouble-shoot (i.e. create a hypervisor and VM homelab setup) 3. level up your skills through guided labs, online courses, and free youtube videos
-  - Entry IT Job Specs:
-    - Starting Salary: $42K (after 90 days $45K)
-    - 9% annual salary raise + quarterly evaluation for increase pay
-    - Full medical benefits
-    - Holiday pay, PTO, volunteer time
-    - 401k 4% matching + many other perks
-  
-  
+    - This IT company was looking **less** for someone with skills and **more** for someone with ethics, character, and proven problem-solving skills.
+    
 # Create Peer to Peer Network Connection
 (Windows PC to Windows PC)
 - First we need to confiture the ethernet connections by assigning a static IP address for each PC and network adapter.
